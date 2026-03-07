@@ -1,0 +1,4652 @@
+{
+  "files": [
+    {
+      "changes": [
+        {
+          "category": "portability-only",
+          "new_value": "null",
+          "old_value": "nan",
+          "path": "row[144].P_E_base"
+        },
+        {
+          "category": "portability-only",
+          "new_value": "null",
+          "old_value": "nan",
+          "path": "row[144].P_E_patch_A"
+        },
+        {
+          "category": "portability-only",
+          "new_value": "null",
+          "old_value": "nan",
+          "path": "row[144].P_E_patch_C"
+        },
+        {
+          "category": "portability-only",
+          "new_value": "null",
+          "old_value": "nan",
+          "path": "row[144].P_O_base"
+        },
+        {
+          "category": "portability-only",
+          "new_value": "null",
+          "old_value": "nan",
+          "path": "row[144].P_O_patch_A"
+        },
+        {
+          "category": "portability-only",
+          "new_value": "null",
+          "old_value": "nan",
+          "path": "row[144].P_O_patch_C"
+        },
+        {
+          "category": "portability-only",
+          "new_value": "null",
+          "old_value": "nan",
+          "path": "row[144].P_rest_base"
+        },
+        {
+          "category": "portability-only",
+          "new_value": "null",
+          "old_value": "nan",
+          "path": "row[144].P_rest_patch_A"
+        },
+        {
+          "category": "portability-only",
+          "new_value": "null",
+          "old_value": "nan",
+          "path": "row[144].P_rest_patch_C"
+        },
+        {
+          "category": "portability-only",
+          "new_value": "null",
+          "old_value": "nan",
+          "path": "row[144].dPE_A"
+        },
+        {
+          "category": "portability-only",
+          "new_value": "null",
+          "old_value": "nan",
+          "path": "row[144].dPE_C"
+        },
+        {
+          "category": "portability-only",
+          "new_value": "null",
+          "old_value": "nan",
+          "path": "row[144].dPO_A"
+        },
+        {
+          "category": "portability-only",
+          "new_value": "null",
+          "old_value": "nan",
+          "path": "row[144].dPO_C"
+        },
+        {
+          "category": "portability-only",
+          "new_value": "null",
+          "old_value": "nan",
+          "path": "row[144].dPrest_A"
+        },
+        {
+          "category": "portability-only",
+          "new_value": "null",
+          "old_value": "nan",
+          "path": "row[144].dPrest_C"
+        },
+        {
+          "category": "portability-only",
+          "new_value": "null",
+          "old_value": "nan",
+          "path": "row[144].d_CA_logPE"
+        },
+        {
+          "category": "portability-only",
+          "new_value": "null",
+          "old_value": "nan",
+          "path": "row[144].d_CA_logPO"
+        },
+        {
+          "category": "portability-only",
+          "new_value": "null",
+          "old_value": "nan",
+          "path": "row[144].dlogPE_A"
+        },
+        {
+          "category": "portability-only",
+          "new_value": "null",
+          "old_value": "nan",
+          "path": "row[144].dlogPE_C"
+        },
+        {
+          "category": "portability-only",
+          "new_value": "null",
+          "old_value": "nan",
+          "path": "row[144].dlogPO_A"
+        },
+        {
+          "category": "portability-only",
+          "new_value": "null",
+          "old_value": "nan",
+          "path": "row[144].dlogPO_C"
+        },
+        {
+          "category": "portability-only",
+          "new_value": "null",
+          "old_value": "nan",
+          "path": "row[144].primary_base_logodds_residual"
+        },
+        {
+          "category": "portability-only",
+          "new_value": "null",
+          "old_value": "nan",
+          "path": "row[144].primary_delta_m_from_logodds_A"
+        },
+        {
+          "category": "portability-only",
+          "new_value": "null",
+          "old_value": "nan",
+          "path": "row[144].primary_delta_m_from_logodds_C"
+        },
+        {
+          "category": "portability-only",
+          "new_value": "null",
+          "old_value": "nan",
+          "path": "row[144].primary_delta_m_residual_A"
+        },
+        {
+          "category": "portability-only",
+          "new_value": "null",
+          "old_value": "nan",
+          "path": "row[144].primary_delta_m_residual_C"
+        },
+        {
+          "category": "portability-only",
+          "new_value": "null",
+          "old_value": "nan",
+          "path": "row[145].P_E_base"
+        },
+        {
+          "category": "portability-only",
+          "new_value": "null",
+          "old_value": "nan",
+          "path": "row[145].P_E_patch_A"
+        },
+        {
+          "category": "portability-only",
+          "new_value": "null",
+          "old_value": "nan",
+          "path": "row[145].P_E_patch_C"
+        },
+        {
+          "category": "portability-only",
+          "new_value": "null",
+          "old_value": "nan",
+          "path": "row[145].P_O_base"
+        },
+        {
+          "category": "portability-only",
+          "new_value": "null",
+          "old_value": "nan",
+          "path": "row[145].P_O_patch_A"
+        },
+        {
+          "category": "portability-only",
+          "new_value": "null",
+          "old_value": "nan",
+          "path": "row[145].P_O_patch_C"
+        },
+        {
+          "category": "portability-only",
+          "new_value": "null",
+          "old_value": "nan",
+          "path": "row[145].P_rest_base"
+        },
+        {
+          "category": "portability-only",
+          "new_value": "null",
+          "old_value": "nan",
+          "path": "row[145].P_rest_patch_A"
+        },
+        {
+          "category": "portability-only",
+          "new_value": "null",
+          "old_value": "nan",
+          "path": "row[145].P_rest_patch_C"
+        },
+        {
+          "category": "portability-only",
+          "new_value": "null",
+          "old_value": "nan",
+          "path": "row[145].dPE_A"
+        },
+        {
+          "category": "portability-only",
+          "new_value": "null",
+          "old_value": "nan",
+          "path": "row[145].dPE_C"
+        },
+        {
+          "category": "portability-only",
+          "new_value": "null",
+          "old_value": "nan",
+          "path": "row[145].dPO_A"
+        },
+        {
+          "category": "portability-only",
+          "new_value": "null",
+          "old_value": "nan",
+          "path": "row[145].dPO_C"
+        },
+        {
+          "category": "portability-only",
+          "new_value": "null",
+          "old_value": "nan",
+          "path": "row[145].dPrest_A"
+        },
+        {
+          "category": "portability-only",
+          "new_value": "null",
+          "old_value": "nan",
+          "path": "row[145].dPrest_C"
+        },
+        {
+          "category": "portability-only",
+          "new_value": "null",
+          "old_value": "nan",
+          "path": "row[145].d_CA_logPE"
+        },
+        {
+          "category": "portability-only",
+          "new_value": "null",
+          "old_value": "nan",
+          "path": "row[145].d_CA_logPO"
+        },
+        {
+          "category": "portability-only",
+          "new_value": "null",
+          "old_value": "nan",
+          "path": "row[145].dlogPE_A"
+        },
+        {
+          "category": "portability-only",
+          "new_value": "null",
+          "old_value": "nan",
+          "path": "row[145].dlogPE_C"
+        },
+        {
+          "category": "portability-only",
+          "new_value": "null",
+          "old_value": "nan",
+          "path": "row[145].dlogPO_A"
+        },
+        {
+          "category": "portability-only",
+          "new_value": "null",
+          "old_value": "nan",
+          "path": "row[145].dlogPO_C"
+        },
+        {
+          "category": "portability-only",
+          "new_value": "null",
+          "old_value": "nan",
+          "path": "row[145].primary_base_logodds_residual"
+        },
+        {
+          "category": "portability-only",
+          "new_value": "null",
+          "old_value": "nan",
+          "path": "row[145].primary_delta_m_from_logodds_A"
+        },
+        {
+          "category": "portability-only",
+          "new_value": "null",
+          "old_value": "nan",
+          "path": "row[145].primary_delta_m_from_logodds_C"
+        },
+        {
+          "category": "portability-only",
+          "new_value": "null",
+          "old_value": "nan",
+          "path": "row[145].primary_delta_m_residual_A"
+        },
+        {
+          "category": "portability-only",
+          "new_value": "null",
+          "old_value": "nan",
+          "path": "row[145].primary_delta_m_residual_C"
+        },
+        {
+          "category": "portability-only",
+          "new_value": "null",
+          "old_value": "nan",
+          "path": "row[146].P_E_base"
+        },
+        {
+          "category": "portability-only",
+          "new_value": "null",
+          "old_value": "nan",
+          "path": "row[146].P_E_patch_A"
+        },
+        {
+          "category": "portability-only",
+          "new_value": "null",
+          "old_value": "nan",
+          "path": "row[146].P_E_patch_C"
+        },
+        {
+          "category": "portability-only",
+          "new_value": "null",
+          "old_value": "nan",
+          "path": "row[146].P_O_base"
+        },
+        {
+          "category": "portability-only",
+          "new_value": "null",
+          "old_value": "nan",
+          "path": "row[146].P_O_patch_A"
+        },
+        {
+          "category": "portability-only",
+          "new_value": "null",
+          "old_value": "nan",
+          "path": "row[146].P_O_patch_C"
+        },
+        {
+          "category": "portability-only",
+          "new_value": "null",
+          "old_value": "nan",
+          "path": "row[146].P_rest_base"
+        },
+        {
+          "category": "portability-only",
+          "new_value": "null",
+          "old_value": "nan",
+          "path": "row[146].P_rest_patch_A"
+        },
+        {
+          "category": "portability-only",
+          "new_value": "null",
+          "old_value": "nan",
+          "path": "row[146].P_rest_patch_C"
+        },
+        {
+          "category": "portability-only",
+          "new_value": "null",
+          "old_value": "nan",
+          "path": "row[146].dPE_A"
+        },
+        {
+          "category": "portability-only",
+          "new_value": "null",
+          "old_value": "nan",
+          "path": "row[146].dPE_C"
+        },
+        {
+          "category": "portability-only",
+          "new_value": "null",
+          "old_value": "nan",
+          "path": "row[146].dPO_A"
+        },
+        {
+          "category": "portability-only",
+          "new_value": "null",
+          "old_value": "nan",
+          "path": "row[146].dPO_C"
+        },
+        {
+          "category": "portability-only",
+          "new_value": "null",
+          "old_value": "nan",
+          "path": "row[146].dPrest_A"
+        },
+        {
+          "category": "portability-only",
+          "new_value": "null",
+          "old_value": "nan",
+          "path": "row[146].dPrest_C"
+        },
+        {
+          "category": "portability-only",
+          "new_value": "null",
+          "old_value": "nan",
+          "path": "row[146].d_CA_logPE"
+        },
+        {
+          "category": "portability-only",
+          "new_value": "null",
+          "old_value": "nan",
+          "path": "row[146].d_CA_logPO"
+        },
+        {
+          "category": "portability-only",
+          "new_value": "null",
+          "old_value": "nan",
+          "path": "row[146].dlogPE_A"
+        },
+        {
+          "category": "portability-only",
+          "new_value": "null",
+          "old_value": "nan",
+          "path": "row[146].dlogPE_C"
+        },
+        {
+          "category": "portability-only",
+          "new_value": "null",
+          "old_value": "nan",
+          "path": "row[146].dlogPO_A"
+        },
+        {
+          "category": "portability-only",
+          "new_value": "null",
+          "old_value": "nan",
+          "path": "row[146].dlogPO_C"
+        },
+        {
+          "category": "portability-only",
+          "new_value": "null",
+          "old_value": "nan",
+          "path": "row[146].primary_base_logodds_residual"
+        },
+        {
+          "category": "portability-only",
+          "new_value": "null",
+          "old_value": "nan",
+          "path": "row[146].primary_delta_m_from_logodds_A"
+        },
+        {
+          "category": "portability-only",
+          "new_value": "null",
+          "old_value": "nan",
+          "path": "row[146].primary_delta_m_from_logodds_C"
+        },
+        {
+          "category": "portability-only",
+          "new_value": "null",
+          "old_value": "nan",
+          "path": "row[146].primary_delta_m_residual_A"
+        },
+        {
+          "category": "portability-only",
+          "new_value": "null",
+          "old_value": "nan",
+          "path": "row[146].primary_delta_m_residual_C"
+        },
+        {
+          "category": "portability-only",
+          "new_value": "null",
+          "old_value": "nan",
+          "path": "row[147].P_E_base"
+        },
+        {
+          "category": "portability-only",
+          "new_value": "null",
+          "old_value": "nan",
+          "path": "row[147].P_E_patch_A"
+        },
+        {
+          "category": "portability-only",
+          "new_value": "null",
+          "old_value": "nan",
+          "path": "row[147].P_E_patch_C"
+        },
+        {
+          "category": "portability-only",
+          "new_value": "null",
+          "old_value": "nan",
+          "path": "row[147].P_O_base"
+        },
+        {
+          "category": "portability-only",
+          "new_value": "null",
+          "old_value": "nan",
+          "path": "row[147].P_O_patch_A"
+        },
+        {
+          "category": "portability-only",
+          "new_value": "null",
+          "old_value": "nan",
+          "path": "row[147].P_O_patch_C"
+        },
+        {
+          "category": "portability-only",
+          "new_value": "null",
+          "old_value": "nan",
+          "path": "row[147].P_rest_base"
+        },
+        {
+          "category": "portability-only",
+          "new_value": "null",
+          "old_value": "nan",
+          "path": "row[147].P_rest_patch_A"
+        },
+        {
+          "category": "portability-only",
+          "new_value": "null",
+          "old_value": "nan",
+          "path": "row[147].P_rest_patch_C"
+        },
+        {
+          "category": "portability-only",
+          "new_value": "null",
+          "old_value": "nan",
+          "path": "row[147].dPE_A"
+        },
+        {
+          "category": "portability-only",
+          "new_value": "null",
+          "old_value": "nan",
+          "path": "row[147].dPE_C"
+        },
+        {
+          "category": "portability-only",
+          "new_value": "null",
+          "old_value": "nan",
+          "path": "row[147].dPO_A"
+        },
+        {
+          "category": "portability-only",
+          "new_value": "null",
+          "old_value": "nan",
+          "path": "row[147].dPO_C"
+        },
+        {
+          "category": "portability-only",
+          "new_value": "null",
+          "old_value": "nan",
+          "path": "row[147].dPrest_A"
+        },
+        {
+          "category": "portability-only",
+          "new_value": "null",
+          "old_value": "nan",
+          "path": "row[147].dPrest_C"
+        },
+        {
+          "category": "portability-only",
+          "new_value": "null",
+          "old_value": "nan",
+          "path": "row[147].d_CA_logPE"
+        },
+        {
+          "category": "portability-only",
+          "new_value": "null",
+          "old_value": "nan",
+          "path": "row[147].d_CA_logPO"
+        },
+        {
+          "category": "portability-only",
+          "new_value": "null",
+          "old_value": "nan",
+          "path": "row[147].dlogPE_A"
+        },
+        {
+          "category": "portability-only",
+          "new_value": "null",
+          "old_value": "nan",
+          "path": "row[147].dlogPE_C"
+        },
+        {
+          "category": "portability-only",
+          "new_value": "null",
+          "old_value": "nan",
+          "path": "row[147].dlogPO_A"
+        },
+        {
+          "category": "portability-only",
+          "new_value": "null",
+          "old_value": "nan",
+          "path": "row[147].dlogPO_C"
+        },
+        {
+          "category": "portability-only",
+          "new_value": "null",
+          "old_value": "nan",
+          "path": "row[147].primary_base_logodds_residual"
+        },
+        {
+          "category": "portability-only",
+          "new_value": "null",
+          "old_value": "nan",
+          "path": "row[147].primary_delta_m_from_logodds_A"
+        },
+        {
+          "category": "portability-only",
+          "new_value": "null",
+          "old_value": "nan",
+          "path": "row[147].primary_delta_m_from_logodds_C"
+        },
+        {
+          "category": "portability-only",
+          "new_value": "null",
+          "old_value": "nan",
+          "path": "row[147].primary_delta_m_residual_A"
+        },
+        {
+          "category": "portability-only",
+          "new_value": "null",
+          "old_value": "nan",
+          "path": "row[147].primary_delta_m_residual_C"
+        },
+        {
+          "category": "portability-only",
+          "new_value": "null",
+          "old_value": "nan",
+          "path": "row[148].P_E_base"
+        },
+        {
+          "category": "portability-only",
+          "new_value": "null",
+          "old_value": "nan",
+          "path": "row[148].P_E_patch_A"
+        },
+        {
+          "category": "portability-only",
+          "new_value": "null",
+          "old_value": "nan",
+          "path": "row[148].P_E_patch_C"
+        },
+        {
+          "category": "portability-only",
+          "new_value": "null",
+          "old_value": "nan",
+          "path": "row[148].P_O_base"
+        },
+        {
+          "category": "portability-only",
+          "new_value": "null",
+          "old_value": "nan",
+          "path": "row[148].P_O_patch_A"
+        },
+        {
+          "category": "portability-only",
+          "new_value": "null",
+          "old_value": "nan",
+          "path": "row[148].P_O_patch_C"
+        },
+        {
+          "category": "portability-only",
+          "new_value": "null",
+          "old_value": "nan",
+          "path": "row[148].P_rest_base"
+        },
+        {
+          "category": "portability-only",
+          "new_value": "null",
+          "old_value": "nan",
+          "path": "row[148].P_rest_patch_A"
+        },
+        {
+          "category": "portability-only",
+          "new_value": "null",
+          "old_value": "nan",
+          "path": "row[148].P_rest_patch_C"
+        },
+        {
+          "category": "portability-only",
+          "new_value": "null",
+          "old_value": "nan",
+          "path": "row[148].dPE_A"
+        },
+        {
+          "category": "portability-only",
+          "new_value": "null",
+          "old_value": "nan",
+          "path": "row[148].dPE_C"
+        },
+        {
+          "category": "portability-only",
+          "new_value": "null",
+          "old_value": "nan",
+          "path": "row[148].dPO_A"
+        },
+        {
+          "category": "portability-only",
+          "new_value": "null",
+          "old_value": "nan",
+          "path": "row[148].dPO_C"
+        },
+        {
+          "category": "portability-only",
+          "new_value": "null",
+          "old_value": "nan",
+          "path": "row[148].dPrest_A"
+        },
+        {
+          "category": "portability-only",
+          "new_value": "null",
+          "old_value": "nan",
+          "path": "row[148].dPrest_C"
+        },
+        {
+          "category": "portability-only",
+          "new_value": "null",
+          "old_value": "nan",
+          "path": "row[148].d_CA_logPE"
+        },
+        {
+          "category": "portability-only",
+          "new_value": "null",
+          "old_value": "nan",
+          "path": "row[148].d_CA_logPO"
+        },
+        {
+          "category": "portability-only",
+          "new_value": "null",
+          "old_value": "nan",
+          "path": "row[148].dlogPE_A"
+        },
+        {
+          "category": "portability-only",
+          "new_value": "null",
+          "old_value": "nan",
+          "path": "row[148].dlogPE_C"
+        },
+        {
+          "category": "portability-only",
+          "new_value": "null",
+          "old_value": "nan",
+          "path": "row[148].dlogPO_A"
+        },
+        {
+          "category": "portability-only",
+          "new_value": "null",
+          "old_value": "nan",
+          "path": "row[148].dlogPO_C"
+        },
+        {
+          "category": "portability-only",
+          "new_value": "null",
+          "old_value": "nan",
+          "path": "row[148].primary_base_logodds_residual"
+        },
+        {
+          "category": "portability-only",
+          "new_value": "null",
+          "old_value": "nan",
+          "path": "row[148].primary_delta_m_from_logodds_A"
+        },
+        {
+          "category": "portability-only",
+          "new_value": "null",
+          "old_value": "nan",
+          "path": "row[148].primary_delta_m_from_logodds_C"
+        },
+        {
+          "category": "portability-only",
+          "new_value": "null",
+          "old_value": "nan",
+          "path": "row[148].primary_delta_m_residual_A"
+        },
+        {
+          "category": "portability-only",
+          "new_value": "null",
+          "old_value": "nan",
+          "path": "row[148].primary_delta_m_residual_C"
+        },
+        {
+          "category": "portability-only",
+          "new_value": "null",
+          "old_value": "nan",
+          "path": "row[149].P_E_base"
+        },
+        {
+          "category": "portability-only",
+          "new_value": "null",
+          "old_value": "nan",
+          "path": "row[149].P_E_patch_A"
+        },
+        {
+          "category": "portability-only",
+          "new_value": "null",
+          "old_value": "nan",
+          "path": "row[149].P_E_patch_C"
+        },
+        {
+          "category": "portability-only",
+          "new_value": "null",
+          "old_value": "nan",
+          "path": "row[149].P_O_base"
+        },
+        {
+          "category": "portability-only",
+          "new_value": "null",
+          "old_value": "nan",
+          "path": "row[149].P_O_patch_A"
+        },
+        {
+          "category": "portability-only",
+          "new_value": "null",
+          "old_value": "nan",
+          "path": "row[149].P_O_patch_C"
+        },
+        {
+          "category": "portability-only",
+          "new_value": "null",
+          "old_value": "nan",
+          "path": "row[149].P_rest_base"
+        },
+        {
+          "category": "portability-only",
+          "new_value": "null",
+          "old_value": "nan",
+          "path": "row[149].P_rest_patch_A"
+        },
+        {
+          "category": "portability-only",
+          "new_value": "null",
+          "old_value": "nan",
+          "path": "row[149].P_rest_patch_C"
+        },
+        {
+          "category": "portability-only",
+          "new_value": "null",
+          "old_value": "nan",
+          "path": "row[149].dPE_A"
+        },
+        {
+          "category": "portability-only",
+          "new_value": "null",
+          "old_value": "nan",
+          "path": "row[149].dPE_C"
+        },
+        {
+          "category": "portability-only",
+          "new_value": "null",
+          "old_value": "nan",
+          "path": "row[149].dPO_A"
+        },
+        {
+          "category": "portability-only",
+          "new_value": "null",
+          "old_value": "nan",
+          "path": "row[149].dPO_C"
+        },
+        {
+          "category": "portability-only",
+          "new_value": "null",
+          "old_value": "nan",
+          "path": "row[149].dPrest_A"
+        },
+        {
+          "category": "portability-only",
+          "new_value": "null",
+          "old_value": "nan",
+          "path": "row[149].dPrest_C"
+        },
+        {
+          "category": "portability-only",
+          "new_value": "null",
+          "old_value": "nan",
+          "path": "row[149].d_CA_logPE"
+        },
+        {
+          "category": "portability-only",
+          "new_value": "null",
+          "old_value": "nan",
+          "path": "row[149].d_CA_logPO"
+        },
+        {
+          "category": "portability-only",
+          "new_value": "null",
+          "old_value": "nan",
+          "path": "row[149].dlogPE_A"
+        },
+        {
+          "category": "portability-only",
+          "new_value": "null",
+          "old_value": "nan",
+          "path": "row[149].dlogPE_C"
+        },
+        {
+          "category": "portability-only",
+          "new_value": "null",
+          "old_value": "nan",
+          "path": "row[149].dlogPO_A"
+        },
+        {
+          "category": "portability-only",
+          "new_value": "null",
+          "old_value": "nan",
+          "path": "row[149].dlogPO_C"
+        },
+        {
+          "category": "portability-only",
+          "new_value": "null",
+          "old_value": "nan",
+          "path": "row[149].primary_base_logodds_residual"
+        },
+        {
+          "category": "portability-only",
+          "new_value": "null",
+          "old_value": "nan",
+          "path": "row[149].primary_delta_m_from_logodds_A"
+        },
+        {
+          "category": "portability-only",
+          "new_value": "null",
+          "old_value": "nan",
+          "path": "row[149].primary_delta_m_from_logodds_C"
+        },
+        {
+          "category": "portability-only",
+          "new_value": "null",
+          "old_value": "nan",
+          "path": "row[149].primary_delta_m_residual_A"
+        },
+        {
+          "category": "portability-only",
+          "new_value": "null",
+          "old_value": "nan",
+          "path": "row[149].primary_delta_m_residual_C"
+        },
+        {
+          "category": "portability-only",
+          "new_value": "null",
+          "old_value": "nan",
+          "path": "row[150].P_E_base"
+        },
+        {
+          "category": "portability-only",
+          "new_value": "null",
+          "old_value": "nan",
+          "path": "row[150].P_E_patch_A"
+        },
+        {
+          "category": "portability-only",
+          "new_value": "null",
+          "old_value": "nan",
+          "path": "row[150].P_E_patch_C"
+        },
+        {
+          "category": "portability-only",
+          "new_value": "null",
+          "old_value": "nan",
+          "path": "row[150].P_O_base"
+        },
+        {
+          "category": "portability-only",
+          "new_value": "null",
+          "old_value": "nan",
+          "path": "row[150].P_O_patch_A"
+        },
+        {
+          "category": "portability-only",
+          "new_value": "null",
+          "old_value": "nan",
+          "path": "row[150].P_O_patch_C"
+        },
+        {
+          "category": "portability-only",
+          "new_value": "null",
+          "old_value": "nan",
+          "path": "row[150].P_rest_base"
+        },
+        {
+          "category": "portability-only",
+          "new_value": "null",
+          "old_value": "nan",
+          "path": "row[150].P_rest_patch_A"
+        },
+        {
+          "category": "portability-only",
+          "new_value": "null",
+          "old_value": "nan",
+          "path": "row[150].P_rest_patch_C"
+        },
+        {
+          "category": "portability-only",
+          "new_value": "null",
+          "old_value": "nan",
+          "path": "row[150].dPE_A"
+        },
+        {
+          "category": "portability-only",
+          "new_value": "null",
+          "old_value": "nan",
+          "path": "row[150].dPE_C"
+        },
+        {
+          "category": "portability-only",
+          "new_value": "null",
+          "old_value": "nan",
+          "path": "row[150].dPO_A"
+        },
+        {
+          "category": "portability-only",
+          "new_value": "null",
+          "old_value": "nan",
+          "path": "row[150].dPO_C"
+        },
+        {
+          "category": "portability-only",
+          "new_value": "null",
+          "old_value": "nan",
+          "path": "row[150].dPrest_A"
+        },
+        {
+          "category": "portability-only",
+          "new_value": "null",
+          "old_value": "nan",
+          "path": "row[150].dPrest_C"
+        },
+        {
+          "category": "portability-only",
+          "new_value": "null",
+          "old_value": "nan",
+          "path": "row[150].d_CA_logPE"
+        },
+        {
+          "category": "portability-only",
+          "new_value": "null",
+          "old_value": "nan",
+          "path": "row[150].d_CA_logPO"
+        },
+        {
+          "category": "portability-only",
+          "new_value": "null",
+          "old_value": "nan",
+          "path": "row[150].dlogPE_A"
+        },
+        {
+          "category": "portability-only",
+          "new_value": "null",
+          "old_value": "nan",
+          "path": "row[150].dlogPE_C"
+        },
+        {
+          "category": "portability-only",
+          "new_value": "null",
+          "old_value": "nan",
+          "path": "row[150].dlogPO_A"
+        },
+        {
+          "category": "portability-only",
+          "new_value": "null",
+          "old_value": "nan",
+          "path": "row[150].dlogPO_C"
+        },
+        {
+          "category": "portability-only",
+          "new_value": "null",
+          "old_value": "nan",
+          "path": "row[150].primary_base_logodds_residual"
+        },
+        {
+          "category": "portability-only",
+          "new_value": "null",
+          "old_value": "nan",
+          "path": "row[150].primary_delta_m_from_logodds_A"
+        },
+        {
+          "category": "portability-only",
+          "new_value": "null",
+          "old_value": "nan",
+          "path": "row[150].primary_delta_m_from_logodds_C"
+        },
+        {
+          "category": "portability-only",
+          "new_value": "null",
+          "old_value": "nan",
+          "path": "row[150].primary_delta_m_residual_A"
+        },
+        {
+          "category": "portability-only",
+          "new_value": "null",
+          "old_value": "nan",
+          "path": "row[150].primary_delta_m_residual_C"
+        },
+        {
+          "category": "portability-only",
+          "new_value": "null",
+          "old_value": "nan",
+          "path": "row[151].P_E_base"
+        },
+        {
+          "category": "portability-only",
+          "new_value": "null",
+          "old_value": "nan",
+          "path": "row[151].P_E_patch_A"
+        },
+        {
+          "category": "portability-only",
+          "new_value": "null",
+          "old_value": "nan",
+          "path": "row[151].P_E_patch_C"
+        },
+        {
+          "category": "portability-only",
+          "new_value": "null",
+          "old_value": "nan",
+          "path": "row[151].P_O_base"
+        },
+        {
+          "category": "portability-only",
+          "new_value": "null",
+          "old_value": "nan",
+          "path": "row[151].P_O_patch_A"
+        },
+        {
+          "category": "portability-only",
+          "new_value": "null",
+          "old_value": "nan",
+          "path": "row[151].P_O_patch_C"
+        },
+        {
+          "category": "portability-only",
+          "new_value": "null",
+          "old_value": "nan",
+          "path": "row[151].P_rest_base"
+        },
+        {
+          "category": "portability-only",
+          "new_value": "null",
+          "old_value": "nan",
+          "path": "row[151].P_rest_patch_A"
+        },
+        {
+          "category": "portability-only",
+          "new_value": "null",
+          "old_value": "nan",
+          "path": "row[151].P_rest_patch_C"
+        },
+        {
+          "category": "portability-only",
+          "new_value": "null",
+          "old_value": "nan",
+          "path": "row[151].dPE_A"
+        },
+        {
+          "category": "portability-only",
+          "new_value": "null",
+          "old_value": "nan",
+          "path": "row[151].dPE_C"
+        },
+        {
+          "category": "portability-only",
+          "new_value": "null",
+          "old_value": "nan",
+          "path": "row[151].dPO_A"
+        },
+        {
+          "category": "portability-only",
+          "new_value": "null",
+          "old_value": "nan",
+          "path": "row[151].dPO_C"
+        },
+        {
+          "category": "portability-only",
+          "new_value": "null",
+          "old_value": "nan",
+          "path": "row[151].dPrest_A"
+        },
+        {
+          "category": "portability-only",
+          "new_value": "null",
+          "old_value": "nan",
+          "path": "row[151].dPrest_C"
+        },
+        {
+          "category": "portability-only",
+          "new_value": "null",
+          "old_value": "nan",
+          "path": "row[151].d_CA_logPE"
+        },
+        {
+          "category": "portability-only",
+          "new_value": "null",
+          "old_value": "nan",
+          "path": "row[151].d_CA_logPO"
+        },
+        {
+          "category": "portability-only",
+          "new_value": "null",
+          "old_value": "nan",
+          "path": "row[151].dlogPE_A"
+        },
+        {
+          "category": "portability-only",
+          "new_value": "null",
+          "old_value": "nan",
+          "path": "row[151].dlogPE_C"
+        },
+        {
+          "category": "portability-only",
+          "new_value": "null",
+          "old_value": "nan",
+          "path": "row[151].dlogPO_A"
+        },
+        {
+          "category": "portability-only",
+          "new_value": "null",
+          "old_value": "nan",
+          "path": "row[151].dlogPO_C"
+        },
+        {
+          "category": "portability-only",
+          "new_value": "null",
+          "old_value": "nan",
+          "path": "row[151].primary_base_logodds_residual"
+        },
+        {
+          "category": "portability-only",
+          "new_value": "null",
+          "old_value": "nan",
+          "path": "row[151].primary_delta_m_from_logodds_A"
+        },
+        {
+          "category": "portability-only",
+          "new_value": "null",
+          "old_value": "nan",
+          "path": "row[151].primary_delta_m_from_logodds_C"
+        },
+        {
+          "category": "portability-only",
+          "new_value": "null",
+          "old_value": "nan",
+          "path": "row[151].primary_delta_m_residual_A"
+        },
+        {
+          "category": "portability-only",
+          "new_value": "null",
+          "old_value": "nan",
+          "path": "row[151].primary_delta_m_residual_C"
+        },
+        {
+          "category": "portability-only",
+          "new_value": "null",
+          "old_value": "nan",
+          "path": "row[152].P_E_base"
+        },
+        {
+          "category": "portability-only",
+          "new_value": "null",
+          "old_value": "nan",
+          "path": "row[152].P_E_patch_A"
+        },
+        {
+          "category": "portability-only",
+          "new_value": "null",
+          "old_value": "nan",
+          "path": "row[152].P_E_patch_C"
+        },
+        {
+          "category": "portability-only",
+          "new_value": "null",
+          "old_value": "nan",
+          "path": "row[152].P_O_base"
+        },
+        {
+          "category": "portability-only",
+          "new_value": "null",
+          "old_value": "nan",
+          "path": "row[152].P_O_patch_A"
+        },
+        {
+          "category": "portability-only",
+          "new_value": "null",
+          "old_value": "nan",
+          "path": "row[152].P_O_patch_C"
+        },
+        {
+          "category": "portability-only",
+          "new_value": "null",
+          "old_value": "nan",
+          "path": "row[152].P_rest_base"
+        },
+        {
+          "category": "portability-only",
+          "new_value": "null",
+          "old_value": "nan",
+          "path": "row[152].P_rest_patch_A"
+        },
+        {
+          "category": "portability-only",
+          "new_value": "null",
+          "old_value": "nan",
+          "path": "row[152].P_rest_patch_C"
+        },
+        {
+          "category": "portability-only",
+          "new_value": "null",
+          "old_value": "nan",
+          "path": "row[152].dPE_A"
+        },
+        {
+          "category": "portability-only",
+          "new_value": "null",
+          "old_value": "nan",
+          "path": "row[152].dPE_C"
+        },
+        {
+          "category": "portability-only",
+          "new_value": "null",
+          "old_value": "nan",
+          "path": "row[152].dPO_A"
+        },
+        {
+          "category": "portability-only",
+          "new_value": "null",
+          "old_value": "nan",
+          "path": "row[152].dPO_C"
+        },
+        {
+          "category": "portability-only",
+          "new_value": "null",
+          "old_value": "nan",
+          "path": "row[152].dPrest_A"
+        },
+        {
+          "category": "portability-only",
+          "new_value": "null",
+          "old_value": "nan",
+          "path": "row[152].dPrest_C"
+        },
+        {
+          "category": "portability-only",
+          "new_value": "null",
+          "old_value": "nan",
+          "path": "row[152].d_CA_logPE"
+        },
+        {
+          "category": "portability-only",
+          "new_value": "null",
+          "old_value": "nan",
+          "path": "row[152].d_CA_logPO"
+        },
+        {
+          "category": "portability-only",
+          "new_value": "null",
+          "old_value": "nan",
+          "path": "row[152].dlogPE_A"
+        },
+        {
+          "category": "portability-only",
+          "new_value": "null",
+          "old_value": "nan",
+          "path": "row[152].dlogPE_C"
+        },
+        {
+          "category": "portability-only",
+          "new_value": "null",
+          "old_value": "nan",
+          "path": "row[152].dlogPO_A"
+        },
+        {
+          "category": "portability-only",
+          "new_value": "null",
+          "old_value": "nan",
+          "path": "row[152].dlogPO_C"
+        },
+        {
+          "category": "portability-only",
+          "new_value": "null",
+          "old_value": "nan",
+          "path": "row[152].primary_base_logodds_residual"
+        },
+        {
+          "category": "portability-only",
+          "new_value": "null",
+          "old_value": "nan",
+          "path": "row[152].primary_delta_m_from_logodds_A"
+        },
+        {
+          "category": "portability-only",
+          "new_value": "null",
+          "old_value": "nan",
+          "path": "row[152].primary_delta_m_from_logodds_C"
+        },
+        {
+          "category": "portability-only",
+          "new_value": "null",
+          "old_value": "nan",
+          "path": "row[152].primary_delta_m_residual_A"
+        },
+        {
+          "category": "portability-only",
+          "new_value": "null",
+          "old_value": "nan",
+          "path": "row[152].primary_delta_m_residual_C"
+        },
+        {
+          "category": "portability-only",
+          "new_value": "null",
+          "old_value": "nan",
+          "path": "row[153].P_E_base"
+        },
+        {
+          "category": "portability-only",
+          "new_value": "null",
+          "old_value": "nan",
+          "path": "row[153].P_E_patch_A"
+        },
+        {
+          "category": "portability-only",
+          "new_value": "null",
+          "old_value": "nan",
+          "path": "row[153].P_E_patch_C"
+        },
+        {
+          "category": "portability-only",
+          "new_value": "null",
+          "old_value": "nan",
+          "path": "row[153].P_O_base"
+        },
+        {
+          "category": "portability-only",
+          "new_value": "null",
+          "old_value": "nan",
+          "path": "row[153].P_O_patch_A"
+        },
+        {
+          "category": "portability-only",
+          "new_value": "null",
+          "old_value": "nan",
+          "path": "row[153].P_O_patch_C"
+        },
+        {
+          "category": "portability-only",
+          "new_value": "null",
+          "old_value": "nan",
+          "path": "row[153].P_rest_base"
+        },
+        {
+          "category": "portability-only",
+          "new_value": "null",
+          "old_value": "nan",
+          "path": "row[153].P_rest_patch_A"
+        },
+        {
+          "category": "portability-only",
+          "new_value": "null",
+          "old_value": "nan",
+          "path": "row[153].P_rest_patch_C"
+        },
+        {
+          "category": "portability-only",
+          "new_value": "null",
+          "old_value": "nan",
+          "path": "row[153].dPE_A"
+        },
+        {
+          "category": "portability-only",
+          "new_value": "null",
+          "old_value": "nan",
+          "path": "row[153].dPE_C"
+        },
+        {
+          "category": "portability-only",
+          "new_value": "null",
+          "old_value": "nan",
+          "path": "row[153].dPO_A"
+        },
+        {
+          "category": "portability-only",
+          "new_value": "null",
+          "old_value": "nan",
+          "path": "row[153].dPO_C"
+        },
+        {
+          "category": "portability-only",
+          "new_value": "null",
+          "old_value": "nan",
+          "path": "row[153].dPrest_A"
+        },
+        {
+          "category": "portability-only",
+          "new_value": "null",
+          "old_value": "nan",
+          "path": "row[153].dPrest_C"
+        },
+        {
+          "category": "portability-only",
+          "new_value": "null",
+          "old_value": "nan",
+          "path": "row[153].d_CA_logPE"
+        },
+        {
+          "category": "portability-only",
+          "new_value": "null",
+          "old_value": "nan",
+          "path": "row[153].d_CA_logPO"
+        },
+        {
+          "category": "portability-only",
+          "new_value": "null",
+          "old_value": "nan",
+          "path": "row[153].dlogPE_A"
+        },
+        {
+          "category": "portability-only",
+          "new_value": "null",
+          "old_value": "nan",
+          "path": "row[153].dlogPE_C"
+        },
+        {
+          "category": "portability-only",
+          "new_value": "null",
+          "old_value": "nan",
+          "path": "row[153].dlogPO_A"
+        },
+        {
+          "category": "portability-only",
+          "new_value": "null",
+          "old_value": "nan",
+          "path": "row[153].dlogPO_C"
+        },
+        {
+          "category": "portability-only",
+          "new_value": "null",
+          "old_value": "nan",
+          "path": "row[153].primary_base_logodds_residual"
+        },
+        {
+          "category": "portability-only",
+          "new_value": "null",
+          "old_value": "nan",
+          "path": "row[153].primary_delta_m_from_logodds_A"
+        },
+        {
+          "category": "portability-only",
+          "new_value": "null",
+          "old_value": "nan",
+          "path": "row[153].primary_delta_m_from_logodds_C"
+        },
+        {
+          "category": "portability-only",
+          "new_value": "null",
+          "old_value": "nan",
+          "path": "row[153].primary_delta_m_residual_A"
+        },
+        {
+          "category": "portability-only",
+          "new_value": "null",
+          "old_value": "nan",
+          "path": "row[153].primary_delta_m_residual_C"
+        },
+        {
+          "category": "portability-only",
+          "new_value": "null",
+          "old_value": "nan",
+          "path": "row[154].P_E_base"
+        },
+        {
+          "category": "portability-only",
+          "new_value": "null",
+          "old_value": "nan",
+          "path": "row[154].P_E_patch_A"
+        },
+        {
+          "category": "portability-only",
+          "new_value": "null",
+          "old_value": "nan",
+          "path": "row[154].P_E_patch_C"
+        },
+        {
+          "category": "portability-only",
+          "new_value": "null",
+          "old_value": "nan",
+          "path": "row[154].P_O_base"
+        },
+        {
+          "category": "portability-only",
+          "new_value": "null",
+          "old_value": "nan",
+          "path": "row[154].P_O_patch_A"
+        },
+        {
+          "category": "portability-only",
+          "new_value": "null",
+          "old_value": "nan",
+          "path": "row[154].P_O_patch_C"
+        },
+        {
+          "category": "portability-only",
+          "new_value": "null",
+          "old_value": "nan",
+          "path": "row[154].P_rest_base"
+        },
+        {
+          "category": "portability-only",
+          "new_value": "null",
+          "old_value": "nan",
+          "path": "row[154].P_rest_patch_A"
+        },
+        {
+          "category": "portability-only",
+          "new_value": "null",
+          "old_value": "nan",
+          "path": "row[154].P_rest_patch_C"
+        },
+        {
+          "category": "portability-only",
+          "new_value": "null",
+          "old_value": "nan",
+          "path": "row[154].dPE_A"
+        },
+        {
+          "category": "portability-only",
+          "new_value": "null",
+          "old_value": "nan",
+          "path": "row[154].dPE_C"
+        },
+        {
+          "category": "portability-only",
+          "new_value": "null",
+          "old_value": "nan",
+          "path": "row[154].dPO_A"
+        },
+        {
+          "category": "portability-only",
+          "new_value": "null",
+          "old_value": "nan",
+          "path": "row[154].dPO_C"
+        },
+        {
+          "category": "portability-only",
+          "new_value": "null",
+          "old_value": "nan",
+          "path": "row[154].dPrest_A"
+        },
+        {
+          "category": "portability-only",
+          "new_value": "null",
+          "old_value": "nan",
+          "path": "row[154].dPrest_C"
+        },
+        {
+          "category": "portability-only",
+          "new_value": "null",
+          "old_value": "nan",
+          "path": "row[154].d_CA_logPE"
+        },
+        {
+          "category": "portability-only",
+          "new_value": "null",
+          "old_value": "nan",
+          "path": "row[154].d_CA_logPO"
+        },
+        {
+          "category": "portability-only",
+          "new_value": "null",
+          "old_value": "nan",
+          "path": "row[154].dlogPE_A"
+        },
+        {
+          "category": "portability-only",
+          "new_value": "null",
+          "old_value": "nan",
+          "path": "row[154].dlogPE_C"
+        },
+        {
+          "category": "portability-only",
+          "new_value": "null",
+          "old_value": "nan",
+          "path": "row[154].dlogPO_A"
+        },
+        {
+          "category": "portability-only",
+          "new_value": "null",
+          "old_value": "nan",
+          "path": "row[154].dlogPO_C"
+        },
+        {
+          "category": "portability-only",
+          "new_value": "null",
+          "old_value": "nan",
+          "path": "row[154].primary_base_logodds_residual"
+        },
+        {
+          "category": "portability-only",
+          "new_value": "null",
+          "old_value": "nan",
+          "path": "row[154].primary_delta_m_from_logodds_A"
+        },
+        {
+          "category": "portability-only",
+          "new_value": "null",
+          "old_value": "nan",
+          "path": "row[154].primary_delta_m_from_logodds_C"
+        },
+        {
+          "category": "portability-only",
+          "new_value": "null",
+          "old_value": "nan",
+          "path": "row[154].primary_delta_m_residual_A"
+        },
+        {
+          "category": "portability-only",
+          "new_value": "null",
+          "old_value": "nan",
+          "path": "row[154].primary_delta_m_residual_C"
+        },
+        {
+          "category": "portability-only",
+          "new_value": "null",
+          "old_value": "nan",
+          "path": "row[155].P_E_base"
+        },
+        {
+          "category": "portability-only",
+          "new_value": "null",
+          "old_value": "nan",
+          "path": "row[155].P_E_patch_A"
+        },
+        {
+          "category": "portability-only",
+          "new_value": "null",
+          "old_value": "nan",
+          "path": "row[155].P_E_patch_C"
+        },
+        {
+          "category": "portability-only",
+          "new_value": "null",
+          "old_value": "nan",
+          "path": "row[155].P_O_base"
+        },
+        {
+          "category": "portability-only",
+          "new_value": "null",
+          "old_value": "nan",
+          "path": "row[155].P_O_patch_A"
+        },
+        {
+          "category": "portability-only",
+          "new_value": "null",
+          "old_value": "nan",
+          "path": "row[155].P_O_patch_C"
+        },
+        {
+          "category": "portability-only",
+          "new_value": "null",
+          "old_value": "nan",
+          "path": "row[155].P_rest_base"
+        },
+        {
+          "category": "portability-only",
+          "new_value": "null",
+          "old_value": "nan",
+          "path": "row[155].P_rest_patch_A"
+        },
+        {
+          "category": "portability-only",
+          "new_value": "null",
+          "old_value": "nan",
+          "path": "row[155].P_rest_patch_C"
+        },
+        {
+          "category": "portability-only",
+          "new_value": "null",
+          "old_value": "nan",
+          "path": "row[155].dPE_A"
+        },
+        {
+          "category": "portability-only",
+          "new_value": "null",
+          "old_value": "nan",
+          "path": "row[155].dPE_C"
+        },
+        {
+          "category": "portability-only",
+          "new_value": "null",
+          "old_value": "nan",
+          "path": "row[155].dPO_A"
+        },
+        {
+          "category": "portability-only",
+          "new_value": "null",
+          "old_value": "nan",
+          "path": "row[155].dPO_C"
+        },
+        {
+          "category": "portability-only",
+          "new_value": "null",
+          "old_value": "nan",
+          "path": "row[155].dPrest_A"
+        },
+        {
+          "category": "portability-only",
+          "new_value": "null",
+          "old_value": "nan",
+          "path": "row[155].dPrest_C"
+        },
+        {
+          "category": "portability-only",
+          "new_value": "null",
+          "old_value": "nan",
+          "path": "row[155].d_CA_logPE"
+        },
+        {
+          "category": "portability-only",
+          "new_value": "null",
+          "old_value": "nan",
+          "path": "row[155].d_CA_logPO"
+        },
+        {
+          "category": "portability-only",
+          "new_value": "null",
+          "old_value": "nan",
+          "path": "row[155].dlogPE_A"
+        },
+        {
+          "category": "portability-only",
+          "new_value": "null",
+          "old_value": "nan",
+          "path": "row[155].dlogPE_C"
+        },
+        {
+          "category": "portability-only",
+          "new_value": "null",
+          "old_value": "nan",
+          "path": "row[155].dlogPO_A"
+        },
+        {
+          "category": "portability-only",
+          "new_value": "null",
+          "old_value": "nan",
+          "path": "row[155].dlogPO_C"
+        },
+        {
+          "category": "portability-only",
+          "new_value": "null",
+          "old_value": "nan",
+          "path": "row[155].primary_base_logodds_residual"
+        },
+        {
+          "category": "portability-only",
+          "new_value": "null",
+          "old_value": "nan",
+          "path": "row[155].primary_delta_m_from_logodds_A"
+        },
+        {
+          "category": "portability-only",
+          "new_value": "null",
+          "old_value": "nan",
+          "path": "row[155].primary_delta_m_from_logodds_C"
+        },
+        {
+          "category": "portability-only",
+          "new_value": "null",
+          "old_value": "nan",
+          "path": "row[155].primary_delta_m_residual_A"
+        },
+        {
+          "category": "portability-only",
+          "new_value": "null",
+          "old_value": "nan",
+          "path": "row[155].primary_delta_m_residual_C"
+        },
+        {
+          "category": "portability-only",
+          "new_value": "null",
+          "old_value": "nan",
+          "path": "row[156].P_E_base"
+        },
+        {
+          "category": "portability-only",
+          "new_value": "null",
+          "old_value": "nan",
+          "path": "row[156].P_E_patch_A"
+        },
+        {
+          "category": "portability-only",
+          "new_value": "null",
+          "old_value": "nan",
+          "path": "row[156].P_E_patch_C"
+        },
+        {
+          "category": "portability-only",
+          "new_value": "null",
+          "old_value": "nan",
+          "path": "row[156].P_O_base"
+        },
+        {
+          "category": "portability-only",
+          "new_value": "null",
+          "old_value": "nan",
+          "path": "row[156].P_O_patch_A"
+        },
+        {
+          "category": "portability-only",
+          "new_value": "null",
+          "old_value": "nan",
+          "path": "row[156].P_O_patch_C"
+        },
+        {
+          "category": "portability-only",
+          "new_value": "null",
+          "old_value": "nan",
+          "path": "row[156].P_rest_base"
+        },
+        {
+          "category": "portability-only",
+          "new_value": "null",
+          "old_value": "nan",
+          "path": "row[156].P_rest_patch_A"
+        },
+        {
+          "category": "portability-only",
+          "new_value": "null",
+          "old_value": "nan",
+          "path": "row[156].P_rest_patch_C"
+        },
+        {
+          "category": "portability-only",
+          "new_value": "null",
+          "old_value": "nan",
+          "path": "row[156].dPE_A"
+        },
+        {
+          "category": "portability-only",
+          "new_value": "null",
+          "old_value": "nan",
+          "path": "row[156].dPE_C"
+        },
+        {
+          "category": "portability-only",
+          "new_value": "null",
+          "old_value": "nan",
+          "path": "row[156].dPO_A"
+        },
+        {
+          "category": "portability-only",
+          "new_value": "null",
+          "old_value": "nan",
+          "path": "row[156].dPO_C"
+        },
+        {
+          "category": "portability-only",
+          "new_value": "null",
+          "old_value": "nan",
+          "path": "row[156].dPrest_A"
+        },
+        {
+          "category": "portability-only",
+          "new_value": "null",
+          "old_value": "nan",
+          "path": "row[156].dPrest_C"
+        },
+        {
+          "category": "portability-only",
+          "new_value": "null",
+          "old_value": "nan",
+          "path": "row[156].d_CA_logPE"
+        },
+        {
+          "category": "portability-only",
+          "new_value": "null",
+          "old_value": "nan",
+          "path": "row[156].d_CA_logPO"
+        },
+        {
+          "category": "portability-only",
+          "new_value": "null",
+          "old_value": "nan",
+          "path": "row[156].dlogPE_A"
+        },
+        {
+          "category": "portability-only",
+          "new_value": "null",
+          "old_value": "nan",
+          "path": "row[156].dlogPE_C"
+        },
+        {
+          "category": "portability-only",
+          "new_value": "null",
+          "old_value": "nan",
+          "path": "row[156].dlogPO_A"
+        },
+        {
+          "category": "portability-only",
+          "new_value": "null",
+          "old_value": "nan",
+          "path": "row[156].dlogPO_C"
+        },
+        {
+          "category": "portability-only",
+          "new_value": "null",
+          "old_value": "nan",
+          "path": "row[156].primary_base_logodds_residual"
+        },
+        {
+          "category": "portability-only",
+          "new_value": "null",
+          "old_value": "nan",
+          "path": "row[156].primary_delta_m_from_logodds_A"
+        },
+        {
+          "category": "portability-only",
+          "new_value": "null",
+          "old_value": "nan",
+          "path": "row[156].primary_delta_m_from_logodds_C"
+        },
+        {
+          "category": "portability-only",
+          "new_value": "null",
+          "old_value": "nan",
+          "path": "row[156].primary_delta_m_residual_A"
+        },
+        {
+          "category": "portability-only",
+          "new_value": "null",
+          "old_value": "nan",
+          "path": "row[156].primary_delta_m_residual_C"
+        },
+        {
+          "category": "portability-only",
+          "new_value": "null",
+          "old_value": "nan",
+          "path": "row[157].P_E_base"
+        },
+        {
+          "category": "portability-only",
+          "new_value": "null",
+          "old_value": "nan",
+          "path": "row[157].P_E_patch_A"
+        },
+        {
+          "category": "portability-only",
+          "new_value": "null",
+          "old_value": "nan",
+          "path": "row[157].P_E_patch_C"
+        },
+        {
+          "category": "portability-only",
+          "new_value": "null",
+          "old_value": "nan",
+          "path": "row[157].P_O_base"
+        },
+        {
+          "category": "portability-only",
+          "new_value": "null",
+          "old_value": "nan",
+          "path": "row[157].P_O_patch_A"
+        },
+        {
+          "category": "portability-only",
+          "new_value": "null",
+          "old_value": "nan",
+          "path": "row[157].P_O_patch_C"
+        },
+        {
+          "category": "portability-only",
+          "new_value": "null",
+          "old_value": "nan",
+          "path": "row[157].P_rest_base"
+        },
+        {
+          "category": "portability-only",
+          "new_value": "null",
+          "old_value": "nan",
+          "path": "row[157].P_rest_patch_A"
+        },
+        {
+          "category": "portability-only",
+          "new_value": "null",
+          "old_value": "nan",
+          "path": "row[157].P_rest_patch_C"
+        },
+        {
+          "category": "portability-only",
+          "new_value": "null",
+          "old_value": "nan",
+          "path": "row[157].dPE_A"
+        },
+        {
+          "category": "portability-only",
+          "new_value": "null",
+          "old_value": "nan",
+          "path": "row[157].dPE_C"
+        },
+        {
+          "category": "portability-only",
+          "new_value": "null",
+          "old_value": "nan",
+          "path": "row[157].dPO_A"
+        },
+        {
+          "category": "portability-only",
+          "new_value": "null",
+          "old_value": "nan",
+          "path": "row[157].dPO_C"
+        },
+        {
+          "category": "portability-only",
+          "new_value": "null",
+          "old_value": "nan",
+          "path": "row[157].dPrest_A"
+        },
+        {
+          "category": "portability-only",
+          "new_value": "null",
+          "old_value": "nan",
+          "path": "row[157].dPrest_C"
+        },
+        {
+          "category": "portability-only",
+          "new_value": "null",
+          "old_value": "nan",
+          "path": "row[157].d_CA_logPE"
+        },
+        {
+          "category": "portability-only",
+          "new_value": "null",
+          "old_value": "nan",
+          "path": "row[157].d_CA_logPO"
+        },
+        {
+          "category": "portability-only",
+          "new_value": "null",
+          "old_value": "nan",
+          "path": "row[157].dlogPE_A"
+        },
+        {
+          "category": "portability-only",
+          "new_value": "null",
+          "old_value": "nan",
+          "path": "row[157].dlogPE_C"
+        },
+        {
+          "category": "portability-only",
+          "new_value": "null",
+          "old_value": "nan",
+          "path": "row[157].dlogPO_A"
+        },
+        {
+          "category": "portability-only",
+          "new_value": "null",
+          "old_value": "nan",
+          "path": "row[157].dlogPO_C"
+        },
+        {
+          "category": "portability-only",
+          "new_value": "null",
+          "old_value": "nan",
+          "path": "row[157].primary_base_logodds_residual"
+        },
+        {
+          "category": "portability-only",
+          "new_value": "null",
+          "old_value": "nan",
+          "path": "row[157].primary_delta_m_from_logodds_A"
+        },
+        {
+          "category": "portability-only",
+          "new_value": "null",
+          "old_value": "nan",
+          "path": "row[157].primary_delta_m_from_logodds_C"
+        },
+        {
+          "category": "portability-only",
+          "new_value": "null",
+          "old_value": "nan",
+          "path": "row[157].primary_delta_m_residual_A"
+        },
+        {
+          "category": "portability-only",
+          "new_value": "null",
+          "old_value": "nan",
+          "path": "row[157].primary_delta_m_residual_C"
+        },
+        {
+          "category": "portability-only",
+          "new_value": "null",
+          "old_value": "nan",
+          "path": "row[158].P_E_base"
+        },
+        {
+          "category": "portability-only",
+          "new_value": "null",
+          "old_value": "nan",
+          "path": "row[158].P_E_patch_A"
+        },
+        {
+          "category": "portability-only",
+          "new_value": "null",
+          "old_value": "nan",
+          "path": "row[158].P_E_patch_C"
+        },
+        {
+          "category": "portability-only",
+          "new_value": "null",
+          "old_value": "nan",
+          "path": "row[158].P_O_base"
+        },
+        {
+          "category": "portability-only",
+          "new_value": "null",
+          "old_value": "nan",
+          "path": "row[158].P_O_patch_A"
+        },
+        {
+          "category": "portability-only",
+          "new_value": "null",
+          "old_value": "nan",
+          "path": "row[158].P_O_patch_C"
+        },
+        {
+          "category": "portability-only",
+          "new_value": "null",
+          "old_value": "nan",
+          "path": "row[158].P_rest_base"
+        },
+        {
+          "category": "portability-only",
+          "new_value": "null",
+          "old_value": "nan",
+          "path": "row[158].P_rest_patch_A"
+        },
+        {
+          "category": "portability-only",
+          "new_value": "null",
+          "old_value": "nan",
+          "path": "row[158].P_rest_patch_C"
+        },
+        {
+          "category": "portability-only",
+          "new_value": "null",
+          "old_value": "nan",
+          "path": "row[158].dPE_A"
+        },
+        {
+          "category": "portability-only",
+          "new_value": "null",
+          "old_value": "nan",
+          "path": "row[158].dPE_C"
+        },
+        {
+          "category": "portability-only",
+          "new_value": "null",
+          "old_value": "nan",
+          "path": "row[158].dPO_A"
+        },
+        {
+          "category": "portability-only",
+          "new_value": "null",
+          "old_value": "nan",
+          "path": "row[158].dPO_C"
+        },
+        {
+          "category": "portability-only",
+          "new_value": "null",
+          "old_value": "nan",
+          "path": "row[158].dPrest_A"
+        },
+        {
+          "category": "portability-only",
+          "new_value": "null",
+          "old_value": "nan",
+          "path": "row[158].dPrest_C"
+        },
+        {
+          "category": "portability-only",
+          "new_value": "null",
+          "old_value": "nan",
+          "path": "row[158].d_CA_logPE"
+        },
+        {
+          "category": "portability-only",
+          "new_value": "null",
+          "old_value": "nan",
+          "path": "row[158].d_CA_logPO"
+        },
+        {
+          "category": "portability-only",
+          "new_value": "null",
+          "old_value": "nan",
+          "path": "row[158].dlogPE_A"
+        },
+        {
+          "category": "portability-only",
+          "new_value": "null",
+          "old_value": "nan",
+          "path": "row[158].dlogPE_C"
+        },
+        {
+          "category": "portability-only",
+          "new_value": "null",
+          "old_value": "nan",
+          "path": "row[158].dlogPO_A"
+        },
+        {
+          "category": "portability-only",
+          "new_value": "null",
+          "old_value": "nan",
+          "path": "row[158].dlogPO_C"
+        },
+        {
+          "category": "portability-only",
+          "new_value": "null",
+          "old_value": "nan",
+          "path": "row[158].primary_base_logodds_residual"
+        },
+        {
+          "category": "portability-only",
+          "new_value": "null",
+          "old_value": "nan",
+          "path": "row[158].primary_delta_m_from_logodds_A"
+        },
+        {
+          "category": "portability-only",
+          "new_value": "null",
+          "old_value": "nan",
+          "path": "row[158].primary_delta_m_from_logodds_C"
+        },
+        {
+          "category": "portability-only",
+          "new_value": "null",
+          "old_value": "nan",
+          "path": "row[158].primary_delta_m_residual_A"
+        },
+        {
+          "category": "portability-only",
+          "new_value": "null",
+          "old_value": "nan",
+          "path": "row[158].primary_delta_m_residual_C"
+        },
+        {
+          "category": "portability-only",
+          "new_value": "null",
+          "old_value": "nan",
+          "path": "row[159].P_E_base"
+        },
+        {
+          "category": "portability-only",
+          "new_value": "null",
+          "old_value": "nan",
+          "path": "row[159].P_E_patch_A"
+        },
+        {
+          "category": "portability-only",
+          "new_value": "null",
+          "old_value": "nan",
+          "path": "row[159].P_E_patch_C"
+        },
+        {
+          "category": "portability-only",
+          "new_value": "null",
+          "old_value": "nan",
+          "path": "row[159].P_O_base"
+        },
+        {
+          "category": "portability-only",
+          "new_value": "null",
+          "old_value": "nan",
+          "path": "row[159].P_O_patch_A"
+        },
+        {
+          "category": "portability-only",
+          "new_value": "null",
+          "old_value": "nan",
+          "path": "row[159].P_O_patch_C"
+        },
+        {
+          "category": "portability-only",
+          "new_value": "null",
+          "old_value": "nan",
+          "path": "row[159].P_rest_base"
+        },
+        {
+          "category": "portability-only",
+          "new_value": "null",
+          "old_value": "nan",
+          "path": "row[159].P_rest_patch_A"
+        },
+        {
+          "category": "portability-only",
+          "new_value": "null",
+          "old_value": "nan",
+          "path": "row[159].P_rest_patch_C"
+        },
+        {
+          "category": "portability-only",
+          "new_value": "null",
+          "old_value": "nan",
+          "path": "row[159].dPE_A"
+        },
+        {
+          "category": "portability-only",
+          "new_value": "null",
+          "old_value": "nan",
+          "path": "row[159].dPE_C"
+        },
+        {
+          "category": "portability-only",
+          "new_value": "null",
+          "old_value": "nan",
+          "path": "row[159].dPO_A"
+        },
+        {
+          "category": "portability-only",
+          "new_value": "null",
+          "old_value": "nan",
+          "path": "row[159].dPO_C"
+        },
+        {
+          "category": "portability-only",
+          "new_value": "null",
+          "old_value": "nan",
+          "path": "row[159].dPrest_A"
+        },
+        {
+          "category": "portability-only",
+          "new_value": "null",
+          "old_value": "nan",
+          "path": "row[159].dPrest_C"
+        },
+        {
+          "category": "portability-only",
+          "new_value": "null",
+          "old_value": "nan",
+          "path": "row[159].d_CA_logPE"
+        },
+        {
+          "category": "portability-only",
+          "new_value": "null",
+          "old_value": "nan",
+          "path": "row[159].d_CA_logPO"
+        },
+        {
+          "category": "portability-only",
+          "new_value": "null",
+          "old_value": "nan",
+          "path": "row[159].dlogPE_A"
+        },
+        {
+          "category": "portability-only",
+          "new_value": "null",
+          "old_value": "nan",
+          "path": "row[159].dlogPE_C"
+        },
+        {
+          "category": "portability-only",
+          "new_value": "null",
+          "old_value": "nan",
+          "path": "row[159].dlogPO_A"
+        },
+        {
+          "category": "portability-only",
+          "new_value": "null",
+          "old_value": "nan",
+          "path": "row[159].dlogPO_C"
+        },
+        {
+          "category": "portability-only",
+          "new_value": "null",
+          "old_value": "nan",
+          "path": "row[159].primary_base_logodds_residual"
+        },
+        {
+          "category": "portability-only",
+          "new_value": "null",
+          "old_value": "nan",
+          "path": "row[159].primary_delta_m_from_logodds_A"
+        },
+        {
+          "category": "portability-only",
+          "new_value": "null",
+          "old_value": "nan",
+          "path": "row[159].primary_delta_m_from_logodds_C"
+        },
+        {
+          "category": "portability-only",
+          "new_value": "null",
+          "old_value": "nan",
+          "path": "row[159].primary_delta_m_residual_A"
+        },
+        {
+          "category": "portability-only",
+          "new_value": "null",
+          "old_value": "nan",
+          "path": "row[159].primary_delta_m_residual_C"
+        },
+        {
+          "category": "portability-only",
+          "new_value": "null",
+          "old_value": "nan",
+          "path": "row[160].P_E_base"
+        },
+        {
+          "category": "portability-only",
+          "new_value": "null",
+          "old_value": "nan",
+          "path": "row[160].P_E_patch_A"
+        },
+        {
+          "category": "portability-only",
+          "new_value": "null",
+          "old_value": "nan",
+          "path": "row[160].P_E_patch_C"
+        },
+        {
+          "category": "portability-only",
+          "new_value": "null",
+          "old_value": "nan",
+          "path": "row[160].P_O_base"
+        },
+        {
+          "category": "portability-only",
+          "new_value": "null",
+          "old_value": "nan",
+          "path": "row[160].P_O_patch_A"
+        },
+        {
+          "category": "portability-only",
+          "new_value": "null",
+          "old_value": "nan",
+          "path": "row[160].P_O_patch_C"
+        },
+        {
+          "category": "portability-only",
+          "new_value": "null",
+          "old_value": "nan",
+          "path": "row[160].P_rest_base"
+        },
+        {
+          "category": "portability-only",
+          "new_value": "null",
+          "old_value": "nan",
+          "path": "row[160].P_rest_patch_A"
+        },
+        {
+          "category": "portability-only",
+          "new_value": "null",
+          "old_value": "nan",
+          "path": "row[160].P_rest_patch_C"
+        },
+        {
+          "category": "portability-only",
+          "new_value": "null",
+          "old_value": "nan",
+          "path": "row[160].dPE_A"
+        },
+        {
+          "category": "portability-only",
+          "new_value": "null",
+          "old_value": "nan",
+          "path": "row[160].dPE_C"
+        },
+        {
+          "category": "portability-only",
+          "new_value": "null",
+          "old_value": "nan",
+          "path": "row[160].dPO_A"
+        },
+        {
+          "category": "portability-only",
+          "new_value": "null",
+          "old_value": "nan",
+          "path": "row[160].dPO_C"
+        },
+        {
+          "category": "portability-only",
+          "new_value": "null",
+          "old_value": "nan",
+          "path": "row[160].dPrest_A"
+        },
+        {
+          "category": "portability-only",
+          "new_value": "null",
+          "old_value": "nan",
+          "path": "row[160].dPrest_C"
+        },
+        {
+          "category": "portability-only",
+          "new_value": "null",
+          "old_value": "nan",
+          "path": "row[160].d_CA_logPE"
+        },
+        {
+          "category": "portability-only",
+          "new_value": "null",
+          "old_value": "nan",
+          "path": "row[160].d_CA_logPO"
+        },
+        {
+          "category": "portability-only",
+          "new_value": "null",
+          "old_value": "nan",
+          "path": "row[160].dlogPE_A"
+        },
+        {
+          "category": "portability-only",
+          "new_value": "null",
+          "old_value": "nan",
+          "path": "row[160].dlogPE_C"
+        },
+        {
+          "category": "portability-only",
+          "new_value": "null",
+          "old_value": "nan",
+          "path": "row[160].dlogPO_A"
+        },
+        {
+          "category": "portability-only",
+          "new_value": "null",
+          "old_value": "nan",
+          "path": "row[160].dlogPO_C"
+        },
+        {
+          "category": "portability-only",
+          "new_value": "null",
+          "old_value": "nan",
+          "path": "row[160].primary_base_logodds_residual"
+        },
+        {
+          "category": "portability-only",
+          "new_value": "null",
+          "old_value": "nan",
+          "path": "row[160].primary_delta_m_from_logodds_A"
+        },
+        {
+          "category": "portability-only",
+          "new_value": "null",
+          "old_value": "nan",
+          "path": "row[160].primary_delta_m_from_logodds_C"
+        },
+        {
+          "category": "portability-only",
+          "new_value": "null",
+          "old_value": "nan",
+          "path": "row[160].primary_delta_m_residual_A"
+        },
+        {
+          "category": "portability-only",
+          "new_value": "null",
+          "old_value": "nan",
+          "path": "row[160].primary_delta_m_residual_C"
+        },
+        {
+          "category": "portability-only",
+          "new_value": "null",
+          "old_value": "nan",
+          "path": "row[161].P_E_base"
+        },
+        {
+          "category": "portability-only",
+          "new_value": "null",
+          "old_value": "nan",
+          "path": "row[161].P_E_patch_A"
+        },
+        {
+          "category": "portability-only",
+          "new_value": "null",
+          "old_value": "nan",
+          "path": "row[161].P_E_patch_C"
+        },
+        {
+          "category": "portability-only",
+          "new_value": "null",
+          "old_value": "nan",
+          "path": "row[161].P_O_base"
+        },
+        {
+          "category": "portability-only",
+          "new_value": "null",
+          "old_value": "nan",
+          "path": "row[161].P_O_patch_A"
+        },
+        {
+          "category": "portability-only",
+          "new_value": "null",
+          "old_value": "nan",
+          "path": "row[161].P_O_patch_C"
+        },
+        {
+          "category": "portability-only",
+          "new_value": "null",
+          "old_value": "nan",
+          "path": "row[161].P_rest_base"
+        },
+        {
+          "category": "portability-only",
+          "new_value": "null",
+          "old_value": "nan",
+          "path": "row[161].P_rest_patch_A"
+        },
+        {
+          "category": "portability-only",
+          "new_value": "null",
+          "old_value": "nan",
+          "path": "row[161].P_rest_patch_C"
+        },
+        {
+          "category": "portability-only",
+          "new_value": "null",
+          "old_value": "nan",
+          "path": "row[161].dPE_A"
+        },
+        {
+          "category": "portability-only",
+          "new_value": "null",
+          "old_value": "nan",
+          "path": "row[161].dPE_C"
+        },
+        {
+          "category": "portability-only",
+          "new_value": "null",
+          "old_value": "nan",
+          "path": "row[161].dPO_A"
+        },
+        {
+          "category": "portability-only",
+          "new_value": "null",
+          "old_value": "nan",
+          "path": "row[161].dPO_C"
+        },
+        {
+          "category": "portability-only",
+          "new_value": "null",
+          "old_value": "nan",
+          "path": "row[161].dPrest_A"
+        },
+        {
+          "category": "portability-only",
+          "new_value": "null",
+          "old_value": "nan",
+          "path": "row[161].dPrest_C"
+        },
+        {
+          "category": "portability-only",
+          "new_value": "null",
+          "old_value": "nan",
+          "path": "row[161].d_CA_logPE"
+        },
+        {
+          "category": "portability-only",
+          "new_value": "null",
+          "old_value": "nan",
+          "path": "row[161].d_CA_logPO"
+        },
+        {
+          "category": "portability-only",
+          "new_value": "null",
+          "old_value": "nan",
+          "path": "row[161].dlogPE_A"
+        },
+        {
+          "category": "portability-only",
+          "new_value": "null",
+          "old_value": "nan",
+          "path": "row[161].dlogPE_C"
+        },
+        {
+          "category": "portability-only",
+          "new_value": "null",
+          "old_value": "nan",
+          "path": "row[161].dlogPO_A"
+        },
+        {
+          "category": "portability-only",
+          "new_value": "null",
+          "old_value": "nan",
+          "path": "row[161].dlogPO_C"
+        },
+        {
+          "category": "portability-only",
+          "new_value": "null",
+          "old_value": "nan",
+          "path": "row[161].primary_base_logodds_residual"
+        },
+        {
+          "category": "portability-only",
+          "new_value": "null",
+          "old_value": "nan",
+          "path": "row[161].primary_delta_m_from_logodds_A"
+        },
+        {
+          "category": "portability-only",
+          "new_value": "null",
+          "old_value": "nan",
+          "path": "row[161].primary_delta_m_from_logodds_C"
+        },
+        {
+          "category": "portability-only",
+          "new_value": "null",
+          "old_value": "nan",
+          "path": "row[161].primary_delta_m_residual_A"
+        },
+        {
+          "category": "portability-only",
+          "new_value": "null",
+          "old_value": "nan",
+          "path": "row[161].primary_delta_m_residual_C"
+        },
+        {
+          "category": "portability-only",
+          "new_value": "null",
+          "old_value": "nan",
+          "path": "row[162].P_E_base"
+        },
+        {
+          "category": "portability-only",
+          "new_value": "null",
+          "old_value": "nan",
+          "path": "row[162].P_E_patch_A"
+        },
+        {
+          "category": "portability-only",
+          "new_value": "null",
+          "old_value": "nan",
+          "path": "row[162].P_E_patch_C"
+        },
+        {
+          "category": "portability-only",
+          "new_value": "null",
+          "old_value": "nan",
+          "path": "row[162].P_O_base"
+        },
+        {
+          "category": "portability-only",
+          "new_value": "null",
+          "old_value": "nan",
+          "path": "row[162].P_O_patch_A"
+        },
+        {
+          "category": "portability-only",
+          "new_value": "null",
+          "old_value": "nan",
+          "path": "row[162].P_O_patch_C"
+        },
+        {
+          "category": "portability-only",
+          "new_value": "null",
+          "old_value": "nan",
+          "path": "row[162].P_rest_base"
+        },
+        {
+          "category": "portability-only",
+          "new_value": "null",
+          "old_value": "nan",
+          "path": "row[162].P_rest_patch_A"
+        },
+        {
+          "category": "portability-only",
+          "new_value": "null",
+          "old_value": "nan",
+          "path": "row[162].P_rest_patch_C"
+        },
+        {
+          "category": "portability-only",
+          "new_value": "null",
+          "old_value": "nan",
+          "path": "row[162].dPE_A"
+        },
+        {
+          "category": "portability-only",
+          "new_value": "null",
+          "old_value": "nan",
+          "path": "row[162].dPE_C"
+        },
+        {
+          "category": "portability-only",
+          "new_value": "null",
+          "old_value": "nan",
+          "path": "row[162].dPO_A"
+        },
+        {
+          "category": "portability-only",
+          "new_value": "null",
+          "old_value": "nan",
+          "path": "row[162].dPO_C"
+        },
+        {
+          "category": "portability-only",
+          "new_value": "null",
+          "old_value": "nan",
+          "path": "row[162].dPrest_A"
+        },
+        {
+          "category": "portability-only",
+          "new_value": "null",
+          "old_value": "nan",
+          "path": "row[162].dPrest_C"
+        },
+        {
+          "category": "portability-only",
+          "new_value": "null",
+          "old_value": "nan",
+          "path": "row[162].d_CA_logPE"
+        },
+        {
+          "category": "portability-only",
+          "new_value": "null",
+          "old_value": "nan",
+          "path": "row[162].d_CA_logPO"
+        },
+        {
+          "category": "portability-only",
+          "new_value": "null",
+          "old_value": "nan",
+          "path": "row[162].dlogPE_A"
+        },
+        {
+          "category": "portability-only",
+          "new_value": "null",
+          "old_value": "nan",
+          "path": "row[162].dlogPE_C"
+        },
+        {
+          "category": "portability-only",
+          "new_value": "null",
+          "old_value": "nan",
+          "path": "row[162].dlogPO_A"
+        },
+        {
+          "category": "portability-only",
+          "new_value": "null",
+          "old_value": "nan",
+          "path": "row[162].dlogPO_C"
+        },
+        {
+          "category": "portability-only",
+          "new_value": "null",
+          "old_value": "nan",
+          "path": "row[162].primary_base_logodds_residual"
+        },
+        {
+          "category": "portability-only",
+          "new_value": "null",
+          "old_value": "nan",
+          "path": "row[162].primary_delta_m_from_logodds_A"
+        },
+        {
+          "category": "portability-only",
+          "new_value": "null",
+          "old_value": "nan",
+          "path": "row[162].primary_delta_m_from_logodds_C"
+        },
+        {
+          "category": "portability-only",
+          "new_value": "null",
+          "old_value": "nan",
+          "path": "row[162].primary_delta_m_residual_A"
+        },
+        {
+          "category": "portability-only",
+          "new_value": "null",
+          "old_value": "nan",
+          "path": "row[162].primary_delta_m_residual_C"
+        },
+        {
+          "category": "portability-only",
+          "new_value": "null",
+          "old_value": "nan",
+          "path": "row[163].P_E_base"
+        },
+        {
+          "category": "portability-only",
+          "new_value": "null",
+          "old_value": "nan",
+          "path": "row[163].P_E_patch_A"
+        },
+        {
+          "category": "portability-only",
+          "new_value": "null",
+          "old_value": "nan",
+          "path": "row[163].P_E_patch_C"
+        },
+        {
+          "category": "portability-only",
+          "new_value": "null",
+          "old_value": "nan",
+          "path": "row[163].P_O_base"
+        },
+        {
+          "category": "portability-only",
+          "new_value": "null",
+          "old_value": "nan",
+          "path": "row[163].P_O_patch_A"
+        },
+        {
+          "category": "portability-only",
+          "new_value": "null",
+          "old_value": "nan",
+          "path": "row[163].P_O_patch_C"
+        },
+        {
+          "category": "portability-only",
+          "new_value": "null",
+          "old_value": "nan",
+          "path": "row[163].P_rest_base"
+        },
+        {
+          "category": "portability-only",
+          "new_value": "null",
+          "old_value": "nan",
+          "path": "row[163].P_rest_patch_A"
+        },
+        {
+          "category": "portability-only",
+          "new_value": "null",
+          "old_value": "nan",
+          "path": "row[163].P_rest_patch_C"
+        },
+        {
+          "category": "portability-only",
+          "new_value": "null",
+          "old_value": "nan",
+          "path": "row[163].dPE_A"
+        },
+        {
+          "category": "portability-only",
+          "new_value": "null",
+          "old_value": "nan",
+          "path": "row[163].dPE_C"
+        },
+        {
+          "category": "portability-only",
+          "new_value": "null",
+          "old_value": "nan",
+          "path": "row[163].dPO_A"
+        },
+        {
+          "category": "portability-only",
+          "new_value": "null",
+          "old_value": "nan",
+          "path": "row[163].dPO_C"
+        },
+        {
+          "category": "portability-only",
+          "new_value": "null",
+          "old_value": "nan",
+          "path": "row[163].dPrest_A"
+        },
+        {
+          "category": "portability-only",
+          "new_value": "null",
+          "old_value": "nan",
+          "path": "row[163].dPrest_C"
+        },
+        {
+          "category": "portability-only",
+          "new_value": "null",
+          "old_value": "nan",
+          "path": "row[163].d_CA_logPE"
+        },
+        {
+          "category": "portability-only",
+          "new_value": "null",
+          "old_value": "nan",
+          "path": "row[163].d_CA_logPO"
+        },
+        {
+          "category": "portability-only",
+          "new_value": "null",
+          "old_value": "nan",
+          "path": "row[163].dlogPE_A"
+        },
+        {
+          "category": "portability-only",
+          "new_value": "null",
+          "old_value": "nan",
+          "path": "row[163].dlogPE_C"
+        },
+        {
+          "category": "portability-only",
+          "new_value": "null",
+          "old_value": "nan",
+          "path": "row[163].dlogPO_A"
+        },
+        {
+          "category": "portability-only",
+          "new_value": "null",
+          "old_value": "nan",
+          "path": "row[163].dlogPO_C"
+        },
+        {
+          "category": "portability-only",
+          "new_value": "null",
+          "old_value": "nan",
+          "path": "row[163].primary_base_logodds_residual"
+        },
+        {
+          "category": "portability-only",
+          "new_value": "null",
+          "old_value": "nan",
+          "path": "row[163].primary_delta_m_from_logodds_A"
+        },
+        {
+          "category": "portability-only",
+          "new_value": "null",
+          "old_value": "nan",
+          "path": "row[163].primary_delta_m_from_logodds_C"
+        },
+        {
+          "category": "portability-only",
+          "new_value": "null",
+          "old_value": "nan",
+          "path": "row[163].primary_delta_m_residual_A"
+        },
+        {
+          "category": "portability-only",
+          "new_value": "null",
+          "old_value": "nan",
+          "path": "row[163].primary_delta_m_residual_C"
+        },
+        {
+          "category": "portability-only",
+          "new_value": "null",
+          "old_value": "nan",
+          "path": "row[164].P_E_base"
+        },
+        {
+          "category": "portability-only",
+          "new_value": "null",
+          "old_value": "nan",
+          "path": "row[164].P_E_patch_A"
+        },
+        {
+          "category": "portability-only",
+          "new_value": "null",
+          "old_value": "nan",
+          "path": "row[164].P_E_patch_C"
+        },
+        {
+          "category": "portability-only",
+          "new_value": "null",
+          "old_value": "nan",
+          "path": "row[164].P_O_base"
+        },
+        {
+          "category": "portability-only",
+          "new_value": "null",
+          "old_value": "nan",
+          "path": "row[164].P_O_patch_A"
+        },
+        {
+          "category": "portability-only",
+          "new_value": "null",
+          "old_value": "nan",
+          "path": "row[164].P_O_patch_C"
+        },
+        {
+          "category": "portability-only",
+          "new_value": "null",
+          "old_value": "nan",
+          "path": "row[164].P_rest_base"
+        },
+        {
+          "category": "portability-only",
+          "new_value": "null",
+          "old_value": "nan",
+          "path": "row[164].P_rest_patch_A"
+        },
+        {
+          "category": "portability-only",
+          "new_value": "null",
+          "old_value": "nan",
+          "path": "row[164].P_rest_patch_C"
+        },
+        {
+          "category": "portability-only",
+          "new_value": "null",
+          "old_value": "nan",
+          "path": "row[164].dPE_A"
+        },
+        {
+          "category": "portability-only",
+          "new_value": "null",
+          "old_value": "nan",
+          "path": "row[164].dPE_C"
+        },
+        {
+          "category": "portability-only",
+          "new_value": "null",
+          "old_value": "nan",
+          "path": "row[164].dPO_A"
+        },
+        {
+          "category": "portability-only",
+          "new_value": "null",
+          "old_value": "nan",
+          "path": "row[164].dPO_C"
+        },
+        {
+          "category": "portability-only",
+          "new_value": "null",
+          "old_value": "nan",
+          "path": "row[164].dPrest_A"
+        },
+        {
+          "category": "portability-only",
+          "new_value": "null",
+          "old_value": "nan",
+          "path": "row[164].dPrest_C"
+        },
+        {
+          "category": "portability-only",
+          "new_value": "null",
+          "old_value": "nan",
+          "path": "row[164].d_CA_logPE"
+        },
+        {
+          "category": "portability-only",
+          "new_value": "null",
+          "old_value": "nan",
+          "path": "row[164].d_CA_logPO"
+        },
+        {
+          "category": "portability-only",
+          "new_value": "null",
+          "old_value": "nan",
+          "path": "row[164].dlogPE_A"
+        },
+        {
+          "category": "portability-only",
+          "new_value": "null",
+          "old_value": "nan",
+          "path": "row[164].dlogPE_C"
+        },
+        {
+          "category": "portability-only",
+          "new_value": "null",
+          "old_value": "nan",
+          "path": "row[164].dlogPO_A"
+        },
+        {
+          "category": "portability-only",
+          "new_value": "null",
+          "old_value": "nan",
+          "path": "row[164].dlogPO_C"
+        },
+        {
+          "category": "portability-only",
+          "new_value": "null",
+          "old_value": "nan",
+          "path": "row[164].primary_base_logodds_residual"
+        },
+        {
+          "category": "portability-only",
+          "new_value": "null",
+          "old_value": "nan",
+          "path": "row[164].primary_delta_m_from_logodds_A"
+        },
+        {
+          "category": "portability-only",
+          "new_value": "null",
+          "old_value": "nan",
+          "path": "row[164].primary_delta_m_from_logodds_C"
+        },
+        {
+          "category": "portability-only",
+          "new_value": "null",
+          "old_value": "nan",
+          "path": "row[164].primary_delta_m_residual_A"
+        },
+        {
+          "category": "portability-only",
+          "new_value": "null",
+          "old_value": "nan",
+          "path": "row[164].primary_delta_m_residual_C"
+        },
+        {
+          "category": "portability-only",
+          "new_value": "null",
+          "old_value": "nan",
+          "path": "row[165].P_E_base"
+        },
+        {
+          "category": "portability-only",
+          "new_value": "null",
+          "old_value": "nan",
+          "path": "row[165].P_E_patch_A"
+        },
+        {
+          "category": "portability-only",
+          "new_value": "null",
+          "old_value": "nan",
+          "path": "row[165].P_E_patch_C"
+        },
+        {
+          "category": "portability-only",
+          "new_value": "null",
+          "old_value": "nan",
+          "path": "row[165].P_O_base"
+        },
+        {
+          "category": "portability-only",
+          "new_value": "null",
+          "old_value": "nan",
+          "path": "row[165].P_O_patch_A"
+        },
+        {
+          "category": "portability-only",
+          "new_value": "null",
+          "old_value": "nan",
+          "path": "row[165].P_O_patch_C"
+        },
+        {
+          "category": "portability-only",
+          "new_value": "null",
+          "old_value": "nan",
+          "path": "row[165].P_rest_base"
+        },
+        {
+          "category": "portability-only",
+          "new_value": "null",
+          "old_value": "nan",
+          "path": "row[165].P_rest_patch_A"
+        },
+        {
+          "category": "portability-only",
+          "new_value": "null",
+          "old_value": "nan",
+          "path": "row[165].P_rest_patch_C"
+        },
+        {
+          "category": "portability-only",
+          "new_value": "null",
+          "old_value": "nan",
+          "path": "row[165].dPE_A"
+        },
+        {
+          "category": "portability-only",
+          "new_value": "null",
+          "old_value": "nan",
+          "path": "row[165].dPE_C"
+        },
+        {
+          "category": "portability-only",
+          "new_value": "null",
+          "old_value": "nan",
+          "path": "row[165].dPO_A"
+        },
+        {
+          "category": "portability-only",
+          "new_value": "null",
+          "old_value": "nan",
+          "path": "row[165].dPO_C"
+        },
+        {
+          "category": "portability-only",
+          "new_value": "null",
+          "old_value": "nan",
+          "path": "row[165].dPrest_A"
+        },
+        {
+          "category": "portability-only",
+          "new_value": "null",
+          "old_value": "nan",
+          "path": "row[165].dPrest_C"
+        },
+        {
+          "category": "portability-only",
+          "new_value": "null",
+          "old_value": "nan",
+          "path": "row[165].d_CA_logPE"
+        },
+        {
+          "category": "portability-only",
+          "new_value": "null",
+          "old_value": "nan",
+          "path": "row[165].d_CA_logPO"
+        },
+        {
+          "category": "portability-only",
+          "new_value": "null",
+          "old_value": "nan",
+          "path": "row[165].dlogPE_A"
+        },
+        {
+          "category": "portability-only",
+          "new_value": "null",
+          "old_value": "nan",
+          "path": "row[165].dlogPE_C"
+        },
+        {
+          "category": "portability-only",
+          "new_value": "null",
+          "old_value": "nan",
+          "path": "row[165].dlogPO_A"
+        },
+        {
+          "category": "portability-only",
+          "new_value": "null",
+          "old_value": "nan",
+          "path": "row[165].dlogPO_C"
+        },
+        {
+          "category": "portability-only",
+          "new_value": "null",
+          "old_value": "nan",
+          "path": "row[165].primary_base_logodds_residual"
+        },
+        {
+          "category": "portability-only",
+          "new_value": "null",
+          "old_value": "nan",
+          "path": "row[165].primary_delta_m_from_logodds_A"
+        },
+        {
+          "category": "portability-only",
+          "new_value": "null",
+          "old_value": "nan",
+          "path": "row[165].primary_delta_m_from_logodds_C"
+        },
+        {
+          "category": "portability-only",
+          "new_value": "null",
+          "old_value": "nan",
+          "path": "row[165].primary_delta_m_residual_A"
+        },
+        {
+          "category": "portability-only",
+          "new_value": "null",
+          "old_value": "nan",
+          "path": "row[165].primary_delta_m_residual_C"
+        },
+        {
+          "category": "portability-only",
+          "new_value": "null",
+          "old_value": "nan",
+          "path": "row[166].P_E_base"
+        },
+        {
+          "category": "portability-only",
+          "new_value": "null",
+          "old_value": "nan",
+          "path": "row[166].P_E_patch_A"
+        },
+        {
+          "category": "portability-only",
+          "new_value": "null",
+          "old_value": "nan",
+          "path": "row[166].P_E_patch_C"
+        },
+        {
+          "category": "portability-only",
+          "new_value": "null",
+          "old_value": "nan",
+          "path": "row[166].P_O_base"
+        },
+        {
+          "category": "portability-only",
+          "new_value": "null",
+          "old_value": "nan",
+          "path": "row[166].P_O_patch_A"
+        },
+        {
+          "category": "portability-only",
+          "new_value": "null",
+          "old_value": "nan",
+          "path": "row[166].P_O_patch_C"
+        },
+        {
+          "category": "portability-only",
+          "new_value": "null",
+          "old_value": "nan",
+          "path": "row[166].P_rest_base"
+        },
+        {
+          "category": "portability-only",
+          "new_value": "null",
+          "old_value": "nan",
+          "path": "row[166].P_rest_patch_A"
+        },
+        {
+          "category": "portability-only",
+          "new_value": "null",
+          "old_value": "nan",
+          "path": "row[166].P_rest_patch_C"
+        },
+        {
+          "category": "portability-only",
+          "new_value": "null",
+          "old_value": "nan",
+          "path": "row[166].dPE_A"
+        },
+        {
+          "category": "portability-only",
+          "new_value": "null",
+          "old_value": "nan",
+          "path": "row[166].dPE_C"
+        },
+        {
+          "category": "portability-only",
+          "new_value": "null",
+          "old_value": "nan",
+          "path": "row[166].dPO_A"
+        },
+        {
+          "category": "portability-only",
+          "new_value": "null",
+          "old_value": "nan",
+          "path": "row[166].dPO_C"
+        },
+        {
+          "category": "portability-only",
+          "new_value": "null",
+          "old_value": "nan",
+          "path": "row[166].dPrest_A"
+        },
+        {
+          "category": "portability-only",
+          "new_value": "null",
+          "old_value": "nan",
+          "path": "row[166].dPrest_C"
+        },
+        {
+          "category": "portability-only",
+          "new_value": "null",
+          "old_value": "nan",
+          "path": "row[166].d_CA_logPE"
+        },
+        {
+          "category": "portability-only",
+          "new_value": "null",
+          "old_value": "nan",
+          "path": "row[166].d_CA_logPO"
+        },
+        {
+          "category": "portability-only",
+          "new_value": "null",
+          "old_value": "nan",
+          "path": "row[166].dlogPE_A"
+        },
+        {
+          "category": "portability-only",
+          "new_value": "null",
+          "old_value": "nan",
+          "path": "row[166].dlogPE_C"
+        },
+        {
+          "category": "portability-only",
+          "new_value": "null",
+          "old_value": "nan",
+          "path": "row[166].dlogPO_A"
+        },
+        {
+          "category": "portability-only",
+          "new_value": "null",
+          "old_value": "nan",
+          "path": "row[166].dlogPO_C"
+        },
+        {
+          "category": "portability-only",
+          "new_value": "null",
+          "old_value": "nan",
+          "path": "row[166].primary_base_logodds_residual"
+        },
+        {
+          "category": "portability-only",
+          "new_value": "null",
+          "old_value": "nan",
+          "path": "row[166].primary_delta_m_from_logodds_A"
+        },
+        {
+          "category": "portability-only",
+          "new_value": "null",
+          "old_value": "nan",
+          "path": "row[166].primary_delta_m_from_logodds_C"
+        },
+        {
+          "category": "portability-only",
+          "new_value": "null",
+          "old_value": "nan",
+          "path": "row[166].primary_delta_m_residual_A"
+        },
+        {
+          "category": "portability-only",
+          "new_value": "null",
+          "old_value": "nan",
+          "path": "row[166].primary_delta_m_residual_C"
+        },
+        {
+          "category": "portability-only",
+          "new_value": "null",
+          "old_value": "nan",
+          "path": "row[167].P_E_base"
+        },
+        {
+          "category": "portability-only",
+          "new_value": "null",
+          "old_value": "nan",
+          "path": "row[167].P_E_patch_A"
+        },
+        {
+          "category": "portability-only",
+          "new_value": "null",
+          "old_value": "nan",
+          "path": "row[167].P_E_patch_C"
+        },
+        {
+          "category": "portability-only",
+          "new_value": "null",
+          "old_value": "nan",
+          "path": "row[167].P_O_base"
+        },
+        {
+          "category": "portability-only",
+          "new_value": "null",
+          "old_value": "nan",
+          "path": "row[167].P_O_patch_A"
+        },
+        {
+          "category": "portability-only",
+          "new_value": "null",
+          "old_value": "nan",
+          "path": "row[167].P_O_patch_C"
+        },
+        {
+          "category": "portability-only",
+          "new_value": "null",
+          "old_value": "nan",
+          "path": "row[167].P_rest_base"
+        },
+        {
+          "category": "portability-only",
+          "new_value": "null",
+          "old_value": "nan",
+          "path": "row[167].P_rest_patch_A"
+        },
+        {
+          "category": "portability-only",
+          "new_value": "null",
+          "old_value": "nan",
+          "path": "row[167].P_rest_patch_C"
+        },
+        {
+          "category": "portability-only",
+          "new_value": "null",
+          "old_value": "nan",
+          "path": "row[167].dPE_A"
+        },
+        {
+          "category": "portability-only",
+          "new_value": "null",
+          "old_value": "nan",
+          "path": "row[167].dPE_C"
+        },
+        {
+          "category": "portability-only",
+          "new_value": "null",
+          "old_value": "nan",
+          "path": "row[167].dPO_A"
+        },
+        {
+          "category": "portability-only",
+          "new_value": "null",
+          "old_value": "nan",
+          "path": "row[167].dPO_C"
+        },
+        {
+          "category": "portability-only",
+          "new_value": "null",
+          "old_value": "nan",
+          "path": "row[167].dPrest_A"
+        },
+        {
+          "category": "portability-only",
+          "new_value": "null",
+          "old_value": "nan",
+          "path": "row[167].dPrest_C"
+        },
+        {
+          "category": "portability-only",
+          "new_value": "null",
+          "old_value": "nan",
+          "path": "row[167].d_CA_logPE"
+        },
+        {
+          "category": "portability-only",
+          "new_value": "null",
+          "old_value": "nan",
+          "path": "row[167].d_CA_logPO"
+        },
+        {
+          "category": "portability-only",
+          "new_value": "null",
+          "old_value": "nan",
+          "path": "row[167].dlogPE_A"
+        },
+        {
+          "category": "portability-only",
+          "new_value": "null",
+          "old_value": "nan",
+          "path": "row[167].dlogPE_C"
+        },
+        {
+          "category": "portability-only",
+          "new_value": "null",
+          "old_value": "nan",
+          "path": "row[167].dlogPO_A"
+        },
+        {
+          "category": "portability-only",
+          "new_value": "null",
+          "old_value": "nan",
+          "path": "row[167].dlogPO_C"
+        },
+        {
+          "category": "portability-only",
+          "new_value": "null",
+          "old_value": "nan",
+          "path": "row[167].primary_base_logodds_residual"
+        },
+        {
+          "category": "portability-only",
+          "new_value": "null",
+          "old_value": "nan",
+          "path": "row[167].primary_delta_m_from_logodds_A"
+        },
+        {
+          "category": "portability-only",
+          "new_value": "null",
+          "old_value": "nan",
+          "path": "row[167].primary_delta_m_from_logodds_C"
+        },
+        {
+          "category": "portability-only",
+          "new_value": "null",
+          "old_value": "nan",
+          "path": "row[167].primary_delta_m_residual_A"
+        },
+        {
+          "category": "portability-only",
+          "new_value": "null",
+          "old_value": "nan",
+          "path": "row[167].primary_delta_m_residual_C"
+        }
+      ],
+      "kind": "csv",
+      "path": "results/clt_raw_comparability_l4_l8_l12_controls_full.csv"
+    },
+    {
+      "changes": [],
+      "kind": "csv",
+      "path": "results/disamb_followups_20260227T123857Z/analysis/bootstrap_stability_l12_k20.csv"
+    },
+    {
+      "changes": [],
+      "kind": "csv",
+      "path": "results/disamb_followups_20260227T123857Z/analysis/feature_recurrence_l12_k20.csv"
+    },
+    {
+      "changes": [],
+      "kind": "csv",
+      "path": "results/disamb_followups_20260227T123857Z/analysis/feature_recurrence_l12_k20_long.csv"
+    },
+    {
+      "changes": [],
+      "kind": "csv",
+      "path": "results/disamb_followups_20260227T123857Z/analysis/k_sweep_separation_l4_l8_l12.csv"
+    },
+    {
+      "changes": [],
+      "kind": "csv",
+      "path": "results/disamb_followups_20260227T123857Z/analysis/scale_sweep_l12_k20.csv"
+    },
+    {
+      "changes": [],
+      "kind": "csv",
+      "path": "results/disamb_followups_20260227T123857Z/analysis/split_seed_pairwise_jaccard_l12_k20.csv"
+    },
+    {
+      "changes": [],
+      "kind": "csv",
+      "path": "results/disamb_followups_20260227T123857Z/analysis/split_seed_stability_l12_k20.csv"
+    },
+    {
+      "changes": [],
+      "kind": "csv",
+      "path": "results/disamb_followups_20260227T123857Z/analysis/subset_stability_l12_k20.csv"
+    },
+    {
+      "changes": [],
+      "kind": "csv",
+      "path": "results/mom_option_c_bigrun_fp16_google_gemma-2-2b-it/head_ablation_summary.csv"
+    },
+    {
+      "changes": [],
+      "kind": "csv",
+      "path": "results/mom_option_c_bigrun_fp16_google_gemma-2-2b-it/head_scores.csv"
+    },
+    {
+      "changes": [],
+      "kind": "csv",
+      "path": "results/mom_option_c_bigrun_fp16_google_gemma-2-2b/feature_families_summary.csv"
+    },
+    {
+      "changes": [],
+      "kind": "csv",
+      "path": "results/mom_option_c_bigrun_fp16_google_gemma-2-2b/feature_selectivity.csv"
+    },
+    {
+      "changes": [],
+      "kind": "csv",
+      "path": "results/mom_option_c_bigrun_fp16_google_gemma-2-2b/head_ablation_rows.csv"
+    },
+    {
+      "changes": [],
+      "kind": "csv",
+      "path": "results/mom_option_c_bigrun_fp16_google_gemma-2-2b/head_ablation_summary.csv"
+    },
+    {
+      "changes": [],
+      "kind": "csv",
+      "path": "results/mom_option_c_bigrun_fp16_google_gemma-2-2b/head_qk_patterns.csv"
+    },
+    {
+      "changes": [],
+      "kind": "csv",
+      "path": "results/mom_option_c_bigrun_fp16_google_gemma-2-2b/head_scores.csv"
+    },
+    {
+      "changes": [
+        {
+          "category": "provenance-semantic",
+          "new_value": "[\"aom_eval.py\", \"--model_name_or_path\", \"google/gemma-2-2b\", \"--local_files_only\", \"--device\", \"auto\", \"--torch_dtype\", \"float32\", \"--attn_implementation\", \"eager\", \"--disamb_path\", \"data_paper_hardened_v2/disamb_pairs.jsonl\", \"--cf_path\", \"data_paper_hardened_v2/counterfactual.jsonl\", \"--coh_path\", \"data_paper_hardened_v2/coherence.jsonl\", \"--dataset_manifest_path\", \"data_paper_hardened_v2/DATASET_MANIFEST.json\", \"--bootstrap_n\", \"1000\", \"--bootstrap_seed\", \"42\", \"--ci\", \"0.95\", \"--seed\", \"20260224\", \"--run_patching\", \"--run_patching_specificity\", \"--run_sae_patching\", \"--sae_repo\", \"hf://google/gemma-scope-2b-pt-res@fd571b47c1c64851e9b1989792367b9babb4af63\", \"--sae_width\", \"16k\", \"--sae_run_name\", \"average_l0_457\", \"--sae_layers\", \"24\", \"--sae_scale\", \"1.0\", \"--strict_finite\", \"--strict_metrics\", \"--protocol_path\", \"configs/mom_flagship_protocol.yaml\", \"--protocol_sha256\", \"4628bda437c1e99ab342a90394073849aa7b081dcb677202b23b7bfc57ba1dfd\", \"--require_git\", \"--csv_path\", \"results/mom_overnight_gemma2b_sae_20260224T165425Z/gemma2b_sae.csv\"]",
+          "old_value": "[\"aom_eval.py\", \"--model_name_or_path\", \"google/gemma-2-2b\", \"--local_files_only\", \"--device\", \"auto\", \"--torch_dtype\", \"float32\", \"--attn_implementation\", \"eager\", \"--disamb_path\", \"data_paper_hardened_v2/disamb_pairs.jsonl\", \"--cf_path\", \"data_paper_hardened_v2/counterfactual.jsonl\", \"--coh_path\", \"data_paper_hardened_v2/coherence.jsonl\", \"--dataset_manifest_path\", \"data_paper_hardened_v2/DATASET_MANIFEST.json\", \"--bootstrap_n\", \"1000\", \"--bootstrap_seed\", \"42\", \"--ci\", \"0.95\", \"--seed\", \"20260224\", \"--run_patching\", \"--run_patching_specificity\", \"--run_sae_patching\", \"--sae_repo\", \"hf://google/gemma-scope-2b-pt-res@fd571b47c1c64851e9b1989792367b9babb4af63\", \"--sae_width\", \"16k\", \"--sae_run_name\", \"average_l0_457\", \"--sae_layers\", \"24\", \"--sae_scale\", \"1.0\", \"--strict_finite\", \"--strict_metrics\", \"--protocol_path\", \"configs/mom_flagship_protocol.yaml\", \"--protocol_sha256\", \"4628bda437c1e99ab342a90394073849aa7b081dcb677202b23b7bfc57ba1dfd\", \"--require_git\", \"--csv_path\", \"results/mom_overnight_gemma2b_sae_20260224T165425Z/gemma2b_sae.csv\"]",
+          "path": "row[0].argv_redacted_json"
+        },
+        {
+          "category": "hash-by-dependency",
+          "new_value": "eede9b81c17358eae18eecfa45bb6ebe7e2304ebdac8b9dc81ecec6ba0701946",
+          "old_value": "2d0ee8a00024a4dc710d623ea565f972aba1116e2daf7f4d7cab9931a8bd727b",
+          "path": "row[0].argv_sha256"
+        },
+        {
+          "category": "path-only",
+          "new_value": "data_paper_hardened_v2/counterfactual.jsonl",
+          "old_value": "data_paper_hardened_v2/counterfactual.jsonl",
+          "path": "row[0].cf_path"
+        },
+        {
+          "category": "path-only",
+          "new_value": "data_paper_hardened_v2/coherence.jsonl",
+          "old_value": "data_paper_hardened_v2/coherence.jsonl",
+          "path": "row[0].coh_path"
+        },
+        {
+          "category": "portability-only",
+          "new_value": "null",
+          "old_value": "nan",
+          "path": "row[0].cpt_spec_mean_signed_delta_same_index"
+        },
+        {
+          "category": "portability-only",
+          "new_value": "null",
+          "old_value": "nan",
+          "path": "row[0].cpt_spec_mean_signed_delta_same_index_ci_high"
+        },
+        {
+          "category": "portability-only",
+          "new_value": "null",
+          "old_value": "nan",
+          "path": "row[0].cpt_spec_mean_signed_delta_same_index_ci_low"
+        },
+        {
+          "category": "portability-only",
+          "new_value": "null",
+          "old_value": "nan",
+          "path": "row[0].cpt_spec_mean_signed_delta_same_index_relaxed"
+        },
+        {
+          "category": "portability-only",
+          "new_value": "null",
+          "old_value": "nan",
+          "path": "row[0].cpt_spec_mean_signed_delta_same_index_relaxed_ci_high"
+        },
+        {
+          "category": "portability-only",
+          "new_value": "null",
+          "old_value": "nan",
+          "path": "row[0].cpt_spec_mean_signed_delta_same_index_relaxed_ci_low"
+        },
+        {
+          "category": "portability-only",
+          "new_value": "null",
+          "old_value": "nan",
+          "path": "row[0].cpt_spec_win_rate_signed_same_index"
+        },
+        {
+          "category": "portability-only",
+          "new_value": "null",
+          "old_value": "nan",
+          "path": "row[0].cpt_spec_win_rate_signed_same_index_ci_high"
+        },
+        {
+          "category": "portability-only",
+          "new_value": "null",
+          "old_value": "nan",
+          "path": "row[0].cpt_spec_win_rate_signed_same_index_ci_low"
+        },
+        {
+          "category": "portability-only",
+          "new_value": "null",
+          "old_value": "nan",
+          "path": "row[0].cpt_spec_win_rate_signed_same_index_relaxed"
+        },
+        {
+          "category": "portability-only",
+          "new_value": "null",
+          "old_value": "nan",
+          "path": "row[0].cpt_spec_win_rate_signed_same_index_relaxed_ci_high"
+        },
+        {
+          "category": "portability-only",
+          "new_value": "null",
+          "old_value": "nan",
+          "path": "row[0].cpt_spec_win_rate_signed_same_index_relaxed_ci_low"
+        },
+        {
+          "category": "hash-by-dependency",
+          "new_value": "deb9b00c165a9b8fafe9a7aa9080bdb1fc7f5d637ad9c148e825d2155a0e4a31",
+          "old_value": "1330ba8666f970f56905d4a092cb488e3246e4a43dcfa9dd22329034df5ce853",
+          "path": "row[0].dataset_bundle_manifest_sha256"
+        },
+        {
+          "category": "path-only",
+          "new_value": "data_paper_hardened_v2/DATASET_MANIFEST.json",
+          "old_value": "data_paper_hardened_v2/DATASET_MANIFEST.json",
+          "path": "row[0].dataset_manifest_path"
+        },
+        {
+          "category": "portability-only",
+          "new_value": "null",
+          "old_value": "nan",
+          "path": "row[0].disamb_accuracy_cue_vulnerable"
+        },
+        {
+          "category": "portability-only",
+          "new_value": "null",
+          "old_value": "nan",
+          "path": "row[0].disamb_accuracy_cue_vulnerable_ci_high"
+        },
+        {
+          "category": "portability-only",
+          "new_value": "null",
+          "old_value": "nan",
+          "path": "row[0].disamb_accuracy_cue_vulnerable_ci_low"
+        },
+        {
+          "category": "portability-only",
+          "new_value": "null",
+          "old_value": "nan",
+          "path": "row[0].disamb_accuracy_overlap_high"
+        },
+        {
+          "category": "portability-only",
+          "new_value": "null",
+          "old_value": "nan",
+          "path": "row[0].disamb_accuracy_overlap_high_ci_high"
+        },
+        {
+          "category": "portability-only",
+          "new_value": "null",
+          "old_value": "nan",
+          "path": "row[0].disamb_accuracy_overlap_high_ci_low"
+        },
+        {
+          "category": "portability-only",
+          "new_value": "null",
+          "old_value": "nan",
+          "path": "row[0].disamb_mean_margin_cue_vulnerable"
+        },
+        {
+          "category": "portability-only",
+          "new_value": "null",
+          "old_value": "nan",
+          "path": "row[0].disamb_mean_margin_cue_vulnerable_ci_high"
+        },
+        {
+          "category": "portability-only",
+          "new_value": "null",
+          "old_value": "nan",
+          "path": "row[0].disamb_mean_margin_cue_vulnerable_ci_low"
+        },
+        {
+          "category": "portability-only",
+          "new_value": "null",
+          "old_value": "nan",
+          "path": "row[0].disamb_mean_margin_overlap_high"
+        },
+        {
+          "category": "portability-only",
+          "new_value": "null",
+          "old_value": "nan",
+          "path": "row[0].disamb_mean_margin_overlap_high_ci_high"
+        },
+        {
+          "category": "portability-only",
+          "new_value": "null",
+          "old_value": "nan",
+          "path": "row[0].disamb_mean_margin_overlap_high_ci_low"
+        },
+        {
+          "category": "path-only",
+          "new_value": "data_paper_hardened_v2/disamb_pairs.jsonl",
+          "old_value": "data_paper_hardened_v2/disamb_pairs.jsonl",
+          "path": "row[0].disamb_path"
+        },
+        {
+          "category": "path-only",
+          "new_value": "configs/mom_flagship_protocol.yaml",
+          "old_value": "configs/mom_flagship_protocol.yaml",
+          "path": "row[0].protocol_path"
+        },
+        {
+          "category": "provenance-semantic",
+          "new_value": "hf://google/gemma-scope-2b-pt-res@fd571b47c1c64851e9b1989792367b9babb4af63",
+          "old_value": "hf://google/gemma-scope-2b-pt-res@fd571b47c1c64851e9b1989792367b9babb4af63",
+          "path": "row[0].sae_repo"
+        }
+      ],
+      "kind": "csv",
+      "path": "results/mom_overnight_gemma2b_sae_20260224T165425Z/gemma2b_sae.csv"
+    },
+    {
+      "changes": [
+        {
+          "category": "provenance-semantic",
+          "new_value": "[\"aom_eval.py\", \"--model_name_or_path\", \"hf://google/gemma-2-2b@c5ebcd40d208330abc697524c919956e692655cf\", \"--local_files_only\", \"--device\", \"auto\", \"--attn_implementation\", \"eager\", \"--disamb_path\", \"data/safety_disamb_pairs_v2_csd_ih.jsonl\", \"--cf_path\", \"data/counterfactual.jsonl\", \"--coh_path\", \"data/coherence.jsonl\", \"--run_clt_patching\", \"--clt_repo\", \"clt_bundles/gemma-scope-2b-pt-res_sweep_smoke\", \"--clt_layers\", \"4,8,12,16,20,24\", \"--clt_width\", \"16k\", \"--clt_scale\", \"1.0\", \"--bootstrap_n\", \"1000\", \"--bootstrap_seed\", \"42\", \"--seed\", \"42\", \"--csv_path\", \"results/paper_lock_20260226T042208Z/gemma2b_clt_6layer_safety_seed42.csv\"]",
+          "old_value": "[\"aom_eval.py\", \"--model_name_or_path\", \"hf://google/gemma-2-2b@c5ebcd40d208330abc697524c919956e692655cf\", \"--local_files_only\", \"--device\", \"auto\", \"--attn_implementation\", \"eager\", \"--disamb_path\", \"data/safety_disamb_pairs_v2_csd_ih.jsonl\", \"--cf_path\", \"data/counterfactual.jsonl\", \"--coh_path\", \"data/coherence.jsonl\", \"--run_clt_patching\", \"--clt_repo\", \"clt_bundles/gemma-scope-2b-pt-res_sweep_smoke\", \"--clt_layers\", \"4,8,12,16,20,24\", \"--clt_width\", \"16k\", \"--clt_scale\", \"1.0\", \"--bootstrap_n\", \"1000\", \"--bootstrap_seed\", \"42\", \"--seed\", \"42\", \"--csv_path\", \"results/paper_lock_20260226T042208Z/gemma2b_clt_6layer_safety_seed42.csv\"]",
+          "path": "row[0].argv_redacted_json"
+        },
+        {
+          "category": "hash-by-dependency",
+          "new_value": "fc879d15f66ee76bcbf4247a8666f8cf83755f15ff0950933135133f4d02ddd1",
+          "old_value": "cfb6f8e19e9cac5a02f6bd5be7bb474868be08fd0bc1c9f5dd1e7ca59d48c718",
+          "path": "row[0].argv_sha256"
+        },
+        {
+          "category": "portability-only",
+          "new_value": "null",
+          "old_value": "nan",
+          "path": "row[0].cf_graded_direction_accuracy"
+        },
+        {
+          "category": "portability-only",
+          "new_value": "null",
+          "old_value": "nan",
+          "path": "row[0].cf_graded_direction_accuracy_ci_high"
+        },
+        {
+          "category": "portability-only",
+          "new_value": "null",
+          "old_value": "nan",
+          "path": "row[0].cf_graded_direction_accuracy_ci_low"
+        },
+        {
+          "category": "portability-only",
+          "new_value": "null",
+          "old_value": "nan",
+          "path": "row[0].cf_label_accuracy_graded_items"
+        },
+        {
+          "category": "portability-only",
+          "new_value": "null",
+          "old_value": "nan",
+          "path": "row[0].cf_label_accuracy_graded_items_ci_high"
+        },
+        {
+          "category": "portability-only",
+          "new_value": "null",
+          "old_value": "nan",
+          "path": "row[0].cf_label_accuracy_graded_items_ci_low"
+        },
+        {
+          "category": "portability-only",
+          "new_value": "null",
+          "old_value": "nan",
+          "path": "row[0].cf_label_accuracy_invariant_items"
+        },
+        {
+          "category": "portability-only",
+          "new_value": "null",
+          "old_value": "nan",
+          "path": "row[0].cf_label_accuracy_invariant_items_ci_high"
+        },
+        {
+          "category": "portability-only",
+          "new_value": "null",
+          "old_value": "nan",
+          "path": "row[0].cf_label_accuracy_invariant_items_ci_low"
+        },
+        {
+          "category": "portability-only",
+          "new_value": "null",
+          "old_value": "nan",
+          "path": "row[0].cf_mean_abs_shift_pref_graded_items"
+        },
+        {
+          "category": "portability-only",
+          "new_value": "null",
+          "old_value": "nan",
+          "path": "row[0].cf_mean_abs_shift_pref_graded_items_ci_high"
+        },
+        {
+          "category": "portability-only",
+          "new_value": "null",
+          "old_value": "nan",
+          "path": "row[0].cf_mean_abs_shift_pref_graded_items_ci_low"
+        },
+        {
+          "category": "portability-only",
+          "new_value": "null",
+          "old_value": "nan",
+          "path": "row[0].cf_mean_abs_shift_pref_invariant_items"
+        },
+        {
+          "category": "portability-only",
+          "new_value": "null",
+          "old_value": "nan",
+          "path": "row[0].cf_mean_abs_shift_pref_invariant_items_ci_high"
+        },
+        {
+          "category": "portability-only",
+          "new_value": "null",
+          "old_value": "nan",
+          "path": "row[0].cf_mean_abs_shift_pref_invariant_items_ci_low"
+        },
+        {
+          "category": "portability-only",
+          "new_value": "null",
+          "old_value": "nan",
+          "path": "row[0].cf_mean_shift_l1_graded_items"
+        },
+        {
+          "category": "portability-only",
+          "new_value": "null",
+          "old_value": "nan",
+          "path": "row[0].cf_mean_shift_l1_graded_items_ci_high"
+        },
+        {
+          "category": "portability-only",
+          "new_value": "null",
+          "old_value": "nan",
+          "path": "row[0].cf_mean_shift_l1_graded_items_ci_low"
+        },
+        {
+          "category": "portability-only",
+          "new_value": "null",
+          "old_value": "nan",
+          "path": "row[0].cf_mean_shift_l1_invariant_items"
+        },
+        {
+          "category": "portability-only",
+          "new_value": "null",
+          "old_value": "nan",
+          "path": "row[0].cf_mean_shift_l1_invariant_items_ci_high"
+        },
+        {
+          "category": "portability-only",
+          "new_value": "null",
+          "old_value": "nan",
+          "path": "row[0].cf_mean_shift_l1_invariant_items_ci_low"
+        },
+        {
+          "category": "path-only",
+          "new_value": "data/counterfactual.jsonl",
+          "old_value": "data/counterfactual.jsonl",
+          "path": "row[0].cf_path"
+        },
+        {
+          "category": "path-only",
+          "new_value": "clt_bundles/gemma-scope-2b-pt-res_sweep_smoke/layer_12/width_16k/average_l0_176/cfg.json",
+          "old_value": "clt_bundles/gemma-scope-2b-pt-res_sweep_smoke/layer_12/width_16k/average_l0_176/cfg.json",
+          "path": "row[0].clt_cfg_path_layer_12"
+        },
+        {
+          "category": "path-only",
+          "new_value": "clt_bundles/gemma-scope-2b-pt-res_sweep_smoke/layer_16/width_16k/average_l0_78/cfg.json",
+          "old_value": "clt_bundles/gemma-scope-2b-pt-res_sweep_smoke/layer_16/width_16k/average_l0_78/cfg.json",
+          "path": "row[0].clt_cfg_path_layer_16"
+        },
+        {
+          "category": "path-only",
+          "new_value": "clt_bundles/gemma-scope-2b-pt-res_sweep_smoke/layer_20/width_16k/average_l0_71/cfg.json",
+          "old_value": "clt_bundles/gemma-scope-2b-pt-res_sweep_smoke/layer_20/width_16k/average_l0_71/cfg.json",
+          "path": "row[0].clt_cfg_path_layer_20"
+        },
+        {
+          "category": "path-only",
+          "new_value": "clt_bundles/gemma-scope-2b-pt-res_sweep_smoke/layer_24/width_16k/average_l0_73/cfg.json",
+          "old_value": "clt_bundles/gemma-scope-2b-pt-res_sweep_smoke/layer_24/width_16k/average_l0_73/cfg.json",
+          "path": "row[0].clt_cfg_path_layer_24"
+        },
+        {
+          "category": "path-only",
+          "new_value": "clt_bundles/gemma-scope-2b-pt-res_sweep_smoke/layer_4/width_16k/average_l0_60/cfg.json",
+          "old_value": "clt_bundles/gemma-scope-2b-pt-res_sweep_smoke/layer_4/width_16k/average_l0_60/cfg.json",
+          "path": "row[0].clt_cfg_path_layer_4"
+        },
+        {
+          "category": "path-only",
+          "new_value": "clt_bundles/gemma-scope-2b-pt-res_sweep_smoke/layer_8/width_16k/average_l0_71/cfg.json",
+          "old_value": "clt_bundles/gemma-scope-2b-pt-res_sweep_smoke/layer_8/width_16k/average_l0_71/cfg.json",
+          "path": "row[0].clt_cfg_path_layer_8"
+        },
+        {
+          "category": "path-only",
+          "new_value": "clt_bundles/gemma-scope-2b-pt-res_sweep_smoke/layer_12/width_16k/average_l0_176/params.npz",
+          "old_value": "clt_bundles/gemma-scope-2b-pt-res_sweep_smoke/layer_12/width_16k/average_l0_176/params.npz",
+          "path": "row[0].clt_params_path_layer_12"
+        },
+        {
+          "category": "path-only",
+          "new_value": "clt_bundles/gemma-scope-2b-pt-res_sweep_smoke/layer_16/width_16k/average_l0_78/params.npz",
+          "old_value": "clt_bundles/gemma-scope-2b-pt-res_sweep_smoke/layer_16/width_16k/average_l0_78/params.npz",
+          "path": "row[0].clt_params_path_layer_16"
+        },
+        {
+          "category": "path-only",
+          "new_value": "clt_bundles/gemma-scope-2b-pt-res_sweep_smoke/layer_20/width_16k/average_l0_71/params.npz",
+          "old_value": "clt_bundles/gemma-scope-2b-pt-res_sweep_smoke/layer_20/width_16k/average_l0_71/params.npz",
+          "path": "row[0].clt_params_path_layer_20"
+        },
+        {
+          "category": "path-only",
+          "new_value": "clt_bundles/gemma-scope-2b-pt-res_sweep_smoke/layer_24/width_16k/average_l0_73/params.npz",
+          "old_value": "clt_bundles/gemma-scope-2b-pt-res_sweep_smoke/layer_24/width_16k/average_l0_73/params.npz",
+          "path": "row[0].clt_params_path_layer_24"
+        },
+        {
+          "category": "path-only",
+          "new_value": "clt_bundles/gemma-scope-2b-pt-res_sweep_smoke/layer_4/width_16k/average_l0_60/params.npz",
+          "old_value": "clt_bundles/gemma-scope-2b-pt-res_sweep_smoke/layer_4/width_16k/average_l0_60/params.npz",
+          "path": "row[0].clt_params_path_layer_4"
+        },
+        {
+          "category": "path-only",
+          "new_value": "clt_bundles/gemma-scope-2b-pt-res_sweep_smoke/layer_8/width_16k/average_l0_71/params.npz",
+          "old_value": "clt_bundles/gemma-scope-2b-pt-res_sweep_smoke/layer_8/width_16k/average_l0_71/params.npz",
+          "path": "row[0].clt_params_path_layer_8"
+        },
+        {
+          "category": "provenance-semantic",
+          "new_value": "clt_bundles/gemma-scope-2b-pt-res_sweep_smoke",
+          "old_value": "clt_bundles/gemma-scope-2b-pt-res_sweep_smoke",
+          "path": "row[0].clt_repo"
+        },
+        {
+          "category": "path-only",
+          "new_value": "data/coherence.jsonl",
+          "old_value": "data/coherence.jsonl",
+          "path": "row[0].coh_path"
+        },
+        {
+          "category": "path-only",
+          "new_value": "data/safety_disamb_pairs_v2_csd_ih.jsonl",
+          "old_value": "data/safety_disamb_pairs_v2_csd_ih.jsonl",
+          "path": "row[0].disamb_path"
+        },
+        {
+          "category": "provenance-semantic",
+          "new_value": "hf://google/gemma-2-2b@c5ebcd40d208330abc697524c919956e692655cf",
+          "old_value": "hf://google/gemma-2-2b@c5ebcd40d208330abc697524c919956e692655cf",
+          "path": "row[0].model"
+        }
+      ],
+      "kind": "csv",
+      "path": "results/paper_lock_20260226T042208Z/gemma2b_clt_6layer_safety_seed42.csv"
+    },
+    {
+      "changes": [
+        {
+          "category": "provenance-semantic",
+          "new_value": "[\"aom_eval.py\", \"--model_name_or_path\", \"google/gemma-2-2b-it\", \"--device\", \"auto\", \"--attn_implementation\", \"eager\", \"--disamb_path\", \"data/safety_disamb_pairs_v2_csd_ih.jsonl\", \"--cf_path\", \"data/counterfactual.jsonl\", \"--coh_path\", \"data/coherence.jsonl\", \"--bootstrap_n\", \"1000\", \"--bootstrap_seed\", \"42\", \"--seed\", \"42\", \"--csv_path\", \"results/safety_it_20260226T074644Z/gemma2b_it_safety_baseline_seed42.csv\"]",
+          "old_value": "[\"aom_eval.py\", \"--model_name_or_path\", \"google/gemma-2-2b-it\", \"--device\", \"auto\", \"--attn_implementation\", \"eager\", \"--disamb_path\", \"data/safety_disamb_pairs_v2_csd_ih.jsonl\", \"--cf_path\", \"data/counterfactual.jsonl\", \"--coh_path\", \"data/coherence.jsonl\", \"--bootstrap_n\", \"1000\", \"--bootstrap_seed\", \"42\", \"--seed\", \"42\", \"--csv_path\", \"results/safety_it_20260226T074644Z/gemma2b_it_safety_baseline_seed42.csv\"]",
+          "path": "row[0].argv_redacted_json"
+        },
+        {
+          "category": "hash-by-dependency",
+          "new_value": "8370d769497227b9efc46dcb11933fa52b52fd8a6ecfad3a9100d4e6921340fd",
+          "old_value": "58a9dfee1edbc37cdd8bea9408af9267e6d684c5c2b185348022b53cf32e45b9",
+          "path": "row[0].argv_sha256"
+        },
+        {
+          "category": "portability-only",
+          "new_value": "null",
+          "old_value": "nan",
+          "path": "row[0].cf_graded_direction_accuracy"
+        },
+        {
+          "category": "portability-only",
+          "new_value": "null",
+          "old_value": "nan",
+          "path": "row[0].cf_graded_direction_accuracy_ci_high"
+        },
+        {
+          "category": "portability-only",
+          "new_value": "null",
+          "old_value": "nan",
+          "path": "row[0].cf_graded_direction_accuracy_ci_low"
+        },
+        {
+          "category": "portability-only",
+          "new_value": "null",
+          "old_value": "nan",
+          "path": "row[0].cf_label_accuracy_graded_items"
+        },
+        {
+          "category": "portability-only",
+          "new_value": "null",
+          "old_value": "nan",
+          "path": "row[0].cf_label_accuracy_graded_items_ci_high"
+        },
+        {
+          "category": "portability-only",
+          "new_value": "null",
+          "old_value": "nan",
+          "path": "row[0].cf_label_accuracy_graded_items_ci_low"
+        },
+        {
+          "category": "portability-only",
+          "new_value": "null",
+          "old_value": "nan",
+          "path": "row[0].cf_label_accuracy_invariant_items"
+        },
+        {
+          "category": "portability-only",
+          "new_value": "null",
+          "old_value": "nan",
+          "path": "row[0].cf_label_accuracy_invariant_items_ci_high"
+        },
+        {
+          "category": "portability-only",
+          "new_value": "null",
+          "old_value": "nan",
+          "path": "row[0].cf_label_accuracy_invariant_items_ci_low"
+        },
+        {
+          "category": "portability-only",
+          "new_value": "null",
+          "old_value": "nan",
+          "path": "row[0].cf_mean_abs_shift_pref_graded_items"
+        },
+        {
+          "category": "portability-only",
+          "new_value": "null",
+          "old_value": "nan",
+          "path": "row[0].cf_mean_abs_shift_pref_graded_items_ci_high"
+        },
+        {
+          "category": "portability-only",
+          "new_value": "null",
+          "old_value": "nan",
+          "path": "row[0].cf_mean_abs_shift_pref_graded_items_ci_low"
+        },
+        {
+          "category": "portability-only",
+          "new_value": "null",
+          "old_value": "nan",
+          "path": "row[0].cf_mean_abs_shift_pref_invariant_items"
+        },
+        {
+          "category": "portability-only",
+          "new_value": "null",
+          "old_value": "nan",
+          "path": "row[0].cf_mean_abs_shift_pref_invariant_items_ci_high"
+        },
+        {
+          "category": "portability-only",
+          "new_value": "null",
+          "old_value": "nan",
+          "path": "row[0].cf_mean_abs_shift_pref_invariant_items_ci_low"
+        },
+        {
+          "category": "portability-only",
+          "new_value": "null",
+          "old_value": "nan",
+          "path": "row[0].cf_mean_shift_l1_graded_items"
+        },
+        {
+          "category": "portability-only",
+          "new_value": "null",
+          "old_value": "nan",
+          "path": "row[0].cf_mean_shift_l1_graded_items_ci_high"
+        },
+        {
+          "category": "portability-only",
+          "new_value": "null",
+          "old_value": "nan",
+          "path": "row[0].cf_mean_shift_l1_graded_items_ci_low"
+        },
+        {
+          "category": "portability-only",
+          "new_value": "null",
+          "old_value": "nan",
+          "path": "row[0].cf_mean_shift_l1_invariant_items"
+        },
+        {
+          "category": "portability-only",
+          "new_value": "null",
+          "old_value": "nan",
+          "path": "row[0].cf_mean_shift_l1_invariant_items_ci_high"
+        },
+        {
+          "category": "portability-only",
+          "new_value": "null",
+          "old_value": "nan",
+          "path": "row[0].cf_mean_shift_l1_invariant_items_ci_low"
+        },
+        {
+          "category": "path-only",
+          "new_value": "data/counterfactual.jsonl",
+          "old_value": "data/counterfactual.jsonl",
+          "path": "row[0].cf_path"
+        },
+        {
+          "category": "path-only",
+          "new_value": "data/coherence.jsonl",
+          "old_value": "data/coherence.jsonl",
+          "path": "row[0].coh_path"
+        },
+        {
+          "category": "path-only",
+          "new_value": "data/safety_disamb_pairs_v2_csd_ih.jsonl",
+          "old_value": "data/safety_disamb_pairs_v2_csd_ih.jsonl",
+          "path": "row[0].disamb_path"
+        }
+      ],
+      "kind": "csv",
+      "path": "results/safety_it_20260226T074644Z/gemma2b_it_safety_baseline_seed42.csv"
+    },
+    {
+      "changes": [
+        {
+          "category": "provenance-semantic",
+          "new_value": "[\"aom_eval.py\", \"--model_name_or_path\", \"hf://google/gemma-2-2b-it@299a8560bedf22ed1c72a8a11e7dce4a7f9f51f8\", \"--local_files_only\", \"--device\", \"auto\", \"--attn_implementation\", \"eager\", \"--disamb_path\", \"data/safety_disamb_pairs_v2_csd_ih_naturalistic.jsonl\", \"--cf_path\", \"data/counterfactual.jsonl\", \"--coh_path\", \"data/coherence.jsonl\", \"--bootstrap_n\", \"1000\", \"--bootstrap_seed\", \"42\", \"--seed\", \"42\", \"--csv_path\", \"results/safety_it_naturalistic/gemma2b_it_safety_baseline_seed42.csv\"]",
+          "old_value": "[\"aom_eval.py\", \"--model_name_or_path\", \"hf://google/gemma-2-2b-it@299a8560bedf22ed1c72a8a11e7dce4a7f9f51f8\", \"--local_files_only\", \"--device\", \"auto\", \"--attn_implementation\", \"eager\", \"--disamb_path\", \"data/safety_disamb_pairs_v2_csd_ih_naturalistic.jsonl\", \"--cf_path\", \"data/counterfactual.jsonl\", \"--coh_path\", \"data/coherence.jsonl\", \"--bootstrap_n\", \"1000\", \"--bootstrap_seed\", \"42\", \"--seed\", \"42\", \"--csv_path\", \"results/safety_it_naturalistic/gemma2b_it_safety_baseline_seed42.csv\"]",
+          "path": "row[0].argv_redacted_json"
+        },
+        {
+          "category": "hash-by-dependency",
+          "new_value": "4bc06d39a985f244f4a6e94344394736118e784957e524b35ea607a31aa42cae",
+          "old_value": "e3c9e221887997babc2611e61688616742327ffeda66c0b5dcb92d1425b1cc81",
+          "path": "row[0].argv_sha256"
+        },
+        {
+          "category": "portability-only",
+          "new_value": "null",
+          "old_value": "nan",
+          "path": "row[0].cf_graded_direction_accuracy"
+        },
+        {
+          "category": "portability-only",
+          "new_value": "null",
+          "old_value": "nan",
+          "path": "row[0].cf_graded_direction_accuracy_ci_high"
+        },
+        {
+          "category": "portability-only",
+          "new_value": "null",
+          "old_value": "nan",
+          "path": "row[0].cf_graded_direction_accuracy_ci_low"
+        },
+        {
+          "category": "portability-only",
+          "new_value": "null",
+          "old_value": "nan",
+          "path": "row[0].cf_label_accuracy_graded_items"
+        },
+        {
+          "category": "portability-only",
+          "new_value": "null",
+          "old_value": "nan",
+          "path": "row[0].cf_label_accuracy_graded_items_ci_high"
+        },
+        {
+          "category": "portability-only",
+          "new_value": "null",
+          "old_value": "nan",
+          "path": "row[0].cf_label_accuracy_graded_items_ci_low"
+        },
+        {
+          "category": "portability-only",
+          "new_value": "null",
+          "old_value": "nan",
+          "path": "row[0].cf_label_accuracy_invariant_items"
+        },
+        {
+          "category": "portability-only",
+          "new_value": "null",
+          "old_value": "nan",
+          "path": "row[0].cf_label_accuracy_invariant_items_ci_high"
+        },
+        {
+          "category": "portability-only",
+          "new_value": "null",
+          "old_value": "nan",
+          "path": "row[0].cf_label_accuracy_invariant_items_ci_low"
+        },
+        {
+          "category": "portability-only",
+          "new_value": "null",
+          "old_value": "nan",
+          "path": "row[0].cf_mean_abs_shift_pref_graded_items"
+        },
+        {
+          "category": "portability-only",
+          "new_value": "null",
+          "old_value": "nan",
+          "path": "row[0].cf_mean_abs_shift_pref_graded_items_ci_high"
+        },
+        {
+          "category": "portability-only",
+          "new_value": "null",
+          "old_value": "nan",
+          "path": "row[0].cf_mean_abs_shift_pref_graded_items_ci_low"
+        },
+        {
+          "category": "portability-only",
+          "new_value": "null",
+          "old_value": "nan",
+          "path": "row[0].cf_mean_abs_shift_pref_invariant_items"
+        },
+        {
+          "category": "portability-only",
+          "new_value": "null",
+          "old_value": "nan",
+          "path": "row[0].cf_mean_abs_shift_pref_invariant_items_ci_high"
+        },
+        {
+          "category": "portability-only",
+          "new_value": "null",
+          "old_value": "nan",
+          "path": "row[0].cf_mean_abs_shift_pref_invariant_items_ci_low"
+        },
+        {
+          "category": "portability-only",
+          "new_value": "null",
+          "old_value": "nan",
+          "path": "row[0].cf_mean_shift_l1_graded_items"
+        },
+        {
+          "category": "portability-only",
+          "new_value": "null",
+          "old_value": "nan",
+          "path": "row[0].cf_mean_shift_l1_graded_items_ci_high"
+        },
+        {
+          "category": "portability-only",
+          "new_value": "null",
+          "old_value": "nan",
+          "path": "row[0].cf_mean_shift_l1_graded_items_ci_low"
+        },
+        {
+          "category": "portability-only",
+          "new_value": "null",
+          "old_value": "nan",
+          "path": "row[0].cf_mean_shift_l1_invariant_items"
+        },
+        {
+          "category": "portability-only",
+          "new_value": "null",
+          "old_value": "nan",
+          "path": "row[0].cf_mean_shift_l1_invariant_items_ci_high"
+        },
+        {
+          "category": "portability-only",
+          "new_value": "null",
+          "old_value": "nan",
+          "path": "row[0].cf_mean_shift_l1_invariant_items_ci_low"
+        },
+        {
+          "category": "path-only",
+          "new_value": "data/counterfactual.jsonl",
+          "old_value": "data/counterfactual.jsonl",
+          "path": "row[0].cf_path"
+        },
+        {
+          "category": "path-only",
+          "new_value": "data/coherence.jsonl",
+          "old_value": "data/coherence.jsonl",
+          "path": "row[0].coh_path"
+        },
+        {
+          "category": "portability-only",
+          "new_value": "null",
+          "old_value": "nan",
+          "path": "row[0].disamb_accuracy_cue_vulnerable"
+        },
+        {
+          "category": "portability-only",
+          "new_value": "null",
+          "old_value": "nan",
+          "path": "row[0].disamb_accuracy_cue_vulnerable_ci_high"
+        },
+        {
+          "category": "portability-only",
+          "new_value": "null",
+          "old_value": "nan",
+          "path": "row[0].disamb_accuracy_cue_vulnerable_ci_low"
+        },
+        {
+          "category": "portability-only",
+          "new_value": "null",
+          "old_value": "nan",
+          "path": "row[0].disamb_mean_margin_cue_vulnerable"
+        },
+        {
+          "category": "portability-only",
+          "new_value": "null",
+          "old_value": "nan",
+          "path": "row[0].disamb_mean_margin_cue_vulnerable_ci_high"
+        },
+        {
+          "category": "portability-only",
+          "new_value": "null",
+          "old_value": "nan",
+          "path": "row[0].disamb_mean_margin_cue_vulnerable_ci_low"
+        },
+        {
+          "category": "path-only",
+          "new_value": "data/safety_disamb_pairs_v2_csd_ih_naturalistic.jsonl",
+          "old_value": "data/safety_disamb_pairs_v2_csd_ih_naturalistic.jsonl",
+          "path": "row[0].disamb_path"
+        },
+        {
+          "category": "provenance-semantic",
+          "new_value": "hf://google/gemma-2-2b-it@299a8560bedf22ed1c72a8a11e7dce4a7f9f51f8",
+          "old_value": "hf://google/gemma-2-2b-it@299a8560bedf22ed1c72a8a11e7dce4a7f9f51f8",
+          "path": "row[0].model"
+        }
+      ],
+      "kind": "csv",
+      "path": "results/safety_it_naturalistic/gemma2b_it_safety_baseline_seed42.csv"
+    }
+  ],
+  "n_files": 21,
+  "status": "ok"
+}

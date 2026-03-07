@@ -1,0 +1,23 @@
+cff-version: 1.2.0
+message: "If you use this repository, cite the repository metadata and preferred manuscript citation below."
+title: "AoM_interpretability"
+type: software
+authors:
+  - family-names: "Borck"
+    given-names: "Felix"
+license: "Apache-2.0"
+repository-code: "https://github.com/Satori-1618/AoM_interpretability"
+url: "https://github.com/Satori-1618/AoM_interpretability"
+abstract: "Code, data, publication-safe artifact tooling, and verification scripts for the Mechanics of Meaning / AoM interpretability repository."
+keywords:
+  - mechanistic interpretability
+  - activation patching
+  - sparse autoencoders
+  - reproducibility
+preferred-citation:
+  type: manuscript
+  authors:
+    - family-names: "Borck"
+      given-names: "Felix"
+  title: "Mechanics of Meaning: Sparse Feature Interventions and the Basis Structure of Contextual Control in Transformers"
+  year: 2026

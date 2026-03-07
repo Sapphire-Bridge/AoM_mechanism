@@ -1,0 +1,80 @@
+{
+  "bundle_id": "fa2f39387339d26abd45912e31eede3b5f88aac4ed7bff20660262fcb46787ff",
+  "cf_include_graded": true,
+  "cf_include_shams": true,
+  "coh_include_controls": true,
+  "disamb_mode": "hardened",
+  "files": {
+    "coherence.jsonl": {
+      "n_lines": 240,
+      "path": "data_paper_hardened_v2/coherence.jsonl",
+      "sha256": "04e122738582a3d5ea2a7e7f8e38a3c7841c3bab2cc04cf4d24640d5a902fc64"
+    },
+    "counterfactual.jsonl": {
+      "n_lines": 140,
+      "path": "data_paper_hardened_v2/counterfactual.jsonl",
+      "sha256": "e269fbd4fb819591d0bd5932137fcd18037a9ede9e743b7528916ead9f9374bf"
+    },
+    "disamb_pairs.jsonl": {
+      "n_lines": 52,
+      "path": "data_paper_hardened_v2/disamb_pairs.jsonl",
+      "sha256": "a9587c185bde2ca83a1fd2d22a62d9d961b2105e7626117240e8aeff207adee1"
+    }
+  },
+  "generated_at_utc": "2026-02-06T13:30:38+00:00",
+  "generator": "scripts/generate_data.py",
+  "git_commit": "d23624b91854bb4aa266814b19aad6917eb3f691",
+  "n_coh": 80,
+  "name": "paper_hardened_v2",
+  "seed": 0,
+  "suite_counts": {
+    "cf": {
+      "expected_effect_counts": {
+        "graded": 20,
+        "invariant": 60,
+        "shift": 60
+      },
+      "n_items_total": 140
+    },
+    "coh": {
+      "constraint_type_counts": {
+        "entity_state": 60,
+        "location": 60,
+        "multi_constraint": 60,
+        "possession": 60
+      },
+      "group_counts": {
+        "ablate_irrelevant": 80,
+        "ablate_relevant": 80,
+        "main": 80
+      },
+      "main": {
+        "constraint_type_counts": {
+          "entity_state": 20,
+          "location": 20,
+          "multi_constraint": 20,
+          "possession": 20
+        },
+        "n_constraints_counts": {
+          "1": 60,
+          "2": 20
+        },
+        "n_items": 80
+      },
+      "n_constraints_counts": {
+        "1": 180,
+        "2": 60
+      },
+      "n_rows_total": 240
+    },
+    "disamb": {
+      "n_pairs_total": 52,
+      "pair_variant_counts": {
+        "clean": 13,
+        "distractor": 13,
+        "paraphrase_clean": 13,
+        "paraphrase_distractor": 13
+      }
+    }
+  }
+}

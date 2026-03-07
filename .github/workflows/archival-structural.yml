@@ -1,0 +1,25 @@
+name: archival-structural
+
+on:
+  pull_request:
+  push:
+    branches:
+      - main
+      - master
+      - release-prep
+      - archival-hardening
+
+jobs:
+  structural-gates:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+      - name: Install dependencies
+        run: pip install -r requirements.txt
+      - name: Pytest
+        run: python -m pytest -q
+      - name: Archival structural check
+        run: python scripts/archive_readiness_check.py --skip_pytest --skip_readme_verifier

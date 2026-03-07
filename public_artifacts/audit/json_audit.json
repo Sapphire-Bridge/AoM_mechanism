@@ -1,0 +1,2490 @@
+{
+  "files": [
+    {
+      "changes": [
+        {
+          "category": "path-only",
+          "new_value": "data_paper_hardened_v2/coherence.jsonl",
+          "old_value": "data_paper_hardened_v2/coherence.jsonl",
+          "path": "files.coherence.jsonl.path"
+        },
+        {
+          "category": "path-only",
+          "new_value": "data_paper_hardened_v2/counterfactual.jsonl",
+          "old_value": "data_paper_hardened_v2/counterfactual.jsonl",
+          "path": "files.counterfactual.jsonl.path"
+        },
+        {
+          "category": "path-only",
+          "new_value": "data_paper_hardened_v2/disamb_pairs.jsonl",
+          "old_value": "data_paper_hardened_v2/disamb_pairs.jsonl",
+          "path": "files.disamb_pairs.jsonl.path"
+        }
+      ],
+      "kind": "json",
+      "path": "data_paper_hardened_v2/DATASET_MANIFEST.json"
+    },
+    {
+      "changes": [],
+      "kind": "json",
+      "path": "results/clt_raw_comparability_cf_l4_l8_l12_final_f32.summary.json"
+    },
+    {
+      "changes": [],
+      "kind": "json",
+      "path": "results/clt_raw_comparability_coh_l4_l8_l12_final_f32.summary.json"
+    },
+    {
+      "changes": [
+        {
+          "category": "provenance-semantic",
+          "new_value": "hf://google/gemma-2-2b@c5ebcd40d208330abc697524c919956e692655cf",
+          "old_value": "hf://google/gemma-2-2b@c5ebcd40d208330abc697524c919956e692655cf",
+          "path": "model_name_or_path"
+        },
+        {
+          "category": "path-only",
+          "new_value": ".",
+          "old_value": ".",
+          "path": "provenance.repo_root"
+        }
+      ],
+      "kind": "json",
+      "path": "results/clt_raw_comparability_l4_l8_l12_controls_full.summary.json"
+    },
+    {
+      "changes": [
+        {
+          "category": "hash-by-dependency",
+          "new_value": "c530be98cb297b84973c55b9e33094ba9c3d041c2ef6f170c7bfafd1ab87e206",
+          "old_value": "72e50d972770c948ca6a32251bfd5dc5e086441f3d128a42c5eba9558a168a92",
+          "path": "hashes.comparability_summary_sha256"
+        },
+        {
+          "category": "portability-only",
+          "new_value": null,
+          "old_value": null,
+          "path": "results_by_layer.12.non_primary_applicable_pairs.d_ca_diag_logz.ci_high"
+        },
+        {
+          "category": "portability-only",
+          "new_value": null,
+          "old_value": null,
+          "path": "results_by_layer.12.non_primary_applicable_pairs.d_ca_diag_logz.ci_low"
+        },
+        {
+          "category": "portability-only",
+          "new_value": null,
+          "old_value": null,
+          "path": "results_by_layer.12.non_primary_applicable_pairs.d_ca_diag_logz.mean"
+        },
+        {
+          "category": "portability-only",
+          "new_value": null,
+          "old_value": null,
+          "path": "results_by_layer.12.non_primary_applicable_pairs.d_ca_diag_logz.p_gt_0"
+        },
+        {
+          "category": "portability-only",
+          "new_value": null,
+          "old_value": null,
+          "path": "results_by_layer.12.non_primary_applicable_pairs.d_ca_logodds_residual.ci_high"
+        },
+        {
+          "category": "portability-only",
+          "new_value": null,
+          "old_value": null,
+          "path": "results_by_layer.12.non_primary_applicable_pairs.d_ca_logodds_residual.ci_low"
+        },
+        {
+          "category": "portability-only",
+          "new_value": null,
+          "old_value": null,
+          "path": "results_by_layer.12.non_primary_applicable_pairs.d_ca_logodds_residual.mean"
+        },
+        {
+          "category": "portability-only",
+          "new_value": null,
+          "old_value": null,
+          "path": "results_by_layer.12.non_primary_applicable_pairs.d_ca_logodds_residual.p_gt_0"
+        },
+        {
+          "category": "portability-only",
+          "new_value": null,
+          "old_value": null,
+          "path": "results_by_layer.12.non_primary_applicable_pairs.d_ca_logodds_residual_abs_max"
+        },
+        {
+          "category": "portability-only",
+          "new_value": null,
+          "old_value": null,
+          "path": "results_by_layer.12.non_primary_applicable_pairs.d_ca_logpe.ci_high"
+        },
+        {
+          "category": "portability-only",
+          "new_value": null,
+          "old_value": null,
+          "path": "results_by_layer.12.non_primary_applicable_pairs.d_ca_logpe.ci_low"
+        },
+        {
+          "category": "portability-only",
+          "new_value": null,
+          "old_value": null,
+          "path": "results_by_layer.12.non_primary_applicable_pairs.d_ca_logpe.mean"
+        },
+        {
+          "category": "portability-only",
+          "new_value": null,
+          "old_value": null,
+          "path": "results_by_layer.12.non_primary_applicable_pairs.d_ca_logpe.p_gt_0"
+        },
+        {
+          "category": "portability-only",
+          "new_value": null,
+          "old_value": null,
+          "path": "results_by_layer.12.non_primary_applicable_pairs.d_ca_logpo.ci_high"
+        },
+        {
+          "category": "portability-only",
+          "new_value": null,
+          "old_value": null,
+          "path": "results_by_layer.12.non_primary_applicable_pairs.d_ca_logpo.ci_low"
+        },
+        {
+          "category": "portability-only",
+          "new_value": null,
+          "old_value": null,
+          "path": "results_by_layer.12.non_primary_applicable_pairs.d_ca_logpo.mean"
+        },
+        {
+          "category": "portability-only",
+          "new_value": null,
+          "old_value": null,
+          "path": "results_by_layer.12.non_primary_applicable_pairs.d_ca_logpo.p_gt_0"
+        },
+        {
+          "category": "portability-only",
+          "new_value": null,
+          "old_value": null,
+          "path": "results_by_layer.12.non_primary_applicable_pairs.dpe_a.ci_high"
+        },
+        {
+          "category": "portability-only",
+          "new_value": null,
+          "old_value": null,
+          "path": "results_by_layer.12.non_primary_applicable_pairs.dpe_a.ci_low"
+        },
+        {
+          "category": "portability-only",
+          "new_value": null,
+          "old_value": null,
+          "path": "results_by_layer.12.non_primary_applicable_pairs.dpe_a.mean"
+        },
+        {
+          "category": "portability-only",
+          "new_value": null,
+          "old_value": null,
+          "path": "results_by_layer.12.non_primary_applicable_pairs.dpe_a.p_gt_0"
+        },
+        {
+          "category": "portability-only",
+          "new_value": null,
+          "old_value": null,
+          "path": "results_by_layer.12.non_primary_applicable_pairs.dpe_c.ci_high"
+        },
+        {
+          "category": "portability-only",
+          "new_value": null,
+          "old_value": null,
+          "path": "results_by_layer.12.non_primary_applicable_pairs.dpe_c.ci_low"
+        },
+        {
+          "category": "portability-only",
+          "new_value": null,
+          "old_value": null,
+          "path": "results_by_layer.12.non_primary_applicable_pairs.dpe_c.mean"
+        },
+        {
+          "category": "portability-only",
+          "new_value": null,
+          "old_value": null,
+          "path": "results_by_layer.12.non_primary_applicable_pairs.dpe_c.p_gt_0"
+        },
+        {
+          "category": "portability-only",
+          "new_value": null,
+          "old_value": null,
+          "path": "results_by_layer.12.non_primary_applicable_pairs.dpo_a.ci_high"
+        },
+        {
+          "category": "portability-only",
+          "new_value": null,
+          "old_value": null,
+          "path": "results_by_layer.12.non_primary_applicable_pairs.dpo_a.ci_low"
+        },
+        {
+          "category": "portability-only",
+          "new_value": null,
+          "old_value": null,
+          "path": "results_by_layer.12.non_primary_applicable_pairs.dpo_a.mean"
+        },
+        {
+          "category": "portability-only",
+          "new_value": null,
+          "old_value": null,
+          "path": "results_by_layer.12.non_primary_applicable_pairs.dpo_a.p_gt_0"
+        },
+        {
+          "category": "portability-only",
+          "new_value": null,
+          "old_value": null,
+          "path": "results_by_layer.12.non_primary_applicable_pairs.dpo_c.ci_high"
+        },
+        {
+          "category": "portability-only",
+          "new_value": null,
+          "old_value": null,
+          "path": "results_by_layer.12.non_primary_applicable_pairs.dpo_c.ci_low"
+        },
+        {
+          "category": "portability-only",
+          "new_value": null,
+          "old_value": null,
+          "path": "results_by_layer.12.non_primary_applicable_pairs.dpo_c.mean"
+        },
+        {
+          "category": "portability-only",
+          "new_value": null,
+          "old_value": null,
+          "path": "results_by_layer.12.non_primary_applicable_pairs.dpo_c.p_gt_0"
+        },
+        {
+          "category": "portability-only",
+          "new_value": null,
+          "old_value": null,
+          "path": "results_by_layer.12.non_primary_applicable_pairs.dprest_a.ci_high"
+        },
+        {
+          "category": "portability-only",
+          "new_value": null,
+          "old_value": null,
+          "path": "results_by_layer.12.non_primary_applicable_pairs.dprest_a.ci_low"
+        },
+        {
+          "category": "portability-only",
+          "new_value": null,
+          "old_value": null,
+          "path": "results_by_layer.12.non_primary_applicable_pairs.dprest_a.mean"
+        },
+        {
+          "category": "portability-only",
+          "new_value": null,
+          "old_value": null,
+          "path": "results_by_layer.12.non_primary_applicable_pairs.dprest_a.p_gt_0"
+        },
+        {
+          "category": "portability-only",
+          "new_value": null,
+          "old_value": null,
+          "path": "results_by_layer.12.non_primary_applicable_pairs.dprest_c.ci_high"
+        },
+        {
+          "category": "portability-only",
+          "new_value": null,
+          "old_value": null,
+          "path": "results_by_layer.12.non_primary_applicable_pairs.dprest_c.ci_low"
+        },
+        {
+          "category": "portability-only",
+          "new_value": null,
+          "old_value": null,
+          "path": "results_by_layer.12.non_primary_applicable_pairs.dprest_c.mean"
+        },
+        {
+          "category": "portability-only",
+          "new_value": null,
+          "old_value": null,
+          "path": "results_by_layer.12.non_primary_applicable_pairs.dprest_c.p_gt_0"
+        },
+        {
+          "category": "portability-only",
+          "new_value": null,
+          "old_value": null,
+          "path": "results_by_layer.4.non_primary_applicable_pairs.d_ca_diag_logz.ci_high"
+        },
+        {
+          "category": "portability-only",
+          "new_value": null,
+          "old_value": null,
+          "path": "results_by_layer.4.non_primary_applicable_pairs.d_ca_diag_logz.ci_low"
+        },
+        {
+          "category": "portability-only",
+          "new_value": null,
+          "old_value": null,
+          "path": "results_by_layer.4.non_primary_applicable_pairs.d_ca_diag_logz.mean"
+        },
+        {
+          "category": "portability-only",
+          "new_value": null,
+          "old_value": null,
+          "path": "results_by_layer.4.non_primary_applicable_pairs.d_ca_diag_logz.p_gt_0"
+        },
+        {
+          "category": "portability-only",
+          "new_value": null,
+          "old_value": null,
+          "path": "results_by_layer.4.non_primary_applicable_pairs.d_ca_logodds_residual.ci_high"
+        },
+        {
+          "category": "portability-only",
+          "new_value": null,
+          "old_value": null,
+          "path": "results_by_layer.4.non_primary_applicable_pairs.d_ca_logodds_residual.ci_low"
+        },
+        {
+          "category": "portability-only",
+          "new_value": null,
+          "old_value": null,
+          "path": "results_by_layer.4.non_primary_applicable_pairs.d_ca_logodds_residual.mean"
+        },
+        {
+          "category": "portability-only",
+          "new_value": null,
+          "old_value": null,
+          "path": "results_by_layer.4.non_primary_applicable_pairs.d_ca_logodds_residual.p_gt_0"
+        },
+        {
+          "category": "portability-only",
+          "new_value": null,
+          "old_value": null,
+          "path": "results_by_layer.4.non_primary_applicable_pairs.d_ca_logodds_residual_abs_max"
+        },
+        {
+          "category": "portability-only",
+          "new_value": null,
+          "old_value": null,
+          "path": "results_by_layer.4.non_primary_applicable_pairs.d_ca_logpe.ci_high"
+        },
+        {
+          "category": "portability-only",
+          "new_value": null,
+          "old_value": null,
+          "path": "results_by_layer.4.non_primary_applicable_pairs.d_ca_logpe.ci_low"
+        },
+        {
+          "category": "portability-only",
+          "new_value": null,
+          "old_value": null,
+          "path": "results_by_layer.4.non_primary_applicable_pairs.d_ca_logpe.mean"
+        },
+        {
+          "category": "portability-only",
+          "new_value": null,
+          "old_value": null,
+          "path": "results_by_layer.4.non_primary_applicable_pairs.d_ca_logpe.p_gt_0"
+        },
+        {
+          "category": "portability-only",
+          "new_value": null,
+          "old_value": null,
+          "path": "results_by_layer.4.non_primary_applicable_pairs.d_ca_logpo.ci_high"
+        },
+        {
+          "category": "portability-only",
+          "new_value": null,
+          "old_value": null,
+          "path": "results_by_layer.4.non_primary_applicable_pairs.d_ca_logpo.ci_low"
+        },
+        {
+          "category": "portability-only",
+          "new_value": null,
+          "old_value": null,
+          "path": "results_by_layer.4.non_primary_applicable_pairs.d_ca_logpo.mean"
+        },
+        {
+          "category": "portability-only",
+          "new_value": null,
+          "old_value": null,
+          "path": "results_by_layer.4.non_primary_applicable_pairs.d_ca_logpo.p_gt_0"
+        },
+        {
+          "category": "portability-only",
+          "new_value": null,
+          "old_value": null,
+          "path": "results_by_layer.4.non_primary_applicable_pairs.dpe_a.ci_high"
+        },
+        {
+          "category": "portability-only",
+          "new_value": null,
+          "old_value": null,
+          "path": "results_by_layer.4.non_primary_applicable_pairs.dpe_a.ci_low"
+        },
+        {
+          "category": "portability-only",
+          "new_value": null,
+          "old_value": null,
+          "path": "results_by_layer.4.non_primary_applicable_pairs.dpe_a.mean"
+        },
+        {
+          "category": "portability-only",
+          "new_value": null,
+          "old_value": null,
+          "path": "results_by_layer.4.non_primary_applicable_pairs.dpe_a.p_gt_0"
+        },
+        {
+          "category": "portability-only",
+          "new_value": null,
+          "old_value": null,
+          "path": "results_by_layer.4.non_primary_applicable_pairs.dpe_c.ci_high"
+        },
+        {
+          "category": "portability-only",
+          "new_value": null,
+          "old_value": null,
+          "path": "results_by_layer.4.non_primary_applicable_pairs.dpe_c.ci_low"
+        },
+        {
+          "category": "portability-only",
+          "new_value": null,
+          "old_value": null,
+          "path": "results_by_layer.4.non_primary_applicable_pairs.dpe_c.mean"
+        },
+        {
+          "category": "portability-only",
+          "new_value": null,
+          "old_value": null,
+          "path": "results_by_layer.4.non_primary_applicable_pairs.dpe_c.p_gt_0"
+        },
+        {
+          "category": "portability-only",
+          "new_value": null,
+          "old_value": null,
+          "path": "results_by_layer.4.non_primary_applicable_pairs.dpo_a.ci_high"
+        },
+        {
+          "category": "portability-only",
+          "new_value": null,
+          "old_value": null,
+          "path": "results_by_layer.4.non_primary_applicable_pairs.dpo_a.ci_low"
+        },
+        {
+          "category": "portability-only",
+          "new_value": null,
+          "old_value": null,
+          "path": "results_by_layer.4.non_primary_applicable_pairs.dpo_a.mean"
+        },
+        {
+          "category": "portability-only",
+          "new_value": null,
+          "old_value": null,
+          "path": "results_by_layer.4.non_primary_applicable_pairs.dpo_a.p_gt_0"
+        },
+        {
+          "category": "portability-only",
+          "new_value": null,
+          "old_value": null,
+          "path": "results_by_layer.4.non_primary_applicable_pairs.dpo_c.ci_high"
+        },
+        {
+          "category": "portability-only",
+          "new_value": null,
+          "old_value": null,
+          "path": "results_by_layer.4.non_primary_applicable_pairs.dpo_c.ci_low"
+        },
+        {
+          "category": "portability-only",
+          "new_value": null,
+          "old_value": null,
+          "path": "results_by_layer.4.non_primary_applicable_pairs.dpo_c.mean"
+        },
+        {
+          "category": "portability-only",
+          "new_value": null,
+          "old_value": null,
+          "path": "results_by_layer.4.non_primary_applicable_pairs.dpo_c.p_gt_0"
+        },
+        {
+          "category": "portability-only",
+          "new_value": null,
+          "old_value": null,
+          "path": "results_by_layer.4.non_primary_applicable_pairs.dprest_a.ci_high"
+        },
+        {
+          "category": "portability-only",
+          "new_value": null,
+          "old_value": null,
+          "path": "results_by_layer.4.non_primary_applicable_pairs.dprest_a.ci_low"
+        },
+        {
+          "category": "portability-only",
+          "new_value": null,
+          "old_value": null,
+          "path": "results_by_layer.4.non_primary_applicable_pairs.dprest_a.mean"
+        },
+        {
+          "category": "portability-only",
+          "new_value": null,
+          "old_value": null,
+          "path": "results_by_layer.4.non_primary_applicable_pairs.dprest_a.p_gt_0"
+        },
+        {
+          "category": "portability-only",
+          "new_value": null,
+          "old_value": null,
+          "path": "results_by_layer.4.non_primary_applicable_pairs.dprest_c.ci_high"
+        },
+        {
+          "category": "portability-only",
+          "new_value": null,
+          "old_value": null,
+          "path": "results_by_layer.4.non_primary_applicable_pairs.dprest_c.ci_low"
+        },
+        {
+          "category": "portability-only",
+          "new_value": null,
+          "old_value": null,
+          "path": "results_by_layer.4.non_primary_applicable_pairs.dprest_c.mean"
+        },
+        {
+          "category": "portability-only",
+          "new_value": null,
+          "old_value": null,
+          "path": "results_by_layer.4.non_primary_applicable_pairs.dprest_c.p_gt_0"
+        },
+        {
+          "category": "portability-only",
+          "new_value": null,
+          "old_value": null,
+          "path": "results_by_layer.8.non_primary_applicable_pairs.d_ca_diag_logz.ci_high"
+        },
+        {
+          "category": "portability-only",
+          "new_value": null,
+          "old_value": null,
+          "path": "results_by_layer.8.non_primary_applicable_pairs.d_ca_diag_logz.ci_low"
+        },
+        {
+          "category": "portability-only",
+          "new_value": null,
+          "old_value": null,
+          "path": "results_by_layer.8.non_primary_applicable_pairs.d_ca_diag_logz.mean"
+        },
+        {
+          "category": "portability-only",
+          "new_value": null,
+          "old_value": null,
+          "path": "results_by_layer.8.non_primary_applicable_pairs.d_ca_diag_logz.p_gt_0"
+        },
+        {
+          "category": "portability-only",
+          "new_value": null,
+          "old_value": null,
+          "path": "results_by_layer.8.non_primary_applicable_pairs.d_ca_logodds_residual.ci_high"
+        },
+        {
+          "category": "portability-only",
+          "new_value": null,
+          "old_value": null,
+          "path": "results_by_layer.8.non_primary_applicable_pairs.d_ca_logodds_residual.ci_low"
+        },
+        {
+          "category": "portability-only",
+          "new_value": null,
+          "old_value": null,
+          "path": "results_by_layer.8.non_primary_applicable_pairs.d_ca_logodds_residual.mean"
+        },
+        {
+          "category": "portability-only",
+          "new_value": null,
+          "old_value": null,
+          "path": "results_by_layer.8.non_primary_applicable_pairs.d_ca_logodds_residual.p_gt_0"
+        },
+        {
+          "category": "portability-only",
+          "new_value": null,
+          "old_value": null,
+          "path": "results_by_layer.8.non_primary_applicable_pairs.d_ca_logodds_residual_abs_max"
+        },
+        {
+          "category": "portability-only",
+          "new_value": null,
+          "old_value": null,
+          "path": "results_by_layer.8.non_primary_applicable_pairs.d_ca_logpe.ci_high"
+        },
+        {
+          "category": "portability-only",
+          "new_value": null,
+          "old_value": null,
+          "path": "results_by_layer.8.non_primary_applicable_pairs.d_ca_logpe.ci_low"
+        },
+        {
+          "category": "portability-only",
+          "new_value": null,
+          "old_value": null,
+          "path": "results_by_layer.8.non_primary_applicable_pairs.d_ca_logpe.mean"
+        },
+        {
+          "category": "portability-only",
+          "new_value": null,
+          "old_value": null,
+          "path": "results_by_layer.8.non_primary_applicable_pairs.d_ca_logpe.p_gt_0"
+        },
+        {
+          "category": "portability-only",
+          "new_value": null,
+          "old_value": null,
+          "path": "results_by_layer.8.non_primary_applicable_pairs.d_ca_logpo.ci_high"
+        },
+        {
+          "category": "portability-only",
+          "new_value": null,
+          "old_value": null,
+          "path": "results_by_layer.8.non_primary_applicable_pairs.d_ca_logpo.ci_low"
+        },
+        {
+          "category": "portability-only",
+          "new_value": null,
+          "old_value": null,
+          "path": "results_by_layer.8.non_primary_applicable_pairs.d_ca_logpo.mean"
+        },
+        {
+          "category": "portability-only",
+          "new_value": null,
+          "old_value": null,
+          "path": "results_by_layer.8.non_primary_applicable_pairs.d_ca_logpo.p_gt_0"
+        },
+        {
+          "category": "portability-only",
+          "new_value": null,
+          "old_value": null,
+          "path": "results_by_layer.8.non_primary_applicable_pairs.dpe_a.ci_high"
+        },
+        {
+          "category": "portability-only",
+          "new_value": null,
+          "old_value": null,
+          "path": "results_by_layer.8.non_primary_applicable_pairs.dpe_a.ci_low"
+        },
+        {
+          "category": "portability-only",
+          "new_value": null,
+          "old_value": null,
+          "path": "results_by_layer.8.non_primary_applicable_pairs.dpe_a.mean"
+        },
+        {
+          "category": "portability-only",
+          "new_value": null,
+          "old_value": null,
+          "path": "results_by_layer.8.non_primary_applicable_pairs.dpe_a.p_gt_0"
+        },
+        {
+          "category": "portability-only",
+          "new_value": null,
+          "old_value": null,
+          "path": "results_by_layer.8.non_primary_applicable_pairs.dpe_c.ci_high"
+        },
+        {
+          "category": "portability-only",
+          "new_value": null,
+          "old_value": null,
+          "path": "results_by_layer.8.non_primary_applicable_pairs.dpe_c.ci_low"
+        },
+        {
+          "category": "portability-only",
+          "new_value": null,
+          "old_value": null,
+          "path": "results_by_layer.8.non_primary_applicable_pairs.dpe_c.mean"
+        },
+        {
+          "category": "portability-only",
+          "new_value": null,
+          "old_value": null,
+          "path": "results_by_layer.8.non_primary_applicable_pairs.dpe_c.p_gt_0"
+        },
+        {
+          "category": "portability-only",
+          "new_value": null,
+          "old_value": null,
+          "path": "results_by_layer.8.non_primary_applicable_pairs.dpo_a.ci_high"
+        },
+        {
+          "category": "portability-only",
+          "new_value": null,
+          "old_value": null,
+          "path": "results_by_layer.8.non_primary_applicable_pairs.dpo_a.ci_low"
+        },
+        {
+          "category": "portability-only",
+          "new_value": null,
+          "old_value": null,
+          "path": "results_by_layer.8.non_primary_applicable_pairs.dpo_a.mean"
+        },
+        {
+          "category": "portability-only",
+          "new_value": null,
+          "old_value": null,
+          "path": "results_by_layer.8.non_primary_applicable_pairs.dpo_a.p_gt_0"
+        },
+        {
+          "category": "portability-only",
+          "new_value": null,
+          "old_value": null,
+          "path": "results_by_layer.8.non_primary_applicable_pairs.dpo_c.ci_high"
+        },
+        {
+          "category": "portability-only",
+          "new_value": null,
+          "old_value": null,
+          "path": "results_by_layer.8.non_primary_applicable_pairs.dpo_c.ci_low"
+        },
+        {
+          "category": "portability-only",
+          "new_value": null,
+          "old_value": null,
+          "path": "results_by_layer.8.non_primary_applicable_pairs.dpo_c.mean"
+        },
+        {
+          "category": "portability-only",
+          "new_value": null,
+          "old_value": null,
+          "path": "results_by_layer.8.non_primary_applicable_pairs.dpo_c.p_gt_0"
+        },
+        {
+          "category": "portability-only",
+          "new_value": null,
+          "old_value": null,
+          "path": "results_by_layer.8.non_primary_applicable_pairs.dprest_a.ci_high"
+        },
+        {
+          "category": "portability-only",
+          "new_value": null,
+          "old_value": null,
+          "path": "results_by_layer.8.non_primary_applicable_pairs.dprest_a.ci_low"
+        },
+        {
+          "category": "portability-only",
+          "new_value": null,
+          "old_value": null,
+          "path": "results_by_layer.8.non_primary_applicable_pairs.dprest_a.mean"
+        },
+        {
+          "category": "portability-only",
+          "new_value": null,
+          "old_value": null,
+          "path": "results_by_layer.8.non_primary_applicable_pairs.dprest_a.p_gt_0"
+        },
+        {
+          "category": "portability-only",
+          "new_value": null,
+          "old_value": null,
+          "path": "results_by_layer.8.non_primary_applicable_pairs.dprest_c.ci_high"
+        },
+        {
+          "category": "portability-only",
+          "new_value": null,
+          "old_value": null,
+          "path": "results_by_layer.8.non_primary_applicable_pairs.dprest_c.ci_low"
+        },
+        {
+          "category": "portability-only",
+          "new_value": null,
+          "old_value": null,
+          "path": "results_by_layer.8.non_primary_applicable_pairs.dprest_c.mean"
+        },
+        {
+          "category": "portability-only",
+          "new_value": null,
+          "old_value": null,
+          "path": "results_by_layer.8.non_primary_applicable_pairs.dprest_c.p_gt_0"
+        },
+        {
+          "category": "path-only",
+          "new_value": "hf://google/gemma-2-2b@c5ebcd40d208330abc697524c919956e692655cf",
+          "old_value": "hf://google/gemma-2-2b@c5ebcd40d208330abc697524c919956e692655cf",
+          "path": "source.tokenizer_name_or_path"
+        },
+        {
+          "category": "path-only",
+          "new_value": "hf://google/gemma-2-2b@c5ebcd40d208330abc697524c919956e692655cf",
+          "old_value": "hf://google/gemma-2-2b@c5ebcd40d208330abc697524c919956e692655cf",
+          "path": "source.tokenizer_name_or_path_resolved"
+        }
+      ],
+      "kind": "json",
+      "path": "results/mom_endpoint_plan/r1_full_cpu_f32.endpoint_decomp_summary_v2.json"
+    },
+    {
+      "changes": [
+        {
+          "category": "provenance-semantic",
+          "new_value": "hf://google/gemma-2-2b@c5ebcd40d208330abc697524c919956e692655cf",
+          "old_value": "hf://google/gemma-2-2b@c5ebcd40d208330abc697524c919956e692655cf",
+          "path": "model_name_or_path"
+        }
+      ],
+      "kind": "json",
+      "path": "results/mom_endpoint_plan/r1_full_cpu_f32.summary.json"
+    },
+    {
+      "changes": [
+        {
+          "category": "hash-by-dependency",
+          "new_value": "a841ebb48fb2176d3c44d7f0225936dd83c1fb27522530043c0635eb514019cd",
+          "old_value": "79de1ade4ed25957d0f7d4b600757b4c413942d9c9df1bd3015d88d7670131dc",
+          "path": "hashes.comparability_summary_sha256"
+        },
+        {
+          "category": "portability-only",
+          "new_value": null,
+          "old_value": null,
+          "path": "results_by_layer.12.non_primary_applicable_pairs.d_ca_diag_logz.ci_high"
+        },
+        {
+          "category": "portability-only",
+          "new_value": null,
+          "old_value": null,
+          "path": "results_by_layer.12.non_primary_applicable_pairs.d_ca_diag_logz.ci_low"
+        },
+        {
+          "category": "portability-only",
+          "new_value": null,
+          "old_value": null,
+          "path": "results_by_layer.12.non_primary_applicable_pairs.d_ca_diag_logz.mean"
+        },
+        {
+          "category": "portability-only",
+          "new_value": null,
+          "old_value": null,
+          "path": "results_by_layer.12.non_primary_applicable_pairs.d_ca_diag_logz.p_gt_0"
+        },
+        {
+          "category": "portability-only",
+          "new_value": null,
+          "old_value": null,
+          "path": "results_by_layer.12.non_primary_applicable_pairs.d_ca_logodds_residual.ci_high"
+        },
+        {
+          "category": "portability-only",
+          "new_value": null,
+          "old_value": null,
+          "path": "results_by_layer.12.non_primary_applicable_pairs.d_ca_logodds_residual.ci_low"
+        },
+        {
+          "category": "portability-only",
+          "new_value": null,
+          "old_value": null,
+          "path": "results_by_layer.12.non_primary_applicable_pairs.d_ca_logodds_residual.mean"
+        },
+        {
+          "category": "portability-only",
+          "new_value": null,
+          "old_value": null,
+          "path": "results_by_layer.12.non_primary_applicable_pairs.d_ca_logodds_residual.p_gt_0"
+        },
+        {
+          "category": "portability-only",
+          "new_value": null,
+          "old_value": null,
+          "path": "results_by_layer.12.non_primary_applicable_pairs.d_ca_logodds_residual_abs_max"
+        },
+        {
+          "category": "portability-only",
+          "new_value": null,
+          "old_value": null,
+          "path": "results_by_layer.12.non_primary_applicable_pairs.d_ca_logpe.ci_high"
+        },
+        {
+          "category": "portability-only",
+          "new_value": null,
+          "old_value": null,
+          "path": "results_by_layer.12.non_primary_applicable_pairs.d_ca_logpe.ci_low"
+        },
+        {
+          "category": "portability-only",
+          "new_value": null,
+          "old_value": null,
+          "path": "results_by_layer.12.non_primary_applicable_pairs.d_ca_logpe.mean"
+        },
+        {
+          "category": "portability-only",
+          "new_value": null,
+          "old_value": null,
+          "path": "results_by_layer.12.non_primary_applicable_pairs.d_ca_logpe.p_gt_0"
+        },
+        {
+          "category": "portability-only",
+          "new_value": null,
+          "old_value": null,
+          "path": "results_by_layer.12.non_primary_applicable_pairs.d_ca_logpo.ci_high"
+        },
+        {
+          "category": "portability-only",
+          "new_value": null,
+          "old_value": null,
+          "path": "results_by_layer.12.non_primary_applicable_pairs.d_ca_logpo.ci_low"
+        },
+        {
+          "category": "portability-only",
+          "new_value": null,
+          "old_value": null,
+          "path": "results_by_layer.12.non_primary_applicable_pairs.d_ca_logpo.mean"
+        },
+        {
+          "category": "portability-only",
+          "new_value": null,
+          "old_value": null,
+          "path": "results_by_layer.12.non_primary_applicable_pairs.d_ca_logpo.p_gt_0"
+        },
+        {
+          "category": "portability-only",
+          "new_value": null,
+          "old_value": null,
+          "path": "results_by_layer.12.non_primary_applicable_pairs.dpe_a.ci_high"
+        },
+        {
+          "category": "portability-only",
+          "new_value": null,
+          "old_value": null,
+          "path": "results_by_layer.12.non_primary_applicable_pairs.dpe_a.ci_low"
+        },
+        {
+          "category": "portability-only",
+          "new_value": null,
+          "old_value": null,
+          "path": "results_by_layer.12.non_primary_applicable_pairs.dpe_a.mean"
+        },
+        {
+          "category": "portability-only",
+          "new_value": null,
+          "old_value": null,
+          "path": "results_by_layer.12.non_primary_applicable_pairs.dpe_a.p_gt_0"
+        },
+        {
+          "category": "portability-only",
+          "new_value": null,
+          "old_value": null,
+          "path": "results_by_layer.12.non_primary_applicable_pairs.dpe_c.ci_high"
+        },
+        {
+          "category": "portability-only",
+          "new_value": null,
+          "old_value": null,
+          "path": "results_by_layer.12.non_primary_applicable_pairs.dpe_c.ci_low"
+        },
+        {
+          "category": "portability-only",
+          "new_value": null,
+          "old_value": null,
+          "path": "results_by_layer.12.non_primary_applicable_pairs.dpe_c.mean"
+        },
+        {
+          "category": "portability-only",
+          "new_value": null,
+          "old_value": null,
+          "path": "results_by_layer.12.non_primary_applicable_pairs.dpe_c.p_gt_0"
+        },
+        {
+          "category": "portability-only",
+          "new_value": null,
+          "old_value": null,
+          "path": "results_by_layer.12.non_primary_applicable_pairs.dpo_a.ci_high"
+        },
+        {
+          "category": "portability-only",
+          "new_value": null,
+          "old_value": null,
+          "path": "results_by_layer.12.non_primary_applicable_pairs.dpo_a.ci_low"
+        },
+        {
+          "category": "portability-only",
+          "new_value": null,
+          "old_value": null,
+          "path": "results_by_layer.12.non_primary_applicable_pairs.dpo_a.mean"
+        },
+        {
+          "category": "portability-only",
+          "new_value": null,
+          "old_value": null,
+          "path": "results_by_layer.12.non_primary_applicable_pairs.dpo_a.p_gt_0"
+        },
+        {
+          "category": "portability-only",
+          "new_value": null,
+          "old_value": null,
+          "path": "results_by_layer.12.non_primary_applicable_pairs.dpo_c.ci_high"
+        },
+        {
+          "category": "portability-only",
+          "new_value": null,
+          "old_value": null,
+          "path": "results_by_layer.12.non_primary_applicable_pairs.dpo_c.ci_low"
+        },
+        {
+          "category": "portability-only",
+          "new_value": null,
+          "old_value": null,
+          "path": "results_by_layer.12.non_primary_applicable_pairs.dpo_c.mean"
+        },
+        {
+          "category": "portability-only",
+          "new_value": null,
+          "old_value": null,
+          "path": "results_by_layer.12.non_primary_applicable_pairs.dpo_c.p_gt_0"
+        },
+        {
+          "category": "portability-only",
+          "new_value": null,
+          "old_value": null,
+          "path": "results_by_layer.12.non_primary_applicable_pairs.dprest_a.ci_high"
+        },
+        {
+          "category": "portability-only",
+          "new_value": null,
+          "old_value": null,
+          "path": "results_by_layer.12.non_primary_applicable_pairs.dprest_a.ci_low"
+        },
+        {
+          "category": "portability-only",
+          "new_value": null,
+          "old_value": null,
+          "path": "results_by_layer.12.non_primary_applicable_pairs.dprest_a.mean"
+        },
+        {
+          "category": "portability-only",
+          "new_value": null,
+          "old_value": null,
+          "path": "results_by_layer.12.non_primary_applicable_pairs.dprest_a.p_gt_0"
+        },
+        {
+          "category": "portability-only",
+          "new_value": null,
+          "old_value": null,
+          "path": "results_by_layer.12.non_primary_applicable_pairs.dprest_c.ci_high"
+        },
+        {
+          "category": "portability-only",
+          "new_value": null,
+          "old_value": null,
+          "path": "results_by_layer.12.non_primary_applicable_pairs.dprest_c.ci_low"
+        },
+        {
+          "category": "portability-only",
+          "new_value": null,
+          "old_value": null,
+          "path": "results_by_layer.12.non_primary_applicable_pairs.dprest_c.mean"
+        },
+        {
+          "category": "portability-only",
+          "new_value": null,
+          "old_value": null,
+          "path": "results_by_layer.12.non_primary_applicable_pairs.dprest_c.p_gt_0"
+        },
+        {
+          "category": "portability-only",
+          "new_value": null,
+          "old_value": null,
+          "path": "results_by_layer.4.non_primary_applicable_pairs.d_ca_diag_logz.ci_high"
+        },
+        {
+          "category": "portability-only",
+          "new_value": null,
+          "old_value": null,
+          "path": "results_by_layer.4.non_primary_applicable_pairs.d_ca_diag_logz.ci_low"
+        },
+        {
+          "category": "portability-only",
+          "new_value": null,
+          "old_value": null,
+          "path": "results_by_layer.4.non_primary_applicable_pairs.d_ca_diag_logz.mean"
+        },
+        {
+          "category": "portability-only",
+          "new_value": null,
+          "old_value": null,
+          "path": "results_by_layer.4.non_primary_applicable_pairs.d_ca_diag_logz.p_gt_0"
+        },
+        {
+          "category": "portability-only",
+          "new_value": null,
+          "old_value": null,
+          "path": "results_by_layer.4.non_primary_applicable_pairs.d_ca_logodds_residual.ci_high"
+        },
+        {
+          "category": "portability-only",
+          "new_value": null,
+          "old_value": null,
+          "path": "results_by_layer.4.non_primary_applicable_pairs.d_ca_logodds_residual.ci_low"
+        },
+        {
+          "category": "portability-only",
+          "new_value": null,
+          "old_value": null,
+          "path": "results_by_layer.4.non_primary_applicable_pairs.d_ca_logodds_residual.mean"
+        },
+        {
+          "category": "portability-only",
+          "new_value": null,
+          "old_value": null,
+          "path": "results_by_layer.4.non_primary_applicable_pairs.d_ca_logodds_residual.p_gt_0"
+        },
+        {
+          "category": "portability-only",
+          "new_value": null,
+          "old_value": null,
+          "path": "results_by_layer.4.non_primary_applicable_pairs.d_ca_logodds_residual_abs_max"
+        },
+        {
+          "category": "portability-only",
+          "new_value": null,
+          "old_value": null,
+          "path": "results_by_layer.4.non_primary_applicable_pairs.d_ca_logpe.ci_high"
+        },
+        {
+          "category": "portability-only",
+          "new_value": null,
+          "old_value": null,
+          "path": "results_by_layer.4.non_primary_applicable_pairs.d_ca_logpe.ci_low"
+        },
+        {
+          "category": "portability-only",
+          "new_value": null,
+          "old_value": null,
+          "path": "results_by_layer.4.non_primary_applicable_pairs.d_ca_logpe.mean"
+        },
+        {
+          "category": "portability-only",
+          "new_value": null,
+          "old_value": null,
+          "path": "results_by_layer.4.non_primary_applicable_pairs.d_ca_logpe.p_gt_0"
+        },
+        {
+          "category": "portability-only",
+          "new_value": null,
+          "old_value": null,
+          "path": "results_by_layer.4.non_primary_applicable_pairs.d_ca_logpo.ci_high"
+        },
+        {
+          "category": "portability-only",
+          "new_value": null,
+          "old_value": null,
+          "path": "results_by_layer.4.non_primary_applicable_pairs.d_ca_logpo.ci_low"
+        },
+        {
+          "category": "portability-only",
+          "new_value": null,
+          "old_value": null,
+          "path": "results_by_layer.4.non_primary_applicable_pairs.d_ca_logpo.mean"
+        },
+        {
+          "category": "portability-only",
+          "new_value": null,
+          "old_value": null,
+          "path": "results_by_layer.4.non_primary_applicable_pairs.d_ca_logpo.p_gt_0"
+        },
+        {
+          "category": "portability-only",
+          "new_value": null,
+          "old_value": null,
+          "path": "results_by_layer.4.non_primary_applicable_pairs.dpe_a.ci_high"
+        },
+        {
+          "category": "portability-only",
+          "new_value": null,
+          "old_value": null,
+          "path": "results_by_layer.4.non_primary_applicable_pairs.dpe_a.ci_low"
+        },
+        {
+          "category": "portability-only",
+          "new_value": null,
+          "old_value": null,
+          "path": "results_by_layer.4.non_primary_applicable_pairs.dpe_a.mean"
+        },
+        {
+          "category": "portability-only",
+          "new_value": null,
+          "old_value": null,
+          "path": "results_by_layer.4.non_primary_applicable_pairs.dpe_a.p_gt_0"
+        },
+        {
+          "category": "portability-only",
+          "new_value": null,
+          "old_value": null,
+          "path": "results_by_layer.4.non_primary_applicable_pairs.dpe_c.ci_high"
+        },
+        {
+          "category": "portability-only",
+          "new_value": null,
+          "old_value": null,
+          "path": "results_by_layer.4.non_primary_applicable_pairs.dpe_c.ci_low"
+        },
+        {
+          "category": "portability-only",
+          "new_value": null,
+          "old_value": null,
+          "path": "results_by_layer.4.non_primary_applicable_pairs.dpe_c.mean"
+        },
+        {
+          "category": "portability-only",
+          "new_value": null,
+          "old_value": null,
+          "path": "results_by_layer.4.non_primary_applicable_pairs.dpe_c.p_gt_0"
+        },
+        {
+          "category": "portability-only",
+          "new_value": null,
+          "old_value": null,
+          "path": "results_by_layer.4.non_primary_applicable_pairs.dpo_a.ci_high"
+        },
+        {
+          "category": "portability-only",
+          "new_value": null,
+          "old_value": null,
+          "path": "results_by_layer.4.non_primary_applicable_pairs.dpo_a.ci_low"
+        },
+        {
+          "category": "portability-only",
+          "new_value": null,
+          "old_value": null,
+          "path": "results_by_layer.4.non_primary_applicable_pairs.dpo_a.mean"
+        },
+        {
+          "category": "portability-only",
+          "new_value": null,
+          "old_value": null,
+          "path": "results_by_layer.4.non_primary_applicable_pairs.dpo_a.p_gt_0"
+        },
+        {
+          "category": "portability-only",
+          "new_value": null,
+          "old_value": null,
+          "path": "results_by_layer.4.non_primary_applicable_pairs.dpo_c.ci_high"
+        },
+        {
+          "category": "portability-only",
+          "new_value": null,
+          "old_value": null,
+          "path": "results_by_layer.4.non_primary_applicable_pairs.dpo_c.ci_low"
+        },
+        {
+          "category": "portability-only",
+          "new_value": null,
+          "old_value": null,
+          "path": "results_by_layer.4.non_primary_applicable_pairs.dpo_c.mean"
+        },
+        {
+          "category": "portability-only",
+          "new_value": null,
+          "old_value": null,
+          "path": "results_by_layer.4.non_primary_applicable_pairs.dpo_c.p_gt_0"
+        },
+        {
+          "category": "portability-only",
+          "new_value": null,
+          "old_value": null,
+          "path": "results_by_layer.4.non_primary_applicable_pairs.dprest_a.ci_high"
+        },
+        {
+          "category": "portability-only",
+          "new_value": null,
+          "old_value": null,
+          "path": "results_by_layer.4.non_primary_applicable_pairs.dprest_a.ci_low"
+        },
+        {
+          "category": "portability-only",
+          "new_value": null,
+          "old_value": null,
+          "path": "results_by_layer.4.non_primary_applicable_pairs.dprest_a.mean"
+        },
+        {
+          "category": "portability-only",
+          "new_value": null,
+          "old_value": null,
+          "path": "results_by_layer.4.non_primary_applicable_pairs.dprest_a.p_gt_0"
+        },
+        {
+          "category": "portability-only",
+          "new_value": null,
+          "old_value": null,
+          "path": "results_by_layer.4.non_primary_applicable_pairs.dprest_c.ci_high"
+        },
+        {
+          "category": "portability-only",
+          "new_value": null,
+          "old_value": null,
+          "path": "results_by_layer.4.non_primary_applicable_pairs.dprest_c.ci_low"
+        },
+        {
+          "category": "portability-only",
+          "new_value": null,
+          "old_value": null,
+          "path": "results_by_layer.4.non_primary_applicable_pairs.dprest_c.mean"
+        },
+        {
+          "category": "portability-only",
+          "new_value": null,
+          "old_value": null,
+          "path": "results_by_layer.4.non_primary_applicable_pairs.dprest_c.p_gt_0"
+        },
+        {
+          "category": "portability-only",
+          "new_value": null,
+          "old_value": null,
+          "path": "results_by_layer.8.non_primary_applicable_pairs.d_ca_diag_logz.ci_high"
+        },
+        {
+          "category": "portability-only",
+          "new_value": null,
+          "old_value": null,
+          "path": "results_by_layer.8.non_primary_applicable_pairs.d_ca_diag_logz.ci_low"
+        },
+        {
+          "category": "portability-only",
+          "new_value": null,
+          "old_value": null,
+          "path": "results_by_layer.8.non_primary_applicable_pairs.d_ca_diag_logz.mean"
+        },
+        {
+          "category": "portability-only",
+          "new_value": null,
+          "old_value": null,
+          "path": "results_by_layer.8.non_primary_applicable_pairs.d_ca_diag_logz.p_gt_0"
+        },
+        {
+          "category": "portability-only",
+          "new_value": null,
+          "old_value": null,
+          "path": "results_by_layer.8.non_primary_applicable_pairs.d_ca_logodds_residual.ci_high"
+        },
+        {
+          "category": "portability-only",
+          "new_value": null,
+          "old_value": null,
+          "path": "results_by_layer.8.non_primary_applicable_pairs.d_ca_logodds_residual.ci_low"
+        },
+        {
+          "category": "portability-only",
+          "new_value": null,
+          "old_value": null,
+          "path": "results_by_layer.8.non_primary_applicable_pairs.d_ca_logodds_residual.mean"
+        },
+        {
+          "category": "portability-only",
+          "new_value": null,
+          "old_value": null,
+          "path": "results_by_layer.8.non_primary_applicable_pairs.d_ca_logodds_residual.p_gt_0"
+        },
+        {
+          "category": "portability-only",
+          "new_value": null,
+          "old_value": null,
+          "path": "results_by_layer.8.non_primary_applicable_pairs.d_ca_logodds_residual_abs_max"
+        },
+        {
+          "category": "portability-only",
+          "new_value": null,
+          "old_value": null,
+          "path": "results_by_layer.8.non_primary_applicable_pairs.d_ca_logpe.ci_high"
+        },
+        {
+          "category": "portability-only",
+          "new_value": null,
+          "old_value": null,
+          "path": "results_by_layer.8.non_primary_applicable_pairs.d_ca_logpe.ci_low"
+        },
+        {
+          "category": "portability-only",
+          "new_value": null,
+          "old_value": null,
+          "path": "results_by_layer.8.non_primary_applicable_pairs.d_ca_logpe.mean"
+        },
+        {
+          "category": "portability-only",
+          "new_value": null,
+          "old_value": null,
+          "path": "results_by_layer.8.non_primary_applicable_pairs.d_ca_logpe.p_gt_0"
+        },
+        {
+          "category": "portability-only",
+          "new_value": null,
+          "old_value": null,
+          "path": "results_by_layer.8.non_primary_applicable_pairs.d_ca_logpo.ci_high"
+        },
+        {
+          "category": "portability-only",
+          "new_value": null,
+          "old_value": null,
+          "path": "results_by_layer.8.non_primary_applicable_pairs.d_ca_logpo.ci_low"
+        },
+        {
+          "category": "portability-only",
+          "new_value": null,
+          "old_value": null,
+          "path": "results_by_layer.8.non_primary_applicable_pairs.d_ca_logpo.mean"
+        },
+        {
+          "category": "portability-only",
+          "new_value": null,
+          "old_value": null,
+          "path": "results_by_layer.8.non_primary_applicable_pairs.d_ca_logpo.p_gt_0"
+        },
+        {
+          "category": "portability-only",
+          "new_value": null,
+          "old_value": null,
+          "path": "results_by_layer.8.non_primary_applicable_pairs.dpe_a.ci_high"
+        },
+        {
+          "category": "portability-only",
+          "new_value": null,
+          "old_value": null,
+          "path": "results_by_layer.8.non_primary_applicable_pairs.dpe_a.ci_low"
+        },
+        {
+          "category": "portability-only",
+          "new_value": null,
+          "old_value": null,
+          "path": "results_by_layer.8.non_primary_applicable_pairs.dpe_a.mean"
+        },
+        {
+          "category": "portability-only",
+          "new_value": null,
+          "old_value": null,
+          "path": "results_by_layer.8.non_primary_applicable_pairs.dpe_a.p_gt_0"
+        },
+        {
+          "category": "portability-only",
+          "new_value": null,
+          "old_value": null,
+          "path": "results_by_layer.8.non_primary_applicable_pairs.dpe_c.ci_high"
+        },
+        {
+          "category": "portability-only",
+          "new_value": null,
+          "old_value": null,
+          "path": "results_by_layer.8.non_primary_applicable_pairs.dpe_c.ci_low"
+        },
+        {
+          "category": "portability-only",
+          "new_value": null,
+          "old_value": null,
+          "path": "results_by_layer.8.non_primary_applicable_pairs.dpe_c.mean"
+        },
+        {
+          "category": "portability-only",
+          "new_value": null,
+          "old_value": null,
+          "path": "results_by_layer.8.non_primary_applicable_pairs.dpe_c.p_gt_0"
+        },
+        {
+          "category": "portability-only",
+          "new_value": null,
+          "old_value": null,
+          "path": "results_by_layer.8.non_primary_applicable_pairs.dpo_a.ci_high"
+        },
+        {
+          "category": "portability-only",
+          "new_value": null,
+          "old_value": null,
+          "path": "results_by_layer.8.non_primary_applicable_pairs.dpo_a.ci_low"
+        },
+        {
+          "category": "portability-only",
+          "new_value": null,
+          "old_value": null,
+          "path": "results_by_layer.8.non_primary_applicable_pairs.dpo_a.mean"
+        },
+        {
+          "category": "portability-only",
+          "new_value": null,
+          "old_value": null,
+          "path": "results_by_layer.8.non_primary_applicable_pairs.dpo_a.p_gt_0"
+        },
+        {
+          "category": "portability-only",
+          "new_value": null,
+          "old_value": null,
+          "path": "results_by_layer.8.non_primary_applicable_pairs.dpo_c.ci_high"
+        },
+        {
+          "category": "portability-only",
+          "new_value": null,
+          "old_value": null,
+          "path": "results_by_layer.8.non_primary_applicable_pairs.dpo_c.ci_low"
+        },
+        {
+          "category": "portability-only",
+          "new_value": null,
+          "old_value": null,
+          "path": "results_by_layer.8.non_primary_applicable_pairs.dpo_c.mean"
+        },
+        {
+          "category": "portability-only",
+          "new_value": null,
+          "old_value": null,
+          "path": "results_by_layer.8.non_primary_applicable_pairs.dpo_c.p_gt_0"
+        },
+        {
+          "category": "portability-only",
+          "new_value": null,
+          "old_value": null,
+          "path": "results_by_layer.8.non_primary_applicable_pairs.dprest_a.ci_high"
+        },
+        {
+          "category": "portability-only",
+          "new_value": null,
+          "old_value": null,
+          "path": "results_by_layer.8.non_primary_applicable_pairs.dprest_a.ci_low"
+        },
+        {
+          "category": "portability-only",
+          "new_value": null,
+          "old_value": null,
+          "path": "results_by_layer.8.non_primary_applicable_pairs.dprest_a.mean"
+        },
+        {
+          "category": "portability-only",
+          "new_value": null,
+          "old_value": null,
+          "path": "results_by_layer.8.non_primary_applicable_pairs.dprest_a.p_gt_0"
+        },
+        {
+          "category": "portability-only",
+          "new_value": null,
+          "old_value": null,
+          "path": "results_by_layer.8.non_primary_applicable_pairs.dprest_c.ci_high"
+        },
+        {
+          "category": "portability-only",
+          "new_value": null,
+          "old_value": null,
+          "path": "results_by_layer.8.non_primary_applicable_pairs.dprest_c.ci_low"
+        },
+        {
+          "category": "portability-only",
+          "new_value": null,
+          "old_value": null,
+          "path": "results_by_layer.8.non_primary_applicable_pairs.dprest_c.mean"
+        },
+        {
+          "category": "portability-only",
+          "new_value": null,
+          "old_value": null,
+          "path": "results_by_layer.8.non_primary_applicable_pairs.dprest_c.p_gt_0"
+        },
+        {
+          "category": "path-only",
+          "new_value": "hf://google/gemma-2-2b@c5ebcd40d208330abc697524c919956e692655cf",
+          "old_value": "hf://google/gemma-2-2b@c5ebcd40d208330abc697524c919956e692655cf",
+          "path": "source.tokenizer_name_or_path"
+        },
+        {
+          "category": "path-only",
+          "new_value": "hf://google/gemma-2-2b@c5ebcd40d208330abc697524c919956e692655cf",
+          "old_value": "hf://google/gemma-2-2b@c5ebcd40d208330abc697524c919956e692655cf",
+          "path": "source.tokenizer_name_or_path_resolved"
+        }
+      ],
+      "kind": "json",
+      "path": "results/mom_endpoint_plan/r1_full_cpu_f64.endpoint_decomp_summary_v2.json"
+    },
+    {
+      "changes": [
+        {
+          "category": "provenance-semantic",
+          "new_value": "hf://google/gemma-2-2b@c5ebcd40d208330abc697524c919956e692655cf",
+          "old_value": "hf://google/gemma-2-2b@c5ebcd40d208330abc697524c919956e692655cf",
+          "path": "model_name_or_path"
+        }
+      ],
+      "kind": "json",
+      "path": "results/mom_endpoint_plan/r1_full_cpu_f64.summary.json"
+    },
+    {
+      "changes": [
+        {
+          "category": "provenance-semantic",
+          "new_value": "[\"aom_clt_head_attribution.py\", \"--model_name_or_path\", \"google/gemma-2-2b-it\", \"--device\", \"mps\", \"--torch_dtype\", \"float16\", \"--clt_repo\", \"clt_bundles/gemma-scope-2b-pt-res_sweep_smoke\", \"--clt_layer\", \"4\", \"--clt_width\", \"16k\", \"--topk_summary_path\", \"results/mom_option_c_bigrun_fp16_google_gemma-2-2b-it/topk.summary.json\", \"--top_n_features\", \"50\", \"--head_layers\", \"1,2,3\", \"--top_h\", \"5\", \"--qk_patterns\", \"--disamb_path\", \"data/disamb_pairs.jsonl\", \"--out_head_scores_csv\", \"results/mom_option_c_bigrun_fp16_google_gemma-2-2b-it/head_scores.csv\", \"--out_ablation_rows_csv\", \"results/mom_option_c_bigrun_fp16_google_gemma-2-2b-it/head_ablation_rows.csv\", \"--out_ablation_summary_csv\", \"results/mom_option_c_bigrun_fp16_google_gemma-2-2b-it/head_ablation_summary.csv\", \"--out_qk_csv\", \"results/mom_option_c_bigrun_fp16_google_gemma-2-2b-it/head_qk_patterns.csv\"]",
+          "old_value": null,
+          "path": "argv_redacted_json"
+        }
+      ],
+      "kind": "json",
+      "path": "results/mom_option_c_bigrun_fp16_google_gemma-2-2b-it/head_ablation_summary.manifest.json"
+    },
+    {
+      "changes": [],
+      "kind": "json",
+      "path": "results/mom_option_c_bigrun_fp16_google_gemma-2-2b-it/topk.summary.json"
+    },
+    {
+      "changes": [
+        {
+          "category": "provenance-semantic",
+          "new_value": "[\"aom_clt_topk_recovery.py\", \"--model_name_or_path\", \"google/gemma-2-2b-it\", \"--device\", \"mps\", \"--torch_dtype\", \"float16\", \"--clt_repo\", \"clt_bundles/gemma-scope-2b-pt-res_sweep_smoke\", \"--clt_width\", \"16k\", \"--layers\", \"4,8,12\", \"--random_control_mode\", \"matched_bin\", \"--with_logz\", \"--disamb_path\", \"data/disamb_pairs.jsonl\", \"--out_csv\", \"results/mom_option_c_bigrun_fp16_google_gemma-2-2b-it/topk.csv\", \"--out_summary\", \"results/mom_option_c_bigrun_fp16_google_gemma-2-2b-it/topk.summary.json\", \"--overwrite\"]",
+          "old_value": null,
+          "path": "argv_redacted_json"
+        }
+      ],
+      "kind": "json",
+      "path": "results/mom_option_c_bigrun_fp16_google_gemma-2-2b-it/topk.summary.manifest.json"
+    },
+    {
+      "changes": [
+        {
+          "category": "provenance-semantic",
+          "new_value": "[\"aom_clt_feature_analysis.py\", \"--model_name_or_path\", \"google/gemma-2-2b\", \"--device\", \"mps\", \"--torch_dtype\", \"float16\", \"--clt_repo\", \"clt_bundles/gemma-scope-2b-pt-res_sweep_smoke\", \"--clt_layer\", \"4\", \"--clt_width\", \"16k\", \"--topk_summary_path\", \"results/mom_option_c_bigrun_fp16_google_gemma-2-2b/topk.summary.json\", \"--top_n_features\", \"50\", \"--disamb_path\", \"data/disamb_pairs.jsonl\", \"--out_activation_csv\", \"results/mom_option_c_bigrun_fp16_google_gemma-2-2b/feature_activations.csv\", \"--out_top_tokens_csv\", \"results/mom_option_c_bigrun_fp16_google_gemma-2-2b/feature_top_tokens.csv\", \"--out_selectivity_csv\", \"results/mom_option_c_bigrun_fp16_google_gemma-2-2b/feature_selectivity.csv\", \"--out_families_json\", \"results/mom_option_c_bigrun_fp16_google_gemma-2-2b/feature_families.json\", \"--out_families_summary_csv\", \"results/mom_option_c_bigrun_fp16_google_gemma-2-2b/feature_families_summary.csv\", \"--out_family_validation_csv\", \"results/mom_option_c_bigrun_fp16_google_gemma-2-2b/feature_families_validation.csv\"]",
+          "old_value": null,
+          "path": "argv_redacted_json"
+        }
+      ],
+      "kind": "json",
+      "path": "results/mom_option_c_bigrun_fp16_google_gemma-2-2b/feature_families_summary.manifest.json"
+    },
+    {
+      "changes": [
+        {
+          "category": "provenance-semantic",
+          "new_value": "[\"aom_clt_head_attribution.py\", \"--model_name_or_path\", \"google/gemma-2-2b\", \"--device\", \"mps\", \"--torch_dtype\", \"float16\", \"--clt_repo\", \"clt_bundles/gemma-scope-2b-pt-res_sweep_smoke\", \"--clt_layer\", \"4\", \"--clt_width\", \"16k\", \"--topk_summary_path\", \"results/mom_option_c_bigrun_fp16_google_gemma-2-2b/topk.summary.json\", \"--top_n_features\", \"50\", \"--head_layers\", \"1,2,3\", \"--top_h\", \"5\", \"--qk_patterns\", \"--disamb_path\", \"data/disamb_pairs.jsonl\", \"--out_head_scores_csv\", \"results/mom_option_c_bigrun_fp16_google_gemma-2-2b/head_scores.csv\", \"--out_ablation_rows_csv\", \"results/mom_option_c_bigrun_fp16_google_gemma-2-2b/head_ablation_rows.csv\", \"--out_ablation_summary_csv\", \"results/mom_option_c_bigrun_fp16_google_gemma-2-2b/head_ablation_summary.csv\", \"--out_qk_csv\", \"results/mom_option_c_bigrun_fp16_google_gemma-2-2b/head_qk_patterns.csv\"]",
+          "old_value": null,
+          "path": "argv_redacted_json"
+        }
+      ],
+      "kind": "json",
+      "path": "results/mom_option_c_bigrun_fp16_google_gemma-2-2b/head_ablation_summary.manifest.json"
+    },
+    {
+      "changes": [],
+      "kind": "json",
+      "path": "results/mom_option_c_bigrun_fp16_google_gemma-2-2b/topk.summary.json"
+    },
+    {
+      "changes": [
+        {
+          "category": "provenance-semantic",
+          "new_value": "[\"aom_clt_topk_recovery.py\", \"--model_name_or_path\", \"google/gemma-2-2b\", \"--device\", \"mps\", \"--torch_dtype\", \"float16\", \"--clt_repo\", \"clt_bundles/gemma-scope-2b-pt-res_sweep_smoke\", \"--clt_width\", \"16k\", \"--layers\", \"4,8,12\", \"--random_control_mode\", \"matched_bin\", \"--with_logz\", \"--disamb_path\", \"data/disamb_pairs.jsonl\", \"--out_csv\", \"results/mom_option_c_bigrun_fp16_google_gemma-2-2b/topk.csv\", \"--out_summary\", \"results/mom_option_c_bigrun_fp16_google_gemma-2-2b/topk.summary.json\", \"--overwrite\"]",
+          "old_value": null,
+          "path": "argv_redacted_json"
+        }
+      ],
+      "kind": "json",
+      "path": "results/mom_option_c_bigrun_fp16_google_gemma-2-2b/topk.summary.manifest.json"
+    },
+    {
+      "changes": [
+        {
+          "category": "provenance-semantic",
+          "new_value": [
+            "aom_eval.py",
+            "--model_name_or_path",
+            "hf://google/gemma-2-2b@c5ebcd40d208330abc697524c919956e692655cf",
+            "--local_files_only",
+            "--device",
+            "auto",
+            "--attn_implementation",
+            "eager",
+            "--disamb_path",
+            "data/disamb_pairs.jsonl",
+            "--cf_path",
+            "data/counterfactual.jsonl",
+            "--coh_path",
+            "data/coherence.jsonl",
+            "--run_clt_patching",
+            "--clt_repo",
+            "clt_bundles/gemma-scope-2b-pt-res_sweep_smoke",
+            "--clt_layers",
+            "4,8,12,16,20,24",
+            "--clt_width",
+            "16k",
+            "--clt_scale",
+            "1.0",
+            "--bootstrap_n",
+            "1000",
+            "--bootstrap_seed",
+            "42",
+            "--seed",
+            "0",
+            "--csv_path",
+            "results/overnight_mech_20260225T135850Z/gemma2b_clt_6layer_full_seed0.csv"
+          ],
+          "old_value": [
+            "aom_eval.py",
+            "--model_name_or_path",
+            "hf://google/gemma-2-2b@c5ebcd40d208330abc697524c919956e692655cf",
+            "--local_files_only",
+            "--device",
+            "auto",
+            "--attn_implementation",
+            "eager",
+            "--disamb_path",
+            "data/disamb_pairs.jsonl",
+            "--cf_path",
+            "data/counterfactual.jsonl",
+            "--coh_path",
+            "data/coherence.jsonl",
+            "--run_clt_patching",
+            "--clt_repo",
+            "clt_bundles/gemma-scope-2b-pt-res_sweep_smoke",
+            "--clt_layers",
+            "4,8,12,16,20,24",
+            "--clt_width",
+            "16k",
+            "--clt_scale",
+            "1.0",
+            "--bootstrap_n",
+            "1000",
+            "--bootstrap_seed",
+            "42",
+            "--seed",
+            "0",
+            "--csv_path",
+            "results/overnight_mech_20260225T135850Z/gemma2b_clt_6layer_full_seed0.csv"
+          ],
+          "path": "argv_redacted"
+        },
+        {
+          "category": "provenance-semantic",
+          "new_value": "[\"aom_eval.py\", \"--model_name_or_path\", \"hf://google/gemma-2-2b@c5ebcd40d208330abc697524c919956e692655cf\", \"--local_files_only\", \"--device\", \"auto\", \"--attn_implementation\", \"eager\", \"--disamb_path\", \"data/disamb_pairs.jsonl\", \"--cf_path\", \"data/counterfactual.jsonl\", \"--coh_path\", \"data/coherence.jsonl\", \"--run_clt_patching\", \"--clt_repo\", \"clt_bundles/gemma-scope-2b-pt-res_sweep_smoke\", \"--clt_layers\", \"4,8,12,16,20,24\", \"--clt_width\", \"16k\", \"--clt_scale\", \"1.0\", \"--bootstrap_n\", \"1000\", \"--bootstrap_seed\", \"42\", \"--seed\", \"0\", \"--csv_path\", \"results/overnight_mech_20260225T135850Z/gemma2b_clt_6layer_full_seed0.csv\"]",
+          "old_value": null,
+          "path": "argv_redacted_json"
+        },
+        {
+          "category": "path-only",
+          "new_value": "results/overnight_mech_20260225T135850Z/gemma2b_clt_6layer_full_seed0.csv",
+          "old_value": "results/overnight_mech_20260225T135850Z/gemma2b_clt_6layer_full_seed0.csv",
+          "path": "csv_path"
+        },
+        {
+          "category": "path-only",
+          "new_value": "data/counterfactual.jsonl",
+          "old_value": "data/counterfactual.jsonl",
+          "path": "datasets.cf.path"
+        },
+        {
+          "category": "path-only",
+          "new_value": "data/coherence.jsonl",
+          "old_value": "data/coherence.jsonl",
+          "path": "datasets.coh.path"
+        },
+        {
+          "category": "path-only",
+          "new_value": "data/disamb_pairs.jsonl",
+          "old_value": "data/disamb_pairs.jsonl",
+          "path": "datasets.disamb.path"
+        },
+        {
+          "category": "provenance-semantic",
+          "new_value": "[\"aom_eval.py\", \"--model_name_or_path\", \"hf://google/gemma-2-2b@c5ebcd40d208330abc697524c919956e692655cf\", \"--local_files_only\", \"--device\", \"auto\", \"--attn_implementation\", \"eager\", \"--disamb_path\", \"data/disamb_pairs.jsonl\", \"--cf_path\", \"data/counterfactual.jsonl\", \"--coh_path\", \"data/coherence.jsonl\", \"--run_clt_patching\", \"--clt_repo\", \"clt_bundles/gemma-scope-2b-pt-res_sweep_smoke\", \"--clt_layers\", \"4,8,12,16,20,24\", \"--clt_width\", \"16k\", \"--clt_scale\", \"1.0\", \"--bootstrap_n\", \"1000\", \"--bootstrap_seed\", \"42\", \"--seed\", \"0\", \"--csv_path\", \"results/overnight_mech_20260225T135850Z/gemma2b_clt_6layer_full_seed0.csv\"]",
+          "old_value": "[\"aom_eval.py\", \"--model_name_or_path\", \"hf://google/gemma-2-2b@c5ebcd40d208330abc697524c919956e692655cf\", \"--local_files_only\", \"--device\", \"auto\", \"--attn_implementation\", \"eager\", \"--disamb_path\", \"data/disamb_pairs.jsonl\", \"--cf_path\", \"data/counterfactual.jsonl\", \"--coh_path\", \"data/coherence.jsonl\", \"--run_clt_patching\", \"--clt_repo\", \"clt_bundles/gemma-scope-2b-pt-res_sweep_smoke\", \"--clt_layers\", \"4,8,12,16,20,24\", \"--clt_width\", \"16k\", \"--clt_scale\", \"1.0\", \"--bootstrap_n\", \"1000\", \"--bootstrap_seed\", \"42\", \"--seed\", \"0\", \"--csv_path\", \"results/overnight_mech_20260225T135850Z/gemma2b_clt_6layer_full_seed0.csv\"]",
+          "path": "results_row.argv_redacted_json"
+        },
+        {
+          "category": "path-only",
+          "new_value": "data/counterfactual.jsonl",
+          "old_value": "data/counterfactual.jsonl",
+          "path": "results_row.cf_path"
+        },
+        {
+          "category": "path-only",
+          "new_value": "clt_bundles/gemma-scope-2b-pt-res_sweep_smoke/layer_12/width_16k/average_l0_176/cfg.json",
+          "old_value": "clt_bundles/gemma-scope-2b-pt-res_sweep_smoke/layer_12/width_16k/average_l0_176/cfg.json",
+          "path": "results_row.clt_cfg_path_layer_12"
+        },
+        {
+          "category": "path-only",
+          "new_value": "clt_bundles/gemma-scope-2b-pt-res_sweep_smoke/layer_16/width_16k/average_l0_78/cfg.json",
+          "old_value": "clt_bundles/gemma-scope-2b-pt-res_sweep_smoke/layer_16/width_16k/average_l0_78/cfg.json",
+          "path": "results_row.clt_cfg_path_layer_16"
+        },
+        {
+          "category": "path-only",
+          "new_value": "clt_bundles/gemma-scope-2b-pt-res_sweep_smoke/layer_20/width_16k/average_l0_71/cfg.json",
+          "old_value": "clt_bundles/gemma-scope-2b-pt-res_sweep_smoke/layer_20/width_16k/average_l0_71/cfg.json",
+          "path": "results_row.clt_cfg_path_layer_20"
+        },
+        {
+          "category": "path-only",
+          "new_value": "clt_bundles/gemma-scope-2b-pt-res_sweep_smoke/layer_24/width_16k/average_l0_73/cfg.json",
+          "old_value": "clt_bundles/gemma-scope-2b-pt-res_sweep_smoke/layer_24/width_16k/average_l0_73/cfg.json",
+          "path": "results_row.clt_cfg_path_layer_24"
+        },
+        {
+          "category": "path-only",
+          "new_value": "clt_bundles/gemma-scope-2b-pt-res_sweep_smoke/layer_4/width_16k/average_l0_60/cfg.json",
+          "old_value": "clt_bundles/gemma-scope-2b-pt-res_sweep_smoke/layer_4/width_16k/average_l0_60/cfg.json",
+          "path": "results_row.clt_cfg_path_layer_4"
+        },
+        {
+          "category": "path-only",
+          "new_value": "clt_bundles/gemma-scope-2b-pt-res_sweep_smoke/layer_8/width_16k/average_l0_71/cfg.json",
+          "old_value": "clt_bundles/gemma-scope-2b-pt-res_sweep_smoke/layer_8/width_16k/average_l0_71/cfg.json",
+          "path": "results_row.clt_cfg_path_layer_8"
+        },
+        {
+          "category": "path-only",
+          "new_value": "clt_bundles/gemma-scope-2b-pt-res_sweep_smoke/layer_12/width_16k/average_l0_176/params.npz",
+          "old_value": "clt_bundles/gemma-scope-2b-pt-res_sweep_smoke/layer_12/width_16k/average_l0_176/params.npz",
+          "path": "results_row.clt_params_path_layer_12"
+        },
+        {
+          "category": "path-only",
+          "new_value": "clt_bundles/gemma-scope-2b-pt-res_sweep_smoke/layer_16/width_16k/average_l0_78/params.npz",
+          "old_value": "clt_bundles/gemma-scope-2b-pt-res_sweep_smoke/layer_16/width_16k/average_l0_78/params.npz",
+          "path": "results_row.clt_params_path_layer_16"
+        },
+        {
+          "category": "path-only",
+          "new_value": "clt_bundles/gemma-scope-2b-pt-res_sweep_smoke/layer_20/width_16k/average_l0_71/params.npz",
+          "old_value": "clt_bundles/gemma-scope-2b-pt-res_sweep_smoke/layer_20/width_16k/average_l0_71/params.npz",
+          "path": "results_row.clt_params_path_layer_20"
+        },
+        {
+          "category": "path-only",
+          "new_value": "clt_bundles/gemma-scope-2b-pt-res_sweep_smoke/layer_24/width_16k/average_l0_73/params.npz",
+          "old_value": "clt_bundles/gemma-scope-2b-pt-res_sweep_smoke/layer_24/width_16k/average_l0_73/params.npz",
+          "path": "results_row.clt_params_path_layer_24"
+        },
+        {
+          "category": "path-only",
+          "new_value": "clt_bundles/gemma-scope-2b-pt-res_sweep_smoke/layer_4/width_16k/average_l0_60/params.npz",
+          "old_value": "clt_bundles/gemma-scope-2b-pt-res_sweep_smoke/layer_4/width_16k/average_l0_60/params.npz",
+          "path": "results_row.clt_params_path_layer_4"
+        },
+        {
+          "category": "path-only",
+          "new_value": "clt_bundles/gemma-scope-2b-pt-res_sweep_smoke/layer_8/width_16k/average_l0_71/params.npz",
+          "old_value": "clt_bundles/gemma-scope-2b-pt-res_sweep_smoke/layer_8/width_16k/average_l0_71/params.npz",
+          "path": "results_row.clt_params_path_layer_8"
+        },
+        {
+          "category": "provenance-semantic",
+          "new_value": "clt_bundles/gemma-scope-2b-pt-res_sweep_smoke",
+          "old_value": "clt_bundles/gemma-scope-2b-pt-res_sweep_smoke",
+          "path": "results_row.clt_repo"
+        },
+        {
+          "category": "path-only",
+          "new_value": "data/coherence.jsonl",
+          "old_value": "data/coherence.jsonl",
+          "path": "results_row.coh_path"
+        },
+        {
+          "category": "path-only",
+          "new_value": "data/disamb_pairs.jsonl",
+          "old_value": "data/disamb_pairs.jsonl",
+          "path": "results_row.disamb_path"
+        },
+        {
+          "category": "provenance-semantic",
+          "new_value": "hf://google/gemma-2-2b@c5ebcd40d208330abc697524c919956e692655cf",
+          "old_value": "hf://google/gemma-2-2b@c5ebcd40d208330abc697524c919956e692655cf",
+          "path": "results_row.model"
+        }
+      ],
+      "kind": "json",
+      "path": "results/overnight_mech_20260225T135850Z/gemma2b_clt_6layer_full_seed0.manifest.json"
+    },
+    {
+      "changes": [
+        {
+          "category": "provenance-semantic",
+          "new_value": [
+            "aom_eval.py",
+            "--model_name_or_path",
+            "hf://google/gemma-2-2b@c5ebcd40d208330abc697524c919956e692655cf",
+            "--local_files_only",
+            "--device",
+            "auto",
+            "--attn_implementation",
+            "eager",
+            "--disamb_path",
+            "data/disamb_pairs.jsonl",
+            "--cf_path",
+            "data/counterfactual.jsonl",
+            "--coh_path",
+            "data/coherence.jsonl",
+            "--run_clt_patching",
+            "--clt_repo",
+            "clt_bundles/gemma-scope-2b-pt-res_sweep_smoke",
+            "--clt_layers",
+            "4,8,12,16,20,24",
+            "--clt_width",
+            "16k",
+            "--clt_scale",
+            "1.0",
+            "--bootstrap_n",
+            "1000",
+            "--bootstrap_seed",
+            "42",
+            "--seed",
+            "1",
+            "--csv_path",
+            "results/overnight_mech_20260225T135850Z/gemma2b_clt_6layer_full_seed1.csv"
+          ],
+          "old_value": [
+            "aom_eval.py",
+            "--model_name_or_path",
+            "hf://google/gemma-2-2b@c5ebcd40d208330abc697524c919956e692655cf",
+            "--local_files_only",
+            "--device",
+            "auto",
+            "--attn_implementation",
+            "eager",
+            "--disamb_path",
+            "data/disamb_pairs.jsonl",
+            "--cf_path",
+            "data/counterfactual.jsonl",
+            "--coh_path",
+            "data/coherence.jsonl",
+            "--run_clt_patching",
+            "--clt_repo",
+            "clt_bundles/gemma-scope-2b-pt-res_sweep_smoke",
+            "--clt_layers",
+            "4,8,12,16,20,24",
+            "--clt_width",
+            "16k",
+            "--clt_scale",
+            "1.0",
+            "--bootstrap_n",
+            "1000",
+            "--bootstrap_seed",
+            "42",
+            "--seed",
+            "1",
+            "--csv_path",
+            "results/overnight_mech_20260225T135850Z/gemma2b_clt_6layer_full_seed1.csv"
+          ],
+          "path": "argv_redacted"
+        },
+        {
+          "category": "provenance-semantic",
+          "new_value": "[\"aom_eval.py\", \"--model_name_or_path\", \"hf://google/gemma-2-2b@c5ebcd40d208330abc697524c919956e692655cf\", \"--local_files_only\", \"--device\", \"auto\", \"--attn_implementation\", \"eager\", \"--disamb_path\", \"data/disamb_pairs.jsonl\", \"--cf_path\", \"data/counterfactual.jsonl\", \"--coh_path\", \"data/coherence.jsonl\", \"--run_clt_patching\", \"--clt_repo\", \"clt_bundles/gemma-scope-2b-pt-res_sweep_smoke\", \"--clt_layers\", \"4,8,12,16,20,24\", \"--clt_width\", \"16k\", \"--clt_scale\", \"1.0\", \"--bootstrap_n\", \"1000\", \"--bootstrap_seed\", \"42\", \"--seed\", \"1\", \"--csv_path\", \"results/overnight_mech_20260225T135850Z/gemma2b_clt_6layer_full_seed1.csv\"]",
+          "old_value": null,
+          "path": "argv_redacted_json"
+        },
+        {
+          "category": "path-only",
+          "new_value": "results/overnight_mech_20260225T135850Z/gemma2b_clt_6layer_full_seed1.csv",
+          "old_value": "results/overnight_mech_20260225T135850Z/gemma2b_clt_6layer_full_seed1.csv",
+          "path": "csv_path"
+        },
+        {
+          "category": "path-only",
+          "new_value": "data/counterfactual.jsonl",
+          "old_value": "data/counterfactual.jsonl",
+          "path": "datasets.cf.path"
+        },
+        {
+          "category": "path-only",
+          "new_value": "data/coherence.jsonl",
+          "old_value": "data/coherence.jsonl",
+          "path": "datasets.coh.path"
+        },
+        {
+          "category": "path-only",
+          "new_value": "data/disamb_pairs.jsonl",
+          "old_value": "data/disamb_pairs.jsonl",
+          "path": "datasets.disamb.path"
+        },
+        {
+          "category": "provenance-semantic",
+          "new_value": "[\"aom_eval.py\", \"--model_name_or_path\", \"hf://google/gemma-2-2b@c5ebcd40d208330abc697524c919956e692655cf\", \"--local_files_only\", \"--device\", \"auto\", \"--attn_implementation\", \"eager\", \"--disamb_path\", \"data/disamb_pairs.jsonl\", \"--cf_path\", \"data/counterfactual.jsonl\", \"--coh_path\", \"data/coherence.jsonl\", \"--run_clt_patching\", \"--clt_repo\", \"clt_bundles/gemma-scope-2b-pt-res_sweep_smoke\", \"--clt_layers\", \"4,8,12,16,20,24\", \"--clt_width\", \"16k\", \"--clt_scale\", \"1.0\", \"--bootstrap_n\", \"1000\", \"--bootstrap_seed\", \"42\", \"--seed\", \"1\", \"--csv_path\", \"results/overnight_mech_20260225T135850Z/gemma2b_clt_6layer_full_seed1.csv\"]",
+          "old_value": "[\"aom_eval.py\", \"--model_name_or_path\", \"hf://google/gemma-2-2b@c5ebcd40d208330abc697524c919956e692655cf\", \"--local_files_only\", \"--device\", \"auto\", \"--attn_implementation\", \"eager\", \"--disamb_path\", \"data/disamb_pairs.jsonl\", \"--cf_path\", \"data/counterfactual.jsonl\", \"--coh_path\", \"data/coherence.jsonl\", \"--run_clt_patching\", \"--clt_repo\", \"clt_bundles/gemma-scope-2b-pt-res_sweep_smoke\", \"--clt_layers\", \"4,8,12,16,20,24\", \"--clt_width\", \"16k\", \"--clt_scale\", \"1.0\", \"--bootstrap_n\", \"1000\", \"--bootstrap_seed\", \"42\", \"--seed\", \"1\", \"--csv_path\", \"results/overnight_mech_20260225T135850Z/gemma2b_clt_6layer_full_seed1.csv\"]",
+          "path": "results_row.argv_redacted_json"
+        },
+        {
+          "category": "path-only",
+          "new_value": "data/counterfactual.jsonl",
+          "old_value": "data/counterfactual.jsonl",
+          "path": "results_row.cf_path"
+        },
+        {
+          "category": "path-only",
+          "new_value": "clt_bundles/gemma-scope-2b-pt-res_sweep_smoke/layer_12/width_16k/average_l0_176/cfg.json",
+          "old_value": "clt_bundles/gemma-scope-2b-pt-res_sweep_smoke/layer_12/width_16k/average_l0_176/cfg.json",
+          "path": "results_row.clt_cfg_path_layer_12"
+        },
+        {
+          "category": "path-only",
+          "new_value": "clt_bundles/gemma-scope-2b-pt-res_sweep_smoke/layer_16/width_16k/average_l0_78/cfg.json",
+          "old_value": "clt_bundles/gemma-scope-2b-pt-res_sweep_smoke/layer_16/width_16k/average_l0_78/cfg.json",
+          "path": "results_row.clt_cfg_path_layer_16"
+        },
+        {
+          "category": "path-only",
+          "new_value": "clt_bundles/gemma-scope-2b-pt-res_sweep_smoke/layer_20/width_16k/average_l0_71/cfg.json",
+          "old_value": "clt_bundles/gemma-scope-2b-pt-res_sweep_smoke/layer_20/width_16k/average_l0_71/cfg.json",
+          "path": "results_row.clt_cfg_path_layer_20"
+        },
+        {
+          "category": "path-only",
+          "new_value": "clt_bundles/gemma-scope-2b-pt-res_sweep_smoke/layer_24/width_16k/average_l0_73/cfg.json",
+          "old_value": "clt_bundles/gemma-scope-2b-pt-res_sweep_smoke/layer_24/width_16k/average_l0_73/cfg.json",
+          "path": "results_row.clt_cfg_path_layer_24"
+        },
+        {
+          "category": "path-only",
+          "new_value": "clt_bundles/gemma-scope-2b-pt-res_sweep_smoke/layer_4/width_16k/average_l0_60/cfg.json",
+          "old_value": "clt_bundles/gemma-scope-2b-pt-res_sweep_smoke/layer_4/width_16k/average_l0_60/cfg.json",
+          "path": "results_row.clt_cfg_path_layer_4"
+        },
+        {
+          "category": "path-only",
+          "new_value": "clt_bundles/gemma-scope-2b-pt-res_sweep_smoke/layer_8/width_16k/average_l0_71/cfg.json",
+          "old_value": "clt_bundles/gemma-scope-2b-pt-res_sweep_smoke/layer_8/width_16k/average_l0_71/cfg.json",
+          "path": "results_row.clt_cfg_path_layer_8"
+        },
+        {
+          "category": "path-only",
+          "new_value": "clt_bundles/gemma-scope-2b-pt-res_sweep_smoke/layer_12/width_16k/average_l0_176/params.npz",
+          "old_value": "clt_bundles/gemma-scope-2b-pt-res_sweep_smoke/layer_12/width_16k/average_l0_176/params.npz",
+          "path": "results_row.clt_params_path_layer_12"
+        },
+        {
+          "category": "path-only",
+          "new_value": "clt_bundles/gemma-scope-2b-pt-res_sweep_smoke/layer_16/width_16k/average_l0_78/params.npz",
+          "old_value": "clt_bundles/gemma-scope-2b-pt-res_sweep_smoke/layer_16/width_16k/average_l0_78/params.npz",
+          "path": "results_row.clt_params_path_layer_16"
+        },
+        {
+          "category": "path-only",
+          "new_value": "clt_bundles/gemma-scope-2b-pt-res_sweep_smoke/layer_20/width_16k/average_l0_71/params.npz",
+          "old_value": "clt_bundles/gemma-scope-2b-pt-res_sweep_smoke/layer_20/width_16k/average_l0_71/params.npz",
+          "path": "results_row.clt_params_path_layer_20"
+        },
+        {
+          "category": "path-only",
+          "new_value": "clt_bundles/gemma-scope-2b-pt-res_sweep_smoke/layer_24/width_16k/average_l0_73/params.npz",
+          "old_value": "clt_bundles/gemma-scope-2b-pt-res_sweep_smoke/layer_24/width_16k/average_l0_73/params.npz",
+          "path": "results_row.clt_params_path_layer_24"
+        },
+        {
+          "category": "path-only",
+          "new_value": "clt_bundles/gemma-scope-2b-pt-res_sweep_smoke/layer_4/width_16k/average_l0_60/params.npz",
+          "old_value": "clt_bundles/gemma-scope-2b-pt-res_sweep_smoke/layer_4/width_16k/average_l0_60/params.npz",
+          "path": "results_row.clt_params_path_layer_4"
+        },
+        {
+          "category": "path-only",
+          "new_value": "clt_bundles/gemma-scope-2b-pt-res_sweep_smoke/layer_8/width_16k/average_l0_71/params.npz",
+          "old_value": "clt_bundles/gemma-scope-2b-pt-res_sweep_smoke/layer_8/width_16k/average_l0_71/params.npz",
+          "path": "results_row.clt_params_path_layer_8"
+        },
+        {
+          "category": "provenance-semantic",
+          "new_value": "clt_bundles/gemma-scope-2b-pt-res_sweep_smoke",
+          "old_value": "clt_bundles/gemma-scope-2b-pt-res_sweep_smoke",
+          "path": "results_row.clt_repo"
+        },
+        {
+          "category": "path-only",
+          "new_value": "data/coherence.jsonl",
+          "old_value": "data/coherence.jsonl",
+          "path": "results_row.coh_path"
+        },
+        {
+          "category": "path-only",
+          "new_value": "data/disamb_pairs.jsonl",
+          "old_value": "data/disamb_pairs.jsonl",
+          "path": "results_row.disamb_path"
+        },
+        {
+          "category": "provenance-semantic",
+          "new_value": "hf://google/gemma-2-2b@c5ebcd40d208330abc697524c919956e692655cf",
+          "old_value": "hf://google/gemma-2-2b@c5ebcd40d208330abc697524c919956e692655cf",
+          "path": "results_row.model"
+        }
+      ],
+      "kind": "json",
+      "path": "results/overnight_mech_20260225T135850Z/gemma2b_clt_6layer_full_seed1.manifest.json"
+    },
+    {
+      "changes": [
+        {
+          "category": "provenance-semantic",
+          "new_value": [
+            "aom_eval.py",
+            "--model_name_or_path",
+            "hf://google/gemma-2-2b@c5ebcd40d208330abc697524c919956e692655cf",
+            "--local_files_only",
+            "--device",
+            "auto",
+            "--attn_implementation",
+            "eager",
+            "--disamb_path",
+            "data/disamb_pairs.jsonl",
+            "--cf_path",
+            "data/counterfactual.jsonl",
+            "--coh_path",
+            "data/coherence.jsonl",
+            "--run_clt_patching",
+            "--clt_repo",
+            "clt_bundles/gemma-scope-2b-pt-res_sweep_smoke",
+            "--clt_layers",
+            "4,8,12,16,20,24",
+            "--clt_width",
+            "16k",
+            "--clt_scale",
+            "1.0",
+            "--bootstrap_n",
+            "1000",
+            "--bootstrap_seed",
+            "42",
+            "--seed",
+            "42",
+            "--csv_path",
+            "results/overnight_mech_20260225T135850Z/gemma2b_clt_6layer_full_seed42.csv"
+          ],
+          "old_value": [
+            "aom_eval.py",
+            "--model_name_or_path",
+            "hf://google/gemma-2-2b@c5ebcd40d208330abc697524c919956e692655cf",
+            "--local_files_only",
+            "--device",
+            "auto",
+            "--attn_implementation",
+            "eager",
+            "--disamb_path",
+            "data/disamb_pairs.jsonl",
+            "--cf_path",
+            "data/counterfactual.jsonl",
+            "--coh_path",
+            "data/coherence.jsonl",
+            "--run_clt_patching",
+            "--clt_repo",
+            "clt_bundles/gemma-scope-2b-pt-res_sweep_smoke",
+            "--clt_layers",
+            "4,8,12,16,20,24",
+            "--clt_width",
+            "16k",
+            "--clt_scale",
+            "1.0",
+            "--bootstrap_n",
+            "1000",
+            "--bootstrap_seed",
+            "42",
+            "--seed",
+            "42",
+            "--csv_path",
+            "results/overnight_mech_20260225T135850Z/gemma2b_clt_6layer_full_seed42.csv"
+          ],
+          "path": "argv_redacted"
+        },
+        {
+          "category": "provenance-semantic",
+          "new_value": "[\"aom_eval.py\", \"--model_name_or_path\", \"hf://google/gemma-2-2b@c5ebcd40d208330abc697524c919956e692655cf\", \"--local_files_only\", \"--device\", \"auto\", \"--attn_implementation\", \"eager\", \"--disamb_path\", \"data/disamb_pairs.jsonl\", \"--cf_path\", \"data/counterfactual.jsonl\", \"--coh_path\", \"data/coherence.jsonl\", \"--run_clt_patching\", \"--clt_repo\", \"clt_bundles/gemma-scope-2b-pt-res_sweep_smoke\", \"--clt_layers\", \"4,8,12,16,20,24\", \"--clt_width\", \"16k\", \"--clt_scale\", \"1.0\", \"--bootstrap_n\", \"1000\", \"--bootstrap_seed\", \"42\", \"--seed\", \"42\", \"--csv_path\", \"results/overnight_mech_20260225T135850Z/gemma2b_clt_6layer_full_seed42.csv\"]",
+          "old_value": null,
+          "path": "argv_redacted_json"
+        },
+        {
+          "category": "path-only",
+          "new_value": "results/overnight_mech_20260225T135850Z/gemma2b_clt_6layer_full_seed42.csv",
+          "old_value": "results/overnight_mech_20260225T135850Z/gemma2b_clt_6layer_full_seed42.csv",
+          "path": "csv_path"
+        },
+        {
+          "category": "path-only",
+          "new_value": "data/counterfactual.jsonl",
+          "old_value": "data/counterfactual.jsonl",
+          "path": "datasets.cf.path"
+        },
+        {
+          "category": "path-only",
+          "new_value": "data/coherence.jsonl",
+          "old_value": "data/coherence.jsonl",
+          "path": "datasets.coh.path"
+        },
+        {
+          "category": "path-only",
+          "new_value": "data/disamb_pairs.jsonl",
+          "old_value": "data/disamb_pairs.jsonl",
+          "path": "datasets.disamb.path"
+        },
+        {
+          "category": "provenance-semantic",
+          "new_value": "[\"aom_eval.py\", \"--model_name_or_path\", \"hf://google/gemma-2-2b@c5ebcd40d208330abc697524c919956e692655cf\", \"--local_files_only\", \"--device\", \"auto\", \"--attn_implementation\", \"eager\", \"--disamb_path\", \"data/disamb_pairs.jsonl\", \"--cf_path\", \"data/counterfactual.jsonl\", \"--coh_path\", \"data/coherence.jsonl\", \"--run_clt_patching\", \"--clt_repo\", \"clt_bundles/gemma-scope-2b-pt-res_sweep_smoke\", \"--clt_layers\", \"4,8,12,16,20,24\", \"--clt_width\", \"16k\", \"--clt_scale\", \"1.0\", \"--bootstrap_n\", \"1000\", \"--bootstrap_seed\", \"42\", \"--seed\", \"42\", \"--csv_path\", \"results/overnight_mech_20260225T135850Z/gemma2b_clt_6layer_full_seed42.csv\"]",
+          "old_value": "[\"aom_eval.py\", \"--model_name_or_path\", \"hf://google/gemma-2-2b@c5ebcd40d208330abc697524c919956e692655cf\", \"--local_files_only\", \"--device\", \"auto\", \"--attn_implementation\", \"eager\", \"--disamb_path\", \"data/disamb_pairs.jsonl\", \"--cf_path\", \"data/counterfactual.jsonl\", \"--coh_path\", \"data/coherence.jsonl\", \"--run_clt_patching\", \"--clt_repo\", \"clt_bundles/gemma-scope-2b-pt-res_sweep_smoke\", \"--clt_layers\", \"4,8,12,16,20,24\", \"--clt_width\", \"16k\", \"--clt_scale\", \"1.0\", \"--bootstrap_n\", \"1000\", \"--bootstrap_seed\", \"42\", \"--seed\", \"42\", \"--csv_path\", \"results/overnight_mech_20260225T135850Z/gemma2b_clt_6layer_full_seed42.csv\"]",
+          "path": "results_row.argv_redacted_json"
+        },
+        {
+          "category": "path-only",
+          "new_value": "data/counterfactual.jsonl",
+          "old_value": "data/counterfactual.jsonl",
+          "path": "results_row.cf_path"
+        },
+        {
+          "category": "path-only",
+          "new_value": "clt_bundles/gemma-scope-2b-pt-res_sweep_smoke/layer_12/width_16k/average_l0_176/cfg.json",
+          "old_value": "clt_bundles/gemma-scope-2b-pt-res_sweep_smoke/layer_12/width_16k/average_l0_176/cfg.json",
+          "path": "results_row.clt_cfg_path_layer_12"
+        },
+        {
+          "category": "path-only",
+          "new_value": "clt_bundles/gemma-scope-2b-pt-res_sweep_smoke/layer_16/width_16k/average_l0_78/cfg.json",
+          "old_value": "clt_bundles/gemma-scope-2b-pt-res_sweep_smoke/layer_16/width_16k/average_l0_78/cfg.json",
+          "path": "results_row.clt_cfg_path_layer_16"
+        },
+        {
+          "category": "path-only",
+          "new_value": "clt_bundles/gemma-scope-2b-pt-res_sweep_smoke/layer_20/width_16k/average_l0_71/cfg.json",
+          "old_value": "clt_bundles/gemma-scope-2b-pt-res_sweep_smoke/layer_20/width_16k/average_l0_71/cfg.json",
+          "path": "results_row.clt_cfg_path_layer_20"
+        },
+        {
+          "category": "path-only",
+          "new_value": "clt_bundles/gemma-scope-2b-pt-res_sweep_smoke/layer_24/width_16k/average_l0_73/cfg.json",
+          "old_value": "clt_bundles/gemma-scope-2b-pt-res_sweep_smoke/layer_24/width_16k/average_l0_73/cfg.json",
+          "path": "results_row.clt_cfg_path_layer_24"
+        },
+        {
+          "category": "path-only",
+          "new_value": "clt_bundles/gemma-scope-2b-pt-res_sweep_smoke/layer_4/width_16k/average_l0_60/cfg.json",
+          "old_value": "clt_bundles/gemma-scope-2b-pt-res_sweep_smoke/layer_4/width_16k/average_l0_60/cfg.json",
+          "path": "results_row.clt_cfg_path_layer_4"
+        },
+        {
+          "category": "path-only",
+          "new_value": "clt_bundles/gemma-scope-2b-pt-res_sweep_smoke/layer_8/width_16k/average_l0_71/cfg.json",
+          "old_value": "clt_bundles/gemma-scope-2b-pt-res_sweep_smoke/layer_8/width_16k/average_l0_71/cfg.json",
+          "path": "results_row.clt_cfg_path_layer_8"
+        },
+        {
+          "category": "path-only",
+          "new_value": "clt_bundles/gemma-scope-2b-pt-res_sweep_smoke/layer_12/width_16k/average_l0_176/params.npz",
+          "old_value": "clt_bundles/gemma-scope-2b-pt-res_sweep_smoke/layer_12/width_16k/average_l0_176/params.npz",
+          "path": "results_row.clt_params_path_layer_12"
+        },
+        {
+          "category": "path-only",
+          "new_value": "clt_bundles/gemma-scope-2b-pt-res_sweep_smoke/layer_16/width_16k/average_l0_78/params.npz",
+          "old_value": "clt_bundles/gemma-scope-2b-pt-res_sweep_smoke/layer_16/width_16k/average_l0_78/params.npz",
+          "path": "results_row.clt_params_path_layer_16"
+        },
+        {
+          "category": "path-only",
+          "new_value": "clt_bundles/gemma-scope-2b-pt-res_sweep_smoke/layer_20/width_16k/average_l0_71/params.npz",
+          "old_value": "clt_bundles/gemma-scope-2b-pt-res_sweep_smoke/layer_20/width_16k/average_l0_71/params.npz",
+          "path": "results_row.clt_params_path_layer_20"
+        },
+        {
+          "category": "path-only",
+          "new_value": "clt_bundles/gemma-scope-2b-pt-res_sweep_smoke/layer_24/width_16k/average_l0_73/params.npz",
+          "old_value": "clt_bundles/gemma-scope-2b-pt-res_sweep_smoke/layer_24/width_16k/average_l0_73/params.npz",
+          "path": "results_row.clt_params_path_layer_24"
+        },
+        {
+          "category": "path-only",
+          "new_value": "clt_bundles/gemma-scope-2b-pt-res_sweep_smoke/layer_4/width_16k/average_l0_60/params.npz",
+          "old_value": "clt_bundles/gemma-scope-2b-pt-res_sweep_smoke/layer_4/width_16k/average_l0_60/params.npz",
+          "path": "results_row.clt_params_path_layer_4"
+        },
+        {
+          "category": "path-only",
+          "new_value": "clt_bundles/gemma-scope-2b-pt-res_sweep_smoke/layer_8/width_16k/average_l0_71/params.npz",
+          "old_value": "clt_bundles/gemma-scope-2b-pt-res_sweep_smoke/layer_8/width_16k/average_l0_71/params.npz",
+          "path": "results_row.clt_params_path_layer_8"
+        },
+        {
+          "category": "provenance-semantic",
+          "new_value": "clt_bundles/gemma-scope-2b-pt-res_sweep_smoke",
+          "old_value": "clt_bundles/gemma-scope-2b-pt-res_sweep_smoke",
+          "path": "results_row.clt_repo"
+        },
+        {
+          "category": "path-only",
+          "new_value": "data/coherence.jsonl",
+          "old_value": "data/coherence.jsonl",
+          "path": "results_row.coh_path"
+        },
+        {
+          "category": "path-only",
+          "new_value": "data/disamb_pairs.jsonl",
+          "old_value": "data/disamb_pairs.jsonl",
+          "path": "results_row.disamb_path"
+        },
+        {
+          "category": "provenance-semantic",
+          "new_value": "hf://google/gemma-2-2b@c5ebcd40d208330abc697524c919956e692655cf",
+          "old_value": "hf://google/gemma-2-2b@c5ebcd40d208330abc697524c919956e692655cf",
+          "path": "results_row.model"
+        }
+      ],
+      "kind": "json",
+      "path": "results/overnight_mech_20260225T135850Z/gemma2b_clt_6layer_full_seed42.manifest.json"
+    },
+    {
+      "changes": [
+        {
+          "category": "provenance-semantic",
+          "new_value": [
+            "aom_eval.py",
+            "--model_name_or_path",
+            "hf://google/gemma-2-2b@c5ebcd40d208330abc697524c919956e692655cf",
+            "--local_files_only",
+            "--device",
+            "auto",
+            "--attn_implementation",
+            "eager",
+            "--disamb_path",
+            "data/disamb_pairs.jsonl",
+            "--cf_path",
+            "data/counterfactual.jsonl",
+            "--coh_path",
+            "data/coherence.jsonl",
+            "--run_patching",
+            "--patch_layers",
+            "4,8,12,16,20,24",
+            "--bootstrap_n",
+            "1000",
+            "--bootstrap_seed",
+            "42",
+            "--seed",
+            "42",
+            "--csv_path",
+            "results/overnight_mech_20260225T135850Z/gemma2b_raw_6layer_full_seed42.csv"
+          ],
+          "old_value": [
+            "aom_eval.py",
+            "--model_name_or_path",
+            "hf://google/gemma-2-2b@c5ebcd40d208330abc697524c919956e692655cf",
+            "--local_files_only",
+            "--device",
+            "auto",
+            "--attn_implementation",
+            "eager",
+            "--disamb_path",
+            "data/disamb_pairs.jsonl",
+            "--cf_path",
+            "data/counterfactual.jsonl",
+            "--coh_path",
+            "data/coherence.jsonl",
+            "--run_patching",
+            "--patch_layers",
+            "4,8,12,16,20,24",
+            "--bootstrap_n",
+            "1000",
+            "--bootstrap_seed",
+            "42",
+            "--seed",
+            "42",
+            "--csv_path",
+            "results/overnight_mech_20260225T135850Z/gemma2b_raw_6layer_full_seed42.csv"
+          ],
+          "path": "argv_redacted"
+        },
+        {
+          "category": "provenance-semantic",
+          "new_value": "[\"aom_eval.py\", \"--model_name_or_path\", \"hf://google/gemma-2-2b@c5ebcd40d208330abc697524c919956e692655cf\", \"--local_files_only\", \"--device\", \"auto\", \"--attn_implementation\", \"eager\", \"--disamb_path\", \"data/disamb_pairs.jsonl\", \"--cf_path\", \"data/counterfactual.jsonl\", \"--coh_path\", \"data/coherence.jsonl\", \"--run_patching\", \"--patch_layers\", \"4,8,12,16,20,24\", \"--bootstrap_n\", \"1000\", \"--bootstrap_seed\", \"42\", \"--seed\", \"42\", \"--csv_path\", \"results/overnight_mech_20260225T135850Z/gemma2b_raw_6layer_full_seed42.csv\"]",
+          "old_value": null,
+          "path": "argv_redacted_json"
+        },
+        {
+          "category": "path-only",
+          "new_value": "results/overnight_mech_20260225T135850Z/gemma2b_raw_6layer_full_seed42.csv",
+          "old_value": "results/overnight_mech_20260225T135850Z/gemma2b_raw_6layer_full_seed42.csv",
+          "path": "csv_path"
+        },
+        {
+          "category": "path-only",
+          "new_value": "data/counterfactual.jsonl",
+          "old_value": "data/counterfactual.jsonl",
+          "path": "datasets.cf.path"
+        },
+        {
+          "category": "path-only",
+          "new_value": "data/coherence.jsonl",
+          "old_value": "data/coherence.jsonl",
+          "path": "datasets.coh.path"
+        },
+        {
+          "category": "path-only",
+          "new_value": "data/disamb_pairs.jsonl",
+          "old_value": "data/disamb_pairs.jsonl",
+          "path": "datasets.disamb.path"
+        },
+        {
+          "category": "provenance-semantic",
+          "new_value": "[\"aom_eval.py\", \"--model_name_or_path\", \"hf://google/gemma-2-2b@c5ebcd40d208330abc697524c919956e692655cf\", \"--local_files_only\", \"--device\", \"auto\", \"--attn_implementation\", \"eager\", \"--disamb_path\", \"data/disamb_pairs.jsonl\", \"--cf_path\", \"data/counterfactual.jsonl\", \"--coh_path\", \"data/coherence.jsonl\", \"--run_patching\", \"--patch_layers\", \"4,8,12,16,20,24\", \"--bootstrap_n\", \"1000\", \"--bootstrap_seed\", \"42\", \"--seed\", \"42\", \"--csv_path\", \"results/overnight_mech_20260225T135850Z/gemma2b_raw_6layer_full_seed42.csv\"]",
+          "old_value": "[\"aom_eval.py\", \"--model_name_or_path\", \"hf://google/gemma-2-2b@c5ebcd40d208330abc697524c919956e692655cf\", \"--local_files_only\", \"--device\", \"auto\", \"--attn_implementation\", \"eager\", \"--disamb_path\", \"data/disamb_pairs.jsonl\", \"--cf_path\", \"data/counterfactual.jsonl\", \"--coh_path\", \"data/coherence.jsonl\", \"--run_patching\", \"--patch_layers\", \"4,8,12,16,20,24\", \"--bootstrap_n\", \"1000\", \"--bootstrap_seed\", \"42\", \"--seed\", \"42\", \"--csv_path\", \"results/overnight_mech_20260225T135850Z/gemma2b_raw_6layer_full_seed42.csv\"]",
+          "path": "results_row.argv_redacted_json"
+        },
+        {
+          "category": "path-only",
+          "new_value": "data/counterfactual.jsonl",
+          "old_value": "data/counterfactual.jsonl",
+          "path": "results_row.cf_path"
+        },
+        {
+          "category": "path-only",
+          "new_value": "data/coherence.jsonl",
+          "old_value": "data/coherence.jsonl",
+          "path": "results_row.coh_path"
+        },
+        {
+          "category": "path-only",
+          "new_value": "data/disamb_pairs.jsonl",
+          "old_value": "data/disamb_pairs.jsonl",
+          "path": "results_row.disamb_path"
+        },
+        {
+          "category": "provenance-semantic",
+          "new_value": "hf://google/gemma-2-2b@c5ebcd40d208330abc697524c919956e692655cf",
+          "old_value": "hf://google/gemma-2-2b@c5ebcd40d208330abc697524c919956e692655cf",
+          "path": "results_row.model"
+        }
+      ],
+      "kind": "json",
+      "path": "results/overnight_mech_20260225T135850Z/gemma2b_raw_6layer_full_seed42.manifest.json"
+    },
+    {
+      "changes": [
+        {
+          "category": "path-only",
+          "new_value": "data/disamb_pairs.jsonl",
+          "old_value": "data/disamb_pairs.jsonl",
+          "path": "disamb_path"
+        },
+        {
+          "category": "provenance-semantic",
+          "new_value": "hf://google/gemma-2-2b@c5ebcd40d208330abc697524c919956e692655cf",
+          "old_value": "hf://google/gemma-2-2b@c5ebcd40d208330abc697524c919956e692655cf",
+          "path": "model_name_or_path"
+        }
+      ],
+      "kind": "json",
+      "path": "results/paper_lock_20260226T042208Z/clt_raw_comparability_l4_l8_l12.summary.json"
+    },
+    {
+      "changes": [
+        {
+          "category": "path-only",
+          "new_value": "results/paper_lock_20260226T042208Z/clt_raw_comparability_l4_l8_l12.csv",
+          "old_value": "results/paper_lock_20260226T042208Z/clt_raw_comparability_l4_l8_l12.csv",
+          "path": "source_artifacts.comparability_csv"
+        },
+        {
+          "category": "path-only",
+          "new_value": "results/paper_lock_20260226T042208Z/clt_raw_comparability_l4_l8_l12.summary.json",
+          "old_value": "results/paper_lock_20260226T042208Z/clt_raw_comparability_l4_l8_l12.summary.json",
+          "path": "source_artifacts.comparability_summary"
+        },
+        {
+          "category": "path-only",
+          "new_value": "data/disamb_pairs.jsonl",
+          "old_value": "data/disamb_pairs.jsonl",
+          "path": "source_artifacts.disamb_path"
+        },
+        {
+          "category": "path-only",
+          "new_value": "hf://google/gemma-2-2b@c5ebcd40d208330abc697524c919956e692655cf",
+          "old_value": "hf://google/gemma-2-2b@c5ebcd40d208330abc697524c919956e692655cf",
+          "path": "source_artifacts.tokenizer_name_or_path"
+        }
+      ],
+      "kind": "json",
+      "path": "results/paper_lock_20260226T042208Z/mom_quick_review_metrics.json"
+    }
+  ],
+  "n_files": 21,
+  "status": "ok"
+}
