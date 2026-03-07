@@ -222,6 +222,8 @@ python scripts/clt_raw_comparability.py \
   --disamb_path data/disamb_pairs.jsonl \
   --clt_repo clt_bundles/gemma-scope-2b-pt-res_sweep_smoke \
   --layers 4,8,12 \
+  --device cpu \
+  --torch_dtype float32 \
   --seed 42 \
   --bootstrap_n 1000 \
   --bootstrap_seed 42 \
@@ -333,6 +335,7 @@ Numeric checks to treat as a successful reproduction:
 Hardware / runtime notes for reviewers:
 - `python scripts/run_paper.py smoke` is the CPU-only offline sanity check; use it to verify the environment before any heavy run.
 - The commands above assume local access to `google/gemma-2-2b` weights and the CLT bundle path `clt_bundles/gemma-scope-2b-pt-res_sweep_smoke` (materialize it first with `scripts/gemma_scope_to_clt.py --preset readme_core_bundle --local_files_only` if needed).
+- The core comparability steps are pinned to CPU in the paper runner to avoid Apple Silicon / MPS invariant drift in the A≈B gate.
 - The strict endpoint claims in the paper use CPU reruns (`--device cpu`), not the relaxed MPS workflow. Treat them as multi-hour CPU jobs.
 - The checked-in six-layer overnight manifests on the original machine record `wall_time_sec=5091.42` for the raw run and `wall_time_sec=7020.59` for the CLT run (about 85 min and 117 min, respectively).
 - `scripts/run_paper.py m1max` and `scripts/run_paper.py a100` remain the broader preset runners for multi-model paper sweeps. The commands above are the narrower verifier path for the core Gemma 2 2B MoM claims.
