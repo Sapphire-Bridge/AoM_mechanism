@@ -16,7 +16,8 @@ The paper-facing mechanism results are maintained under the CLT-labeled comparab
 - `results/` contains sanitized paper-facing reference artifacts for this public release, not the full internal historical results tree.
 - `public_artifacts/` contains `RELEASE_MANIFEST.json` plus portability and audit reports emitted by `scripts/release_json_artifacts.py publish`.
 - The fastest clean-clone validation path is `make check`.
-- The full Gemma-2-2B MoM reproduction documented below is a heavyweight multi-hour verification path that assumes local model assets and CLT bundles.
+- The one-command paper-facing MoM run is `make mom-paper`.
+- The full Gemma-2-2B MoM reproduction is a heavyweight multi-hour verification path that assumes local model assets plus the CLT and SAE artifacts cited below.
 
 ## One-command check
 
@@ -41,6 +42,24 @@ python -m pytest -q
 python scripts/check_evidence_contract.py
 python scripts/check_evidence_contract_fields.py
 python scripts/run_paper.py smoke
+```
+
+## One-command MoM paper run
+
+```bash
+make mom-paper
+```
+
+`make mom-paper` creates the local `.venv` if needed, then runs the paper-facing MoM package into a fresh temp directory outside the repo:
+
+- the core CLT comparability / endpoint-decomposition path verified against the checked-in reference artifacts
+- the six-layer raw vs CLT layer-profile support run used in §4
+- the fixed-layer SAE specificity support run cited in §4 / Appendix A.2
+
+For cache-only / offline-style execution, use:
+
+```bash
+make mom-paper MOM_PAPER_ARGS="--local_files_only"
 ```
 
 ## Repository layout

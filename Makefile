@@ -1,10 +1,11 @@
-.PHONY: tables check archival-check
+.PHONY: tables check archival-check mom-paper
 
 RESULTS_DIR ?= results
 TABLES_OUT_DIR ?= tables_out
 PYTHON ?= $(shell command -v python3.11 >/dev/null 2>&1 && echo python3.11 || echo python3)
 VENV ?= .venv
 ARCHIVAL_CHECK_ARGS ?=
+MOM_PAPER_ARGS ?=
 VENV_PYTHON := $(VENV)/bin/python
 VENV_PIP := $(VENV)/bin/pip
 DEPS_STAMP := $(VENV)/.deps-installed
@@ -29,3 +30,6 @@ check: $(DEPS_STAMP)
 
 archival-check: $(DEPS_STAMP)
 	$(VENV_PYTHON) scripts/archive_readiness_check.py $(ARCHIVAL_CHECK_ARGS)
+
+mom-paper: $(DEPS_STAMP)
+	$(VENV_PYTHON) scripts/run_mom_paper.py $(MOM_PAPER_ARGS)
