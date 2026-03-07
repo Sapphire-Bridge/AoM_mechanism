@@ -1,0 +1,63 @@
+scaling:
+  study_name: "aom_scaling_v1"
+  models:
+    - label: "gemma2-2b"
+      model_name_or_path: "google/gemma-2-2b"
+      backend: "transformer_lens"
+    - label: "gemma2-9b"
+      model_name_or_path: "google/gemma-2-9b"
+      backend: "transformer_lens"
+
+  tasks: ["disamb", "cf", "coh"]
+  seed: 0
+  bootstrap_n: 500
+  bootstrap_seed: 42
+  ci: 0.95
+
+  device: "auto"
+  torch_dtype: null
+  attn_implementation: "eager"
+  local_files_only: false
+  trust_remote_code: false
+
+  data:
+    disamb_path: "data/disamb_pairs.jsonl"
+    cf_path: "data/counterfactual.jsonl"
+    coh_path: "data/coherence.jsonl"
+
+  layer_map:
+    strategy: "relative_depth"
+    positions: [0.25, 0.5, 0.75, 0.9]
+
+  battery:
+    eval: true
+    patching: true
+    sae_sterility: false
+    feature_families: false
+    disamb_path_decomp: true
+    why_fetch: true
+    completeness: true
+
+  why_fetch:
+    n_examples: 200
+    heads_topk: 4
+
+  disamb_path_decomp:
+    max_pairs: 200
+    mode: "layer"
+    position: -1
+
+  completeness:
+    explanation_path: ""
+
+  sae:
+    repo: ""
+    layer: 15
+    width: "16k"
+    run_name: null
+    l0_target: null
+    scale: 1.0
+    n_features: 64
+    max_pairs: 32
+    similarity_threshold: 0.8
+    null_n: 500
