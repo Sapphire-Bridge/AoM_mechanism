@@ -15,21 +15,28 @@ The paper-facing mechanism results are maintained under the CLT-labeled comparab
 
 - `results/` contains sanitized paper-facing reference artifacts for this public release, not the full internal historical results tree.
 - `public_artifacts/` contains `RELEASE_MANIFEST.json` plus portability and audit reports emitted by `scripts/release_json_artifacts.py publish`.
-- The fastest clean-clone validation path is `pytest -q`, the evidence-contract checks, and `python scripts/run_paper.py smoke`.
+- The fastest clean-clone validation path is `make check`.
 - The full Gemma-2-2B MoM reproduction documented below is a heavyweight multi-hour verification path that assumes local model assets and CLT bundles.
 
-## Install
+## One-command check
 
 ```bash
-python3 -m venv .venv
-source .venv/bin/activate
-python -m pip install --upgrade pip
-pip install -r requirements.txt
+make check
 ```
 
-## Quick validation
+`make check` creates a local `.venv` with `python3.11` when available (otherwise `python3`), installs `requirements.txt`, and runs the lightweight canonical verification path:
+
+- `python -m pytest -q`
+- `python scripts/check_evidence_contract.py`
+- `python scripts/check_evidence_contract_fields.py`
+- `python scripts/run_paper.py smoke`
+
+If you prefer to manage the environment manually, the equivalent commands are:
 
 ```bash
+python3.11 -m venv .venv
+source .venv/bin/activate
+pip install -r requirements.txt
 python -m pytest -q
 python scripts/check_evidence_contract.py
 python scripts/check_evidence_contract_fields.py

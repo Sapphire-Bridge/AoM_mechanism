@@ -17,9 +17,7 @@ jobs:
       - uses: actions/setup-python@v5
         with:
           python-version: "3.11"
-      - name: Install dependencies
-        run: pip install -r requirements.txt
-      - name: Pytest
-        run: python -m pytest -q
+      - name: Check
+        run: make check PYTHON=python3.11
       - name: Archival structural check
-        run: python scripts/archive_readiness_check.py --skip_pytest --skip_readme_verifier
+        run: make archival-check PYTHON=python3.11 ARCHIVAL_CHECK_ARGS="--skip_pytest --skip_readme_verifier"
