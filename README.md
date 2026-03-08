@@ -1,6 +1,10 @@
 # AoM Interpretability (Appearance of Meaning)
 
-Code, datasets, and sanitized reference artifacts for AoM behavioral evaluation and the Mechanics of Meaning (MoM) comparability / intervention analyses.
+Mechanistic interpretability pipeline comparing raw residual-stream and SAE-basis interventions on meaning-sensitive tasks in Gemma 2 2B. Implements hard-gated substrate comparison, FP64 endpoint-native accounting, matched PCA/random/RECON/RESID controls, and disturbance-efficiency analysis. Companion code for the Mechanics of Meaning (MoM) paper.
+
+## Paper
+
+- Preprint: https://zenodo.org/records/18906800
 
 - AoM-DISAMB: context-sensitive disambiguation via minimal pairs
 - AoM-CF: minimal-pair intervention sensitivity via directional preference shift
