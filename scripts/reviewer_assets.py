@@ -2,6 +2,7 @@
 from __future__ import annotations
 
 import json
+import os
 import subprocess
 import sys
 from dataclasses import dataclass
@@ -206,9 +207,19 @@ def _friendly_hf_error(*, repo_id: str, revision: str | None, exc: Exception) ->
     text = str(exc)
     lowered = text.lower()
     if any(token in lowered for token in ("401", "403", "forbidden", "unauthorized", "gated", "access denied")):
+        hf_home = os.environ.get("HF_HOME")
+        cli_path = Path(sys.executable).with_name("huggingface-cli")
+        login_cmd = str(cli_path) if cli_path.exists() else "huggingface-cli"
+        guidance_parts = []
+        if hf_home:
+            guidance_parts.append(f"HF_HOME={hf_home}")
+            guidance_parts.append(f"If this is a fresh isolated cache, run: {login_cmd} login")
+        else:
+            guidance_parts.append(f"Run: {login_cmd} login")
+        guidance_parts.append("Then rerun: make reviewer-assets")
         return (
             f"could not access {repo_id}@{revision}; check Hugging Face login/token and confirm "
-            f"the required model license is accepted; raw_error={text}"
+            f"the required model license is accepted; {'; '.join(guidance_parts)}; raw_error={text}"
         )
     return f"could not prepare cache for {repo_id}@{revision}; raw_error={text}"
 

@@ -143,3 +143,24 @@ def test_materialize_reviewer_clt_bundle_raises_on_failure(monkeypatch) -> None:
 
     with pytest.raises(RuntimeError, match="failed to materialize reviewer CLT bundle"):
         reviewer_assets.materialize_reviewer_clt_bundle(python_executable="python")
+
+
+def test_friendly_hf_error_includes_isolated_cache_login_guidance(monkeypatch, tmp_path: Path) -> None:
+    fake_python = tmp_path / ".venv-download-test" / "bin" / "python3.11"
+    fake_python.parent.mkdir(parents=True)
+    fake_python.write_text("", encoding="utf-8")
+    fake_cli = fake_python.with_name("huggingface-cli")
+    fake_cli.write_text("", encoding="utf-8")
+
+    monkeypatch.setenv("HF_HOME", "/tmp/aom_hf_download_test")
+    monkeypatch.setattr(reviewer_assets.sys, "executable", str(fake_python))
+
+    message = reviewer_assets._friendly_hf_error(
+        repo_id=paper_requirements.PAPER_MODEL_REPO_ID,
+        revision=paper_requirements.PAPER_MODEL_REVISION,
+        exc=RuntimeError("401 Client Error: gated repo"),
+    )
+
+    assert "HF_HOME=/tmp/aom_hf_download_test" in message
+    assert f"run: {fake_cli} login".lower() in message.lower()
+    assert "Then rerun: make reviewer-assets" in message
