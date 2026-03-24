@@ -208,19 +208,33 @@ def _friendly_hf_error(*, repo_id: str, revision: str | None, exc: Exception) ->
     lowered = text.lower()
     if any(token in lowered for token in ("401", "403", "forbidden", "unauthorized", "gated", "access denied")):
         hf_home = os.environ.get("HF_HOME")
-        cli_path = Path(sys.executable).with_name("huggingface-cli")
-        login_cmd = str(cli_path) if cli_path.exists() else "huggingface-cli"
-        guidance_parts = []
+        python_path = Path(sys.executable)
+        rerun_cmd = "make reviewer-assets"
+        try:
+            rel_python = python_path.relative_to(ROOT)
+            display_python = rel_python.as_posix()
+            parts = rel_python.parts
+            if len(parts) >= 3 and parts[1] == "bin" and parts[2].startswith("python"):
+                rerun_cmd = f"make VENV={parts[0]} reviewer-assets"
+        except ValueError:
+            display_python = str(python_path)
+        raw_lines = [line.rstrip() for line in text.splitlines() if line.strip()]
+        lines = [f"Hugging Face login required to download {repo_id}@{revision}."]
         if hf_home:
-            guidance_parts.append(f"HF_HOME={hf_home}")
-            guidance_parts.append(f"If this is a fresh isolated cache, run: {login_cmd} login")
-        else:
-            guidance_parts.append(f"Run: {login_cmd} login")
-        guidance_parts.append("Then rerun: make reviewer-assets")
-        return (
-            f"could not access {repo_id}@{revision}; check Hugging Face login/token and confirm "
-            f"the required model license is accepted; {'; '.join(guidance_parts)}; raw_error={text}"
+            lines.extend(["Current cache:", f"  HF_HOME={hf_home}"])
+        lines.extend(
+            [
+                "Next step:",
+                f"  {display_python} -m huggingface_hub.commands.huggingface_cli login",
+                "Then rerun:",
+                f"  {rerun_cmd}",
+                "If this still fails:",
+                "  confirm your Hugging Face account has accepted the required model license",
+                "Hub response:",
+            ]
         )
+        lines.extend(f"  {line}" for line in raw_lines)
+        return "\n".join(lines)
     return f"could not prepare cache for {repo_id}@{revision}; raw_error={text}"
 
 

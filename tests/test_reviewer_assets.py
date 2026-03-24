@@ -146,11 +146,7 @@ def test_materialize_reviewer_clt_bundle_raises_on_failure(monkeypatch) -> None:
 
 
 def test_friendly_hf_error_includes_isolated_cache_login_guidance(monkeypatch, tmp_path: Path) -> None:
-    fake_python = tmp_path / ".venv-download-test" / "bin" / "python3.11"
-    fake_python.parent.mkdir(parents=True)
-    fake_python.write_text("", encoding="utf-8")
-    fake_cli = fake_python.with_name("huggingface-cli")
-    fake_cli.write_text("", encoding="utf-8")
+    fake_python = reviewer_assets.ROOT / ".venv-download-test" / "bin" / "python3.11"
 
     monkeypatch.setenv("HF_HOME", "/tmp/aom_hf_download_test")
     monkeypatch.setattr(reviewer_assets.sys, "executable", str(fake_python))
@@ -161,6 +157,10 @@ def test_friendly_hf_error_includes_isolated_cache_login_guidance(monkeypatch, t
         exc=RuntimeError("401 Client Error: gated repo"),
     )
 
+    assert "Hugging Face login required to download" in message
     assert "HF_HOME=/tmp/aom_hf_download_test" in message
-    assert f"run: {fake_cli} login".lower() in message.lower()
-    assert "Then rerun: make reviewer-assets" in message
+    assert "Next step:" in message
+    assert ".venv-download-test/bin/python3.11 -m huggingface_hub.commands.huggingface_cli login" in message
+    assert "Then rerun:" in message
+    assert "  make VENV=.venv-download-test reviewer-assets" in message
+    assert "Hub response:" in message
