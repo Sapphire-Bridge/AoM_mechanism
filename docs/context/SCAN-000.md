@@ -1,6 +1,6 @@
 # SCAN-000
 
-Repository scan for `/Users/felixb/AoM_mechanism_reviewer_fix` on 2026-03-22 at git HEAD `67ca0bd`.
+Repository scan for this repository.
 
 ## Repo Snapshot
 
@@ -91,12 +91,6 @@ Interpretation:
 - The repo’s real complexity is not in packaging. It is in experiment runners, provenance enforcement, and paper-support analysis scripts.
 - `scripts/run_paper.py`, `aom_eval.py`, and the patching modules are the fastest way to understand how claims are generated.
 - `scripts/release_json_artifacts.py` is a late-stage bottleneck for publication correctness.
-
-## Current Worktree State
-
-- The worktree is already dirty outside `docs/context/`.
-- Existing modifications include `Makefile`, `README.md`, several `scripts/*.py` files, test files, and result artifacts.
-- Context generation should avoid touching those files unless explicitly asked.
 
 ## Observed Architectural Shape
 

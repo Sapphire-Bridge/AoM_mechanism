@@ -15,7 +15,7 @@ if str(ROOT) not in sys.path:
     sys.path.insert(0, str(ROOT))
 
 from aom.utils import get_best_device
-from scripts.paper_requirements import PAPER_CLT_BUNDLE_PATH, PAPER_MODEL_REPO_ID
+from scripts.paper_requirements import PAPER_CLT_BUNDLE_PATH, PAPER_MODEL_REPO_ID, PAPER_MODEL_REVISION
 from scripts.run_readme_reproduction import (
     CommandRecord,
     CommandSpec,
@@ -80,6 +80,8 @@ def _one_result_command_spec(run_root: Path, *, local_files_only: bool, device: 
         "scripts/clt_raw_comparability.py",
         "--model_name_or_path",
         PAPER_MODEL_REPO_ID,
+        "--revision",
+        PAPER_MODEL_REVISION,
         "--disamb_path",
         "data/disamb_pairs.jsonl",
         "--clt_repo",

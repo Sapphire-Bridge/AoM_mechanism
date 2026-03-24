@@ -31,6 +31,20 @@ EXPECTED_OUTPUTS = (
 )
 
 
+def _is_comparability_argv(argv: object) -> bool:
+    if not isinstance(argv, list):
+        return False
+    for arg in argv:
+        raw = str(arg).strip()
+        if not raw:
+            continue
+        if raw.endswith("scripts/clt_raw_comparability.py"):
+            return True
+        if Path(raw).name == "clt_raw_comparability.py":
+            return True
+    return False
+
+
 def _run_device(run_root: Path) -> str:
     log_path = run_root / "one_result_check_log.json"
     if not log_path.exists():
@@ -40,11 +54,15 @@ def _run_device(run_root: Path) -> str:
         records = payload.get("records", [])
         if not records:
             return "cpu"
-        argv = records[0].get("argv", [])
-        if "--device" not in argv:
-            return "cpu"
-        device = str(argv[argv.index("--device") + 1]).strip().lower()
-        return device or "cpu"
+        for record in reversed(records):
+            argv = record.get("argv", [])
+            if not _is_comparability_argv(argv):
+                continue
+            if "--device" not in argv:
+                continue
+            device = str(argv[argv.index("--device") + 1]).strip().lower()
+            return device or "cpu"
+        return "cpu"
     except (IndexError, KeyError, TypeError, ValueError, json.JSONDecodeError):
         return "cpu"
 

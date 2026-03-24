@@ -7,6 +7,7 @@ from copy import deepcopy
 from pathlib import Path
 
 from scripts import run_one_result_check, verify_one_result_check
+from scripts.paper_requirements import PAPER_MODEL_REVISION
 from scripts.verify_readme_reproduction import CheckResult
 
 
@@ -19,10 +20,12 @@ def test_one_result_command_spec_targets_layer_4_controls(tmp_path: Path) -> Non
     spec = run_one_result_check._one_result_command_spec(tmp_path, local_files_only=True, device="cpu")
     layer_idx = spec.argv.index("--layers")
     device_idx = spec.argv.index("--device")
+    revision_idx = spec.argv.index("--revision")
     out_json_idx = spec.argv.index("--out_json")
 
     assert spec.argv[layer_idx + 1] == "4"
     assert spec.argv[device_idx + 1] == "cpu"
+    assert spec.argv[revision_idx + 1] == PAPER_MODEL_REVISION
     assert "--local_files_only" in spec.argv
     assert spec.argv[out_json_idx + 1].endswith("one_result_controls_l4.summary.json")
 
@@ -44,28 +47,38 @@ def test_run_one_result_check_dry_run_emits_plan_only(tmp_path: Path) -> None:
     assert "scripts/clt_raw_comparability.py" in out
     assert "--layers 4" in out
     assert "--device cpu" in out
+    assert f"--revision {PAPER_MODEL_REVISION}" in out
     assert "one_result_controls_l4.summary.json" in out
     assert "- overall_status: `PLAN_ONLY`" in out
 
 
-def test_run_one_result_check_gpu_dry_run_uses_resolved_accelerator(tmp_path: Path) -> None:
-    repo_root = Path(__file__).resolve().parents[1]
-    run_root = tmp_path / "one-result-gpu"
-    cmd = [
-        sys.executable,
-        str(repo_root / "scripts" / "run_one_result_check.py"),
-        "--dry_run",
-        "--run_root",
-        str(run_root),
-        "--local_files_only",
-        "--device",
-        "auto",
-        "--require_accelerator",
-    ]
-    proc = subprocess.run(cmd, cwd=str(repo_root), check=True, capture_output=True, text=True)
-    out = proc.stdout
+def test_run_one_result_check_gpu_dry_run_uses_resolved_accelerator(monkeypatch, tmp_path: Path, capsys) -> None:
+    monkeypatch.setattr(run_one_result_check, "_resolve_requested_device", lambda device: "mps")
+    monkeypatch.setattr(run_one_result_check, "_device_available", lambda device: True)
+    original_exists = Path.exists
+    monkeypatch.setattr(
+        run_one_result_check.Path,
+        "exists",
+        lambda self: True
+        if self == run_one_result_check.ROOT / run_one_result_check.PAPER_CLT_BUNDLE_PATH
+        else original_exists(self),
+    )
 
-    assert "--device mps" in out or "--device cuda" in out
+    code = run_one_result_check.main(
+        [
+            "--dry_run",
+            "--run_root",
+            str(tmp_path / "one-result-gpu"),
+            "--local_files_only",
+            "--device",
+            "auto",
+            "--require_accelerator",
+        ]
+    )
+    out = capsys.readouterr().out
+
+    assert code == 0
+    assert "--device mps" in out
 
 
 def test_run_one_result_check_requires_accelerator_if_requested(monkeypatch, tmp_path: Path) -> None:
@@ -141,6 +154,49 @@ def test_verify_one_result_check_warns_on_accelerator_pca_drift(tmp_path: Path) 
     (run_root / "one_result_controls_l4.summary.json").write_text(json.dumps(summary, indent=2) + "\n", encoding="utf-8")
     (run_root / "one_result_check_log.json").write_text(
         json.dumps({"records": [{"argv": ["python", "scripts/clt_raw_comparability.py", "--device", "mps"]}]}, indent=2) + "\n",
+        encoding="utf-8",
+    )
+
+    _missing, checks = verify_one_result_check.verify_run(run_root)
+
+    assert any(
+        check.name == "one-result layer 4 effect_PRJ_PCA_mean"
+        and check.status == "warn"
+        and "accelerator run on mps" in (check.note or "")
+        for check in checks
+    )
+
+
+def test_verify_one_result_check_reads_device_from_real_comparability_record(tmp_path: Path) -> None:
+    summary = deepcopy(_reference_summary())
+    layer_4 = next(row for row in summary["per_layer"] if int(row["layer"]) == 4)
+    layer_4["effect_PRJ_PCA_mean"] = float(layer_4["effect_PRJ_PCA_mean"]) + 0.01
+
+    run_root = tmp_path / "one-result"
+    run_root.mkdir()
+    (run_root / "one_result_controls_l4.csv").write_text("placeholder\n", encoding="utf-8")
+    (run_root / "one_result_controls_l4.summary.json").write_text(
+        json.dumps(summary, indent=2) + "\n",
+        encoding="utf-8",
+    )
+    (run_root / "one_result_check_log.json").write_text(
+        json.dumps(
+            {
+                "records": [
+                    {"argv": ["python", "scripts/gemma_scope_to_clt.py", "--revision", "fd571b47c1c64851e9b1989792367b9babb4af63"]},
+                    {
+                        "argv": [
+                            "python",
+                            str(Path(__file__).resolve().parents[1] / "scripts" / "clt_raw_comparability.py"),
+                            "--device",
+                            "mps",
+                        ]
+                    },
+                ]
+            },
+            indent=2,
+        )
+        + "\n",
         encoding="utf-8",
     )
 
