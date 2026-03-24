@@ -13,7 +13,7 @@ def _resolve_mode_and_device() -> tuple[str, str]:
     import torch
 
     if torch.cuda.is_available():
-        return "a100", "cuda"
+        return "cuda_validated", "cuda"
     if hasattr(torch.backends, "mps") and torch.backends.mps.is_available():
         return "m1max_safe", "mps"
     raise RuntimeError("No accelerator available. Expected CUDA or MPS.")

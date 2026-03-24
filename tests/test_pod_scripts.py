@@ -135,7 +135,7 @@ def test_pod_run_one_result_gpu_strict_local_files_only_boolean(tmp_path: Path) 
 
 def test_pod_run_all_results_gpu_appends_local_files_only_only_when_enabled(tmp_path: Path) -> None:
     repo = _make_fake_repo(tmp_path)
-    results_dir = repo / "results" / "paper_a100"
+    results_dir = repo / "results" / "paper_cuda_validated"
     status_path = Path(f"{results_dir}.status")
     archive_path = Path(f"{results_dir}.tar.gz")
     args_path = repo / "fake_args.txt"

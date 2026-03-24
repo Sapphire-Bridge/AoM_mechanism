@@ -29,7 +29,7 @@ def test_resolve_mode_and_device_prefers_cuda(monkeypatch) -> None:
         backends = _Backends()
 
     monkeypatch.setitem(sys.modules, "torch", _Torch())
-    assert run_paper_accelerated._resolve_mode_and_device() == ("a100", "cuda")
+    assert run_paper_accelerated._resolve_mode_and_device() == ("cuda_validated", "cuda")
 
 
 def test_resolve_mode_and_device_uses_mps_when_cuda_missing(monkeypatch) -> None:

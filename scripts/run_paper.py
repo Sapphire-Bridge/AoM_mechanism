@@ -2590,7 +2590,7 @@ def run_a100(args: argparse.Namespace) -> PaperRun:
     commands.append(report_cmd)
     _run(report_cmd, cwd=ROOT, dry_run=bool(args.dry_run))
 
-    run = PaperRun(mode="a100", results_dir=results_dir, dataset_manifest_path=dataset_manifest_path, commands=commands)
+    run = PaperRun(mode="cuda_validated", results_dir=results_dir, dataset_manifest_path=dataset_manifest_path, commands=commands)
     if not bool(args.dry_run):
         _write_run_manifest(run)
     return run
@@ -2598,7 +2598,7 @@ def run_a100(args: argparse.Namespace) -> PaperRun:
 
 def parse_args() -> argparse.Namespace:
     p = argparse.ArgumentParser(description="Run paper-style evaluations in three reproducible modes.")
-    p.add_argument("mode", type=str, choices=["smoke", "m1max", "m1max_safe", "a100"])
+    p.add_argument("mode", type=str, choices=["smoke", "m1max", "m1max_safe", "cuda_validated"])
     p.add_argument("--data_dir", type=str, default=str(ROOT / "data_paper_hardened_v2"))
     p.add_argument("--results_dir", type=str, default="")
     p.add_argument("--dataset_seed", type=int, default=0)
@@ -2813,7 +2813,7 @@ def main() -> None:
         run_m1max(args)
     elif args.mode == "m1max_safe":
         run_m1max_safe(args)
-    elif args.mode == "a100":
+    elif args.mode == "cuda_validated":
         run_a100(args)
     else:
         raise ValueError(f"Unknown mode: {args.mode!r}")

@@ -4,7 +4,7 @@ set -euo pipefail
 SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 source "$SCRIPT_DIR/pod_env.sh"
 
-RESULTS_DIR="${1:-$REPO_ROOT/results/paper_a100}"
+RESULTS_DIR="${1:-$REPO_ROOT/results/paper_cuda_validated}"
 LOG_PATH="${RESULTS_DIR}.log"
 PID_PATH="${RESULTS_DIR}.pid"
 STATUS_PATH="${RESULTS_DIR}.status"

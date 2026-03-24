@@ -65,7 +65,7 @@ make reproduction MOM_PAPER_ARGS="--run_root /tmp/mom_paper_review_run"
 Optional CUDA/MPS showcase:
 
 ```bash
-make paper-reproduction-gpu PAPER_GPU_ARGS="--results_dir /tmp/paper_a100 --local_files_only"
+make paper-reproduction-gpu PAPER_GPU_ARGS="--results_dir /tmp/paper_cuda_validated --local_files_only"
 ```
 
 `make reproduction` is the canonical strict paper-proof path. It is intentionally CPU-pinned for the core comparability and support stages. `make paper-reproduction-gpu` is the broad accelerator sweep for showcasing CUDA/MPS operability; it is not the canonical claim-verification path.
@@ -319,7 +319,7 @@ make paper-reproduction-gpu
 
 This convenience command chooses the correct broad accelerator preset automatically:
 - `scripts/run_paper.py m1max_safe` on Apple Silicon / MPS
-- `scripts/run_paper.py a100` on CUDA
+- `scripts/run_paper.py cuda_validated` on CUDA
 
 Use this for the multi-model accelerator sweep. On Apple Silicon, the broad behavioral stage runs conservatively with `eager`, and per-model failures/timeouts are reported clearly instead of hanging silently. The canonical strict paper-proof path remains `make reproduction`.
 
@@ -361,7 +361,7 @@ Notes:
 - `pod_run_paper_cpu.sh` is intentionally CPU-pinned because `scripts/run_mom_paper.py` uses CPU for both the core comparability path and the support path.
 - Fresh pods may still require `huggingface-cli login` or `HF_TOKEN` plus accepted model licenses:
   - `google/gemma-2-2b` for the one-result and paper runs
-  - `meta-llama/*` models when the accelerator sweep resolves to CUDA / `a100`
+  - `meta-llama/*` models when the accelerator sweep resolves to CUDA / `cuda_validated`
 - Use `LOCAL_FILES_ONLY=1` only when the required caches are already present.
 
 ```bash
@@ -492,7 +492,7 @@ Hardware / runtime notes for reviewers:
 - The core comparability steps are pinned to CPU in the paper runner to avoid Apple Silicon / MPS invariant drift in the A≈B gate.
 - The strict endpoint claims in the paper use CPU reruns (`--device cpu`), not the relaxed MPS workflow. Treat them as multi-hour CPU jobs.
 - The checked-in six-layer overnight manifests on the original machine record `wall_time_sec=5091.42` for the raw run and `wall_time_sec=7020.59` for the CLT run (about 85 min and 117 min, respectively).
-- `scripts/run_paper.py m1max` and `scripts/run_paper.py a100` remain the broader preset runners for multi-model paper sweeps. The commands above are the narrower verifier path for the core Gemma 2 2B MoM claims.
+- `scripts/run_paper.py m1max` and `scripts/run_paper.py cuda_validated` remain the broader preset runners for multi-model paper sweeps. The commands above are the narrower verifier path for the core Gemma 2 2B MoM claims.
 - Structural archival gate: `python scripts/archive_readiness_check.py` (or `make archival-check`) runs evidence checks, publication-copy generation, portability scans, bundle dry-runs, and README verification if you supply an existing `--readme_run_root`.
 
 SAE feature-space CPT example:
@@ -700,7 +700,7 @@ For chat models, you can interpret dataset prompt fields as user messages and re
 
 Run manifests store hashes only (e.g., `system_prompt_sha256`, `chat_template_sha256`) and never write raw prompt/system text to disk.
 
-## Paper-mode runner (smoke / M1Max / A100)
+## Paper-mode runner (smoke / M1Max / cuda_validated)
 
 This repo includes a convenience runner that generates a hardened “paper dataset” (with CF shams + COH controls) and runs reproducible evaluation presets:
 
@@ -711,8 +711,8 @@ python scripts/run_paper.py smoke
 # Long local run tuned for Apple Silicon (MPS)
 python scripts/run_paper.py m1max
 
-# Full run intended for CUDA GPUs (e.g. A100s)
-python scripts/run_paper.py a100 --attn_behavioral flash_attention_2
+# Full run intended for validated CUDA GPU sweeps
+python scripts/run_paper.py cuda_validated --attn_behavioral flash_attention_2
 ```
 
 Optional CLT integration in paper-mode:

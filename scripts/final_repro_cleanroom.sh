@@ -36,7 +36,7 @@ Usage:
   bash scripts/final_repro_cleanroom.sh [options]
 
 Options:
-  --mode MODE                  run_paper mode: smoke | m1max | a100 (default: m1max)
+  --mode MODE                  run_paper mode: smoke | m1max | cuda_validated (default: m1max)
   --git-rev REV                git revision to export (default: HEAD)
   --clean-dir PATH             clean-room directory (default: /tmp/aom_cleanroom_<utc>)
   --python BIN                 python executable (default: python3)
@@ -64,7 +64,7 @@ Examples:
     --tokenizer-revision <hf_commit>
 
   bash scripts/final_repro_cleanroom.sh \
-    --mode a100 \
+    --mode cuda_validated \
     --clean-dir /tmp/aom_final_release \
     --copy-back-dir release_artifacts
 EOF
@@ -175,8 +175,8 @@ while [[ $# -gt 0 ]]; do
 done
 
 case "$MODE" in
-  smoke|m1max|a100) ;;
-  *) die "Invalid --mode: $MODE (expected smoke|m1max|a100)" ;;
+  smoke|m1max|cuda_validated) ;;
+  *) die "Invalid --mode: $MODE (expected smoke|m1max|cuda_validated)" ;;
 esac
 
 need_cmd git
