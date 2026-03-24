@@ -5,6 +5,7 @@ from pathlib import Path
 
 import pytest
 
+from aom.config import load_config
 from aom.provenance.protocol import resolve_protocol_provenance
 from aom_cf_patching import _resolve_protocol_provenance as resolve_cf
 from aom_coh_patching import _resolve_protocol_provenance as resolve_coh
@@ -159,3 +160,31 @@ def test_resolve_protocol_provenance_frozen_happy_path(tmp_path: Path):
 def test_resolve_protocol_provenance_frozen_requires_path():
     with pytest.raises(ValueError, match="required when require_frozen=True"):
         _ = resolve_protocol_provenance(protocol_path_raw="", protocol_sha256_raw="", require_frozen=True)
+
+
+def test_repo_mom_flagship_protocol_exists_and_is_frozen():
+    repo_root = Path(__file__).resolve().parents[1]
+    protocol_path = repo_root / "configs" / "mom_flagship_protocol.yaml"
+
+    assert protocol_path.exists()
+
+    prov = resolve_protocol_provenance(protocol_path_raw=str(protocol_path), protocol_sha256_raw="", require_frozen=True)
+
+    assert prov.protocol_path == str(protocol_path.resolve())
+    assert prov.protocol_name == "mom_safety_flagship"
+    assert prov.protocol_version == "v1"
+    assert prov.protocol_prereg_tag == "protocol_v1"
+    assert prov.protocol_sha256_verified is True
+
+
+def test_repo_mom_flagship_protocol_exposes_bound_fields():
+    repo_root = Path(__file__).resolve().parents[1]
+    protocol_path = repo_root / "configs" / "mom_flagship_protocol.yaml"
+    cfg = load_config(protocol_path)
+
+    assert cfg["bootstrap"]["n"] == 1000
+    assert cfg["bootstrap"]["seed"] == 42
+    assert cfg["bootstrap"]["ci"] == 0.95
+    assert cfg["splits"]["random_seed"] == 20260224
+    assert cfg["repro"]["strict_finite"] is True
+    assert cfg["repro"]["require_git"] is True
