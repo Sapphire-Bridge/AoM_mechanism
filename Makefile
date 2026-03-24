@@ -1,4 +1,4 @@
-.PHONY: tables check archival-check mom-paper reviewer-assets reviewer-check reproduction one-result-check one-result-check-gpu
+.PHONY: tables check archival-check mom-paper reviewer-assets reviewer-check reproduction paper-reproduction-gpu one-result-check one-result-check-gpu
 
 RESULTS_DIR ?= results
 TABLES_OUT_DIR ?= tables_out
@@ -9,6 +9,7 @@ MOM_PAPER_ARGS ?=
 REVIEWER_CHECK_ARGS ?=
 REVIEWER_ASSETS_ARGS ?=
 ONE_RESULT_ARGS ?=
+PAPER_GPU_ARGS ?=
 VENV_PYTHON := $(VENV)/bin/python
 VENV_PIP := $(VENV)/bin/pip
 DEPS_STAMP := $(VENV)/.deps-installed
@@ -46,6 +47,8 @@ reviewer-assets: $(DEPS_STAMP)
 reproduction: $(DEPS_STAMP)
 	$(VENV_PYTHON) scripts/run_mom_paper.py --local_files_only $(MOM_PAPER_ARGS)
 
+paper-reproduction-gpu: $(DEPS_STAMP)
+	$(VENV_PYTHON) scripts/run_paper_accelerated.py $(PAPER_GPU_ARGS)
 
 one-result-check: $(DEPS_STAMP)
 	$(VENV_PYTHON) scripts/run_one_result_check.py --local_files_only $(ONE_RESULT_ARGS)
