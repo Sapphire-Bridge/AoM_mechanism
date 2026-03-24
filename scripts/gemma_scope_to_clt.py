@@ -5,21 +5,23 @@ import argparse
 import hashlib
 import json
 import shutil
+import sys
 from pathlib import Path
 from typing import Any
 
 import numpy as np
 
-HF_REPO_ID = "google/gemma-scope-2b-pt-res"
-README_CORE_BUNDLE_REVISION = "fd571b47c1c64851e9b1989792367b9babb4af63"
-README_CORE_BUNDLE_RUNS = {
-    4: "average_l0_60",
-    8: "average_l0_71",
-    12: "average_l0_176",
-    16: "average_l0_78",
-    20: "average_l0_71",
-    24: "average_l0_73",
-}
+ROOT = Path(__file__).resolve().parents[1]
+if str(ROOT) not in sys.path:
+    sys.path.insert(0, str(ROOT))
+
+from scripts.paper_requirements import (
+    PAPER_CLT_REQUIRED_RUNS as README_CORE_BUNDLE_RUNS,
+    PAPER_SCOPE_REPO_ID as HF_REPO_ID,
+    PAPER_SCOPE_REVISION as README_CORE_BUNDLE_REVISION,
+    resolve_cached_snapshot as _resolve_cached_snapshot,
+)
+
 GEMMA2_2B_NUM_LAYERS = 26
 GEMMA2_2B_HIDDEN_SIZE = 2304
 WIDTH_TO_D_LATENT = {
@@ -52,23 +54,6 @@ def _sha256(path: Path) -> str:
                 break
             h.update(chunk)
     return h.hexdigest()
-
-
-def _resolve_cached_snapshot(repo_id: str, revision: str | None) -> Path:
-    from huggingface_hub import scan_cache_dir
-
-    target_revision = str(revision or "").strip()
-    for repo in scan_cache_dir().repos:
-        if repo.repo_id != repo_id:
-            continue
-        if target_revision:
-            for cached_revision in repo.revisions:
-                if cached_revision.commit_hash == target_revision:
-                    return Path(str(cached_revision.snapshot_path))
-            raise FileNotFoundError(f"Cached revision {target_revision!r} not found for {repo_id}")
-        if repo.revisions:
-            return Path(str(sorted(repo.revisions, key=lambda item: item.commit_hash)[-1].snapshot_path))
-    raise FileNotFoundError(f"No cached snapshot found for {repo_id}")
 
 
 def _choose_run_name(
