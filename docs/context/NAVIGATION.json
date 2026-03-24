@@ -1,0 +1,63 @@
+{
+  "generated_on": "2026-03-22",
+  "git_head": "67ca0bd",
+  "worktree_dirty": true,
+  "root_entrypoint": "CONTEXT.md",
+  "documents": [
+    {
+      "id": "CONTEXT",
+      "path": "CONTEXT.md",
+      "title": "Root Context Entrypoint",
+      "focus": ["repo purpose", "fast entry paths", "critical files", "links to detailed docs"]
+    },
+    {
+      "id": "SCAN-000",
+      "path": "docs/context/SCAN-000.md",
+      "title": "Repo Scan",
+      "focus": ["repo metrics", "anchor map", "hotspots", "entry order"]
+    },
+    {
+      "id": "CONTEXT-PLAN",
+      "path": "docs/context/CONTEXT-PLAN.md",
+      "title": "Context Partition Plan",
+      "focus": ["doc split", "handoff heuristics", "reading order"]
+    },
+    {
+      "id": "CONTEXT-001",
+      "path": "docs/context/CONTEXT-001.md",
+      "title": "Core Infrastructure",
+      "focus": ["config", "seeds", "manifests", "datasets", "protocol enforcement"]
+    },
+    {
+      "id": "CONTEXT-002",
+      "path": "docs/context/CONTEXT-002.md",
+      "title": "Experiment Pipeline",
+      "focus": ["behavioral eval", "raw patching", "CLT patching", "SAE patching"]
+    },
+    {
+      "id": "CONTEXT-003",
+      "path": "docs/context/CONTEXT-003.md",
+      "title": "Paper Orchestration And Analysis",
+      "focus": ["run_paper", "comparability", "endpoint decomposition", "figures", "tables"]
+    },
+    {
+      "id": "CONTEXT-004",
+      "path": "docs/context/CONTEXT-004.md",
+      "title": "Publication Contract And Release",
+      "focus": ["paper", "evidence contract", "verification", "sanitized release"]
+    },
+    {
+      "id": "CONTEXT-005",
+      "path": "docs/context/CONTEXT-005.md",
+      "title": "Extended Mechanistic Tooling",
+      "focus": ["top-k recovery", "feature analysis", "head attribution", "flagship", "scaling"]
+    }
+  ],
+  "quick_routes": {
+    "paper_reproduction": "docs/context/CONTEXT-003.md",
+    "provenance_and_manifests": "docs/context/CONTEXT-001.md",
+    "patching_and_interventions": "docs/context/CONTEXT-002.md",
+    "publication_verification": "docs/context/CONTEXT-004.md",
+    "extended_mechanistic_analyses": "docs/context/CONTEXT-005.md"
+  }
+}
