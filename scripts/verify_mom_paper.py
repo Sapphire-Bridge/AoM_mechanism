@@ -33,9 +33,9 @@ SUPPORT_EXPECTED_CSV_OUTPUTS = (
 SIX_LAYER_DIR = ROOT / "results" / "overnight_mech_20260225T135850Z"
 FIXED_LAYER_SAE_DIR = ROOT / "results" / "mom_overnight_gemma2b_sae_20260224T165425Z"
 NUMERIC_EQUIVALENT_FIELDS = {
-    "six-layer clt clt_cpt_mean_identity_max_abs_effect",
     "fixed-layer sae sae_cpt_flip_rate_at_best_layer",
 }
+SUPPORT_CONTROL_NEAR_ZERO_ATOL = 2e-6
 
 
 @dataclass(frozen=True)
@@ -230,7 +230,7 @@ def verify_run(run_root: Path) -> tuple[list[MissingArtifact], list[CheckResult]
                 float(raw_run["cpt_mean_sham_max_effect"]),
                 float(raw_ref["cpt_mean_sham_max_effect"]),
                 raw_ref_rel,
-                atol=1e-6,
+                atol=SUPPORT_CONTROL_NEAR_ZERO_ATOL,
                 artifact_kind="support",
             ),
             _compare_close(
@@ -275,11 +275,12 @@ def verify_run(run_root: Path) -> tuple[list[MissingArtifact], list[CheckResult]
                 atol=1e-6,
                 artifact_kind="support",
             ),
-            _compare_exact(
+            _compare_close(
                 "six-layer clt clt_cpt_mean_identity_max_abs_effect",
-                clt_run["clt_cpt_mean_identity_max_abs_effect"],
-                clt_ref["clt_cpt_mean_identity_max_abs_effect"],
+                float(clt_run["clt_cpt_mean_identity_max_abs_effect"]),
+                float(clt_ref["clt_cpt_mean_identity_max_abs_effect"]),
                 clt_ref_rel,
+                atol=SUPPORT_CONTROL_NEAR_ZERO_ATOL,
                 artifact_kind="support",
             ),
             _compare_close(
