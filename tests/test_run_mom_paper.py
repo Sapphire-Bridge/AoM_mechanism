@@ -5,6 +5,7 @@ import sys
 from pathlib import Path
 
 from scripts import run_mom_paper
+from scripts.paper_requirements import PAPER_MODEL_REVISION
 from scripts.run_readme_reproduction import CommandRecord, _readme_command_specs
 from scripts.verify_readme_reproduction import CheckResult, MissingArtifact
 
@@ -16,6 +17,18 @@ def test_paper_support_command_specs_are_support_kind_and_cpu(tmp_path: Path) ->
         idx = spec.argv.index("--device")
         assert spec.argv[idx + 1] == "cpu"
         assert "--device auto" not in spec.argv
+
+
+def test_paper_support_sae_command_uses_raw_repo_and_separate_revision(tmp_path: Path) -> None:
+    specs = {spec.name: spec for spec in run_mom_paper._paper_support_command_specs(tmp_path, local_files_only=True)}
+    sae_spec = specs["Fixed-layer SAE specificity support"]
+
+    repo_idx = sae_spec.argv.index("--sae_repo")
+    revision_idx = sae_spec.argv.index("--sae_revision")
+
+    assert sae_spec.argv[repo_idx + 1] == run_mom_paper.PAPER_SCOPE_REPO_ID
+    assert sae_spec.argv[revision_idx + 1] == run_mom_paper.SAE_REVISION
+    assert "hf://" not in " ".join(str(arg) for arg in sae_spec.argv)
 
 
 def test_status_summary_uses_artifact_kind_not_names(tmp_path: Path) -> None:
@@ -136,6 +149,25 @@ def test_readme_command_specs_use_expected_cf_and_coh_datasets(tmp_path: Path) -
     assert coh_spec.argv[coh_coh_path_idx + 1] == "data_paper_hardened_v2/coherence.jsonl"
 
 
+def test_readme_command_specs_pin_paper_model_revision_for_model_commands(tmp_path: Path) -> None:
+    specs = {spec.name: spec for spec in _readme_command_specs(tmp_path, local_files_only=True)}
+
+    model_command_names = (
+        "DISAMB matched controls",
+        "DISAMB strict CPU rerun (float32)",
+        "DISAMB strict CPU rerun (float64)",
+        "CF task-axis comparability",
+        "COH task-axis comparability",
+    )
+    for name in model_command_names:
+        spec = specs[name]
+        revision_idx = spec.argv.index("--revision")
+        assert spec.argv[revision_idx + 1] == PAPER_MODEL_REVISION
+
+    endpoint_spec = specs["Endpoint decomposition (float64)"]
+    assert "--revision" not in endpoint_spec.argv
+
+
 def test_run_mom_paper_dry_run_emits_core_and_sae_support_commands(tmp_path: Path) -> None:
     repo_root = Path(__file__).resolve().parents[1]
     run_root = tmp_path / "mom-paper"
@@ -157,6 +189,8 @@ def test_run_mom_paper_dry_run_emits_core_and_sae_support_commands(tmp_path: Pat
     assert "--run_patching_specificity" in out
     assert "--patch_layers 4,8,12,16,20,24" in out
     assert "gemma2b_sae.csv" in out
+    assert f"--sae_revision {run_mom_paper.SAE_REVISION}" in out
+    assert "hf://" not in out
     assert "- core_claims_status: `NOT_EXECUTED`" in out
     assert "- support_artifacts_status: `NOT_EXECUTED`" in out
     assert "- overall_status: `PLAN_ONLY`" in out
