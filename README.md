@@ -2,6 +2,8 @@
 
 Mechanistic interpretability pipeline comparing raw residual-stream and SAE-basis interventions on meaning-sensitive tasks in Gemma 2 2B. Implements hard-gated substrate comparison, FP64 endpoint-native accounting, matched PCA/random/RECON/RESID controls, and disturbance-efficiency analysis. Companion code for the Mechanics of Meaning (MoM) paper.
 
+Agent/research context: see `CONTEXT.md`. Repo-specific working rules for agents: see `AGENTS.md`.
+
 ## Paper
 
 - Preprint: https://zenodo.org/records/18906800
@@ -20,8 +22,53 @@ The paper-facing mechanism results are maintained under the CLT-labeled comparab
 - `results/` contains sanitized paper-facing reference artifacts for this public release, not the full internal historical results tree.
 - `public_artifacts/` contains `RELEASE_MANIFEST.json` plus portability and audit reports emitted by `scripts/release_json_artifacts.py publish`.
 - The fastest clean-clone validation path is `make check`.
-- The one-command paper-facing MoM run is `make mom-paper`.
+- The reviewer-facing full MoM reproduction command is `make reproduction`.
+- The reviewer-facing full accelerator sweep command is `make paper-reproduction-gpu`.
 - The full Gemma-2-2B MoM reproduction is a heavyweight multi-hour verification path that assumes local model assets plus the CLT and SAE artifacts cited below.
+
+## Start Here
+
+If you are evaluating this repo as an engineer, interviewer, or lab reviewer, use the shortest path that answers your question. These are rough time budgets on a machine with dependencies installed; a fresh connected machine should run `make reviewer-assets` once before the reviewer-only commands below.
+
+### About 3 minutes: repo boots, tests pass, smoke path works
+
+```bash
+make check
+```
+
+Use this when you want the fastest high-signal check that the repo is wired correctly. It runs the offline test suite, evidence-contract checks, and the canonical smoke runner.
+
+### About 20 minutes: reviewer readiness plus one real result
+
+```bash
+make reviewer-assets
+make reviewer-check
+make one-result-check-gpu
+```
+
+If no accelerator is available, use:
+
+```bash
+make reviewer-assets
+make reviewer-check
+make one-result-check
+```
+
+This is the best interview or lab-demo path on a fresh connected machine. `make reviewer-assets` downloads the pinned reviewer assets once. `make reviewer-check` then confirms the environment, offline smoke route, paper-runner dry-run, and local assets. `make one-result-check-gpu` runs a substantive accelerator-backed verification against the tracked public reference. On CPU-only machines, `make one-result-check` provides the same claim-level check without the accelerator requirement.
+
+### Full run: strict paper reproduction, plus optional accelerator sweep
+
+```bash
+make reproduction MOM_PAPER_ARGS="--run_root /tmp/mom_paper_review_run"
+```
+
+Optional CUDA/MPS showcase:
+
+```bash
+make paper-reproduction-gpu PAPER_GPU_ARGS="--results_dir /tmp/paper_cuda_validated --local_files_only"
+```
+
+`make reproduction` is the canonical strict paper-proof path. It is intentionally CPU-pinned for the core comparability and support stages. `make paper-reproduction-gpu` is the broad accelerator sweep for showcasing CUDA/MPS operability; it is not the canonical claim-verification path.
 
 ## One-command check
 
@@ -51,10 +98,10 @@ python scripts/run_paper.py smoke
 ## One-command MoM paper run
 
 ```bash
-make mom-paper
+make reproduction
 ```
 
-`make mom-paper` creates the local `.venv` if needed, then runs the paper-facing MoM package into a fresh temp directory outside the repo:
+`make reproduction` creates the local `.venv` if needed, then runs the paper-facing MoM package into a fresh temp directory outside the repo:
 
 - the core CLT comparability / endpoint-decomposition path verified against the checked-in reference artifacts
 - the six-layer raw vs CLT layer-profile support run used in §4
@@ -63,8 +110,10 @@ make mom-paper
 For cache-only / offline-style execution, use:
 
 ```bash
-make mom-paper MOM_PAPER_ARGS="--local_files_only"
+make reproduction
 ```
+
+`make mom-paper` remains as a backward-compatible legacy target name if you need the older command spelling, but it does not force `--local_files_only`.
 
 ## Repository layout
 
@@ -205,16 +254,115 @@ Reviewer-safe reproduction commands for the core MoM claims:
 
 These commands write into a temp directory outside the repo so the checked-in release artifacts under `results/` stay untouched and `git status` remains clean. The main-text DISAMB runs below intentionally use `data/disamb_pairs.jsonl`; the fixed-layer specificity appendix artifact uses `data_paper_hardened_v2/disamb_pairs.jsonl` and is reported separately rather than pooled with the six-layer table. The canonical multi-layer CLT bundle path is `clt_bundles/gemma-scope-2b-pt-res_sweep_smoke`; the `_smoke` suffix is historical, but this bundle contains the release layers `4/8/12/16/20/24`.
 
-If that bundle path is absent in a clean clone, materialize it from the cached Gemma Scope snapshot first:
+Fresh connected reviewer machine:
 
 ```bash
-python scripts/gemma_scope_to_clt.py \
-  --preset readme_core_bundle \
-  --width 16k \
-  --revision fd571b47c1c64851e9b1989792367b9babb4af63 \
-  --local_files_only \
-  --out_dir clt_bundles/gemma-scope-2b-pt-res_sweep_smoke
+make reviewer-assets
 ```
+
+This downloads the pinned `google/gemma-2-2b` snapshot, materializes the pinned CLT reviewer bundle, and caches the fixed-layer SAE support files needed by the strict paper path. Run this once per machine before the offline reviewer commands below.
+
+Shortest reviewer readiness check after assets are present:
+
+```bash
+make reviewer-check
+```
+
+This is the best command for an already-prepared reviewer setup. It may bootstrap the virtualenv/dependencies first, then runs three fast gates before any multi-hour job:
+- an offline CPU smoke run with a tiny local model,
+- a dry-run of the paper runner with the reviewer-safe CPU settings,
+- a local asset check for `google/gemma-2-2b`, the CLT bundle/source cache, and the fixed-layer SAE support files.
+
+If it ends with `ready_for_offline_paper_run: PASS`, the reviewer can immediately choose either the fast single-result check or the full paper run using the exact commands printed at the end of the check. If assets are missing, the quickcheck now points back to `make reviewer-assets`.
+
+For an already-installed environment, CI, or a repeated offline readiness check that should avoid `make` bootstrap behavior, run the wrapper directly:
+
+```bash
+python scripts/reviewer_quickcheck.py --cleanup
+```
+
+The quickcheck validates execution readiness plus offline asset readiness. It intentionally does not regenerate the hardened paper dataset during the smoke step; that path uses `--skip_dataset` so the repo stays clean.
+If a reviewer machine is unusually slow, the smoke and dry-run timeouts can be raised with `--smoke-timeout-seconds`, `--paper-dry-run-timeout-seconds`, or the env vars `MOM_REVIEWER_SMOKE_TIMEOUT_SECONDS` and `MOM_REVIEWER_DRY_RUN_TIMEOUT_SECONDS`.
+
+Fastest one-command single-claim verification:
+
+```bash
+make one-result-check
+```
+
+This runs a real layer-4 DISAMB controls verification against the tracked public reference and writes:
+- a compact markdown report
+- a machine-readable command/check log
+- the layer-4 controls CSV and summary JSON
+
+The quick-result report ends with `overall_status: PASS` or `overall_status: FAIL`.
+
+Accelerator variant of the same single-result check:
+
+```bash
+make one-result-check-gpu
+```
+
+This runs the same layer-4 controls verification on the best available accelerator:
+- CUDA if available
+- otherwise MPS if available
+- otherwise it fails clearly instead of silently falling back to CPU
+
+It still verifies against the same tracked public reference as `make one-result-check`.
+On non-CPU devices, small drift in the auxiliary PCA baseline is reported as `WARN` rather than `FAIL`; the main ordering and core control checks remain pass/fail. Treat this GPU path as an accelerator consistency check, not the canonical paper-proof path.
+
+Reviewer-facing full accelerator sweep:
+
+```bash
+make paper-reproduction-gpu
+```
+
+This convenience command chooses the correct broad accelerator preset automatically:
+- `scripts/run_paper.py m1max_safe` on Apple Silicon / MPS
+- `scripts/run_paper.py cuda_validated` on CUDA
+
+Use this for the multi-model accelerator sweep. On Apple Silicon, the broad behavioral stage runs conservatively with `eager`, and per-model failures/timeouts are reported clearly instead of hanging silently. The canonical strict paper-proof path remains `make reproduction`.
+
+Fastest one-command full reviewer path:
+
+```bash
+make reproduction MOM_PAPER_ARGS="--run_root /tmp/mom_paper_review_run"
+```
+
+Notes for the one-command runner:
+- `RUN_ROOT` must start empty.
+- The runner pins both the strict paper stages and the paper-support stages to CPU to avoid Apple Silicon / MPS drift.
+- It writes `$RUN_ROOT/mom_paper_reproduction_report.md` and `$RUN_ROOT/mom_paper_reproduction_log.json`.
+- A successful run reports `overall_status: PASS`.
+- Standalone verifier: `python scripts/verify_mom_paper.py --run_root "$RUN_ROOT"`.
+- `make mom-paper` remains as a backward-compatible legacy target name, but it does not force `--local_files_only`; `make reproduction` is the reviewer-facing target.
+
+Pod / RunPod launch helpers:
+
+These are thin wrappers around the existing repo commands. They activate the repo venv, set HF/cache env vars, launch under `nohup`, and write sibling `.log` and `.pid` files.
+
+```bash
+bash scripts/pod_run_one_result_gpu.sh
+bash scripts/pod_run_all_results_gpu.sh
+bash scripts/pod_run_paper_cpu.sh
+```
+
+Intent:
+- `pod_run_one_result_gpu.sh`: quick accelerator claim check
+- `pod_run_all_results_gpu.sh`: full accelerator sweep via `scripts/run_paper_accelerated.py`
+- `pod_run_paper_cpu.sh`: canonical strict paper reproduction via `scripts/run_mom_paper.py`
+
+Notes:
+- `LOCAL_FILES_ONLY=1` is a strict boolean toggle; anything else leaves downloads enabled.
+- `HF_HOME` is the primary cache root; `TRANSFORMERS_CACHE` is set only for backward compatibility.
+- On success, each wrapper creates a sibling `*.tar.gz` archive, a `*.sha256` checksum, and a simple `*.status` file before any pod stop action.
+- Default post-success behavior is `RUNPOD_POST_SUCCESS_ACTION=auto`: on RunPod, if `RUNPOD_POD_ID` and `runpodctl` are available, the wrapper stops the pod after archiving so GPU billing ends while the archived outputs remain on the workspace volume. Use `RUNPOD_POST_SUCCESS_ACTION=terminate` only if you explicitly want full pod deletion.
+- The `.pid` file is removed by the post-success wrapper when the background job exits; trust the `.status` file for final state.
+- `pod_run_paper_cpu.sh` is intentionally CPU-pinned because `scripts/run_mom_paper.py` uses CPU for both the core comparability path and the support path.
+- Fresh pods may still require `huggingface-cli login` or `HF_TOKEN` plus accepted model licenses:
+  - `google/gemma-2-2b` for the one-result and paper runs
+  - `meta-llama/*` models when the accelerator sweep resolves to CUDA / `cuda_validated`
+- Use `LOCAL_FILES_ONLY=1` only when the required caches are already present.
 
 ```bash
 RUN_ROOT="$(mktemp -d "${TMPDIR:-/tmp}/mom_core.XXXXXX")"
@@ -333,6 +481,8 @@ Numeric checks to treat as a successful reproduction:
 - `$RUN_ROOT/clt_raw_comparability_l4_l8_l12_controls_full.summary.json` should report `counts.n_rows_analysis_included=312`, `counts.n_pairs_analysis_included=52`, zero invariant failures, and all optional-arm success flags true. At layer 4, the mean ordering should remain `RECON (0.3359) > Raw A (0.2612) > PCA (0.2127) >> Random mean (0.0198)` with `RESID (-0.0552)` mean-negative. Compare against `results/clt_raw_comparability_l4_l8_l12_controls_full.summary.json`.
 - `$RUN_ROOT/clt_raw_comparability_cf_l4_l8_l12_final_f32.summary.json` should report `60/60` included rows, `0` invariant failures, and CRR means `0.922/0.915/0.917` for layers `4/8/12`. Compare against `results/clt_raw_comparability_cf_l4_l8_l12_final_f32.summary.json`.
 - `$RUN_ROOT/clt_raw_comparability_coh_l4_l8_l12_final_f32.summary.json` should report `480/480` included rows, `0` invariant failures, and CRR means `0.870/0.869/0.855` for layers `4/8/12`. Compare against `results/clt_raw_comparability_coh_l4_l8_l12_final_f32.summary.json`.
+- One-command runner: `python scripts/run_mom_paper.py --run_root "$RUN_ROOT" --local_files_only`.
+- Scripted verifier for the one-command runner: `python scripts/verify_mom_paper.py --run_root "$RUN_ROOT"`.
 - Scripted verifier: `python scripts/verify_readme_reproduction.py --run_root "$RUN_ROOT"`
 - Scripted end-to-end runner/report: `python scripts/run_readme_reproduction.py --local_files_only --report_path reports/readme_reproduction_report.md`
 
@@ -342,7 +492,7 @@ Hardware / runtime notes for reviewers:
 - The core comparability steps are pinned to CPU in the paper runner to avoid Apple Silicon / MPS invariant drift in the A≈B gate.
 - The strict endpoint claims in the paper use CPU reruns (`--device cpu`), not the relaxed MPS workflow. Treat them as multi-hour CPU jobs.
 - The checked-in six-layer overnight manifests on the original machine record `wall_time_sec=5091.42` for the raw run and `wall_time_sec=7020.59` for the CLT run (about 85 min and 117 min, respectively).
-- `scripts/run_paper.py m1max` and `scripts/run_paper.py a100` remain the broader preset runners for multi-model paper sweeps. The commands above are the narrower verifier path for the core Gemma 2 2B MoM claims.
+- `scripts/run_paper.py m1max` and `scripts/run_paper.py cuda_validated` remain the broader preset runners for multi-model paper sweeps. The commands above are the narrower verifier path for the core Gemma 2 2B MoM claims.
 - Structural archival gate: `python scripts/archive_readiness_check.py` (or `make archival-check`) runs evidence checks, publication-copy generation, portability scans, bundle dry-runs, and README verification if you supply an existing `--readme_run_root`.
 
 SAE feature-space CPT example:
@@ -550,7 +700,7 @@ For chat models, you can interpret dataset prompt fields as user messages and re
 
 Run manifests store hashes only (e.g., `system_prompt_sha256`, `chat_template_sha256`) and never write raw prompt/system text to disk.
 
-## Paper-mode runner (smoke / M1Max / A100)
+## Paper-mode runner (smoke / M1Max / cuda_validated)
 
 This repo includes a convenience runner that generates a hardened “paper dataset” (with CF shams + COH controls) and runs reproducible evaluation presets:
 
@@ -561,8 +711,8 @@ python scripts/run_paper.py smoke
 # Long local run tuned for Apple Silicon (MPS)
 python scripts/run_paper.py m1max
 
-# Full run intended for CUDA GPUs (e.g. A100s)
-python scripts/run_paper.py a100 --attn_behavioral flash_attention_2
+# Full run intended for validated CUDA GPU sweeps
+python scripts/run_paper.py cuda_validated --attn_behavioral flash_attention_2
 ```
 
 Optional CLT integration in paper-mode:

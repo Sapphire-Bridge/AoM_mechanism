@@ -505,6 +505,7 @@ def run_eval_with_loaded(
                 l0_target=getattr(args, "sae_l0_target", None),
                 device=str(tensor_device),
                 dtype=str(getattr(args, "sae_dtype", "float32")),
+                revision=getattr(args, "sae_revision", None),
                 local_files_only=bool(getattr(args, "local_files_only", False)),
             )
             sae_by_layer[int(l)] = sae
@@ -999,6 +1000,7 @@ def parse_args() -> argparse.Namespace:
         help="Run SAE feature-space CPT-style patching (requires Gemma Scope SAEs).",
     )
     p.add_argument("--sae_repo", type=str, default="", help="HF repo id or local path for a Gemma Scope SAE bundle.")
+    p.add_argument("--sae_revision", type=str, default=None, help="Optional HF revision for the SAE repo.")
     p.add_argument("--sae_width", type=str, default="16k", help="SAE width (matches directory width_*).")
     p.add_argument("--sae_run_name", type=str, default=None, help="Explicit run subdir name (e.g. 'average_l0_71').")
     p.add_argument("--sae_l0_target", type=int, default=None, help="Select run dir by average_l0_* tag.")

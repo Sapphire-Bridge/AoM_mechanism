@@ -782,7 +782,7 @@ def _random_orthonormal_rows(*, hidden_dim: int, max_rank: int, seed: int) -> to
     return q.t().contiguous()
 
 
-def parse_args() -> argparse.Namespace:
+def parse_args(argv: list[str] | None = None) -> argparse.Namespace:
     root = Path(__file__).resolve().parents[1]
     p = argparse.ArgumentParser(
         description="Raw-vs-CLT comparability run with A≈B invariant gate, decomposition telemetry, and pair-cluster bootstrap."
@@ -802,6 +802,8 @@ def parse_args() -> argparse.Namespace:
     p.add_argument("--device", type=str, default="auto", choices=["auto", "cpu", "cuda", "mps"])
     p.add_argument("--torch_dtype", type=str, default=None)
     p.add_argument("--attn_implementation", type=str, default="eager", choices=["eager", "sdpa", "flash_attention_2"])
+    p.add_argument("--revision", type=str, default=None)
+    p.add_argument("--tokenizer_revision", type=str, default=None)
     p.add_argument("--local_files_only", action="store_true")
     p.add_argument("--trust_remote_code", action="store_true")
 
@@ -885,7 +887,7 @@ def parse_args() -> argparse.Namespace:
     p.add_argument(
         "--out_json", type=str, default=str(root / "results" / "clt_raw_comparability_l4_l8_l12.summary.json")
     )
-    return p.parse_args()
+    return p.parse_args(argv)
 
 
 def main() -> None:
@@ -920,6 +922,8 @@ def main() -> None:
         str(args.model_name_or_path),
         device=device,
         torch_dtype=args.torch_dtype,
+        revision=args.revision,
+        tokenizer_revision=args.tokenizer_revision,
         local_files_only=bool(args.local_files_only),
         trust_remote_code=bool(args.trust_remote_code),
         attn_implementation=str(args.attn_implementation),

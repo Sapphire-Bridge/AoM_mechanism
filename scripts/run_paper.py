@@ -1,9 +1,12 @@
 from __future__ import annotations
 
 import argparse
+import csv
 import hashlib
 import json
+import os
 import shlex
+import signal
 import subprocess
 import sys
 from dataclasses import dataclass
@@ -47,6 +50,21 @@ COH_PATCHING_MODELS: list[str] = [
 ]
 
 
+@dataclass
+class TimedCommandResult:
+    returncode: int
+    timed_out: bool
+
+
+@dataclass
+class BehavioralModelResult:
+    model: str
+    status: str
+    csv_path: str
+    reason: str = ""
+    exit_code: int | None = None
+
+
 def _utc_now_iso() -> str:
     return datetime.now(timezone.utc).replace(microsecond=0).isoformat()
 
@@ -72,11 +90,157 @@ def _display_arg(arg: str | Path) -> str:
     return s
 
 
+def _portable_manifest_path(path: str | Path, *, base_dir: str | Path) -> str:
+    return Path(os.path.relpath(str(path), str(base_dir))).as_posix()
+
+
 def _run(argv: List[str], *, cwd: Path, dry_run: bool) -> None:
     print(_shlex_join(_display_arg(arg) for arg in argv), flush=True)
     if dry_run:
         return
     subprocess.run(argv, cwd=str(cwd), check=True)
+
+
+def _terminate_process_group(proc: subprocess.Popen[bytes], *, grace_seconds: float = 5.0) -> None:
+    if proc.poll() is not None:
+        return
+    try:
+        os.killpg(proc.pid, signal.SIGTERM)
+    except ProcessLookupError:
+        return
+    try:
+        proc.wait(timeout=grace_seconds)
+        return
+    except subprocess.TimeoutExpired:
+        pass
+    try:
+        os.killpg(proc.pid, signal.SIGKILL)
+    except ProcessLookupError:
+        return
+    try:
+        proc.wait(timeout=grace_seconds)
+    except subprocess.TimeoutExpired:
+        pass
+
+
+def _run_with_timeout(
+    argv: List[str],
+    *,
+    cwd: Path,
+    dry_run: bool,
+    timeout_seconds: int | None,
+) -> TimedCommandResult:
+    print(_shlex_join(_display_arg(arg) for arg in argv), flush=True)
+    if dry_run:
+        return TimedCommandResult(returncode=0, timed_out=False)
+    proc = subprocess.Popen(argv, cwd=str(cwd), start_new_session=True)
+    try:
+        if timeout_seconds is None or int(timeout_seconds) <= 0:
+            return TimedCommandResult(returncode=int(proc.wait()), timed_out=False)
+        return TimedCommandResult(returncode=int(proc.wait(timeout=float(timeout_seconds))), timed_out=False)
+    except subprocess.TimeoutExpired:
+        _terminate_process_group(proc)
+        return TimedCommandResult(returncode=124, timed_out=True)
+    except KeyboardInterrupt:
+        _terminate_process_group(proc)
+        raise
+
+
+def _model_slug(model_name: str) -> str:
+    return str(model_name).replace("/", "_")
+
+
+def _merge_csv_files(csv_paths: List[Path], out_path: Path) -> None:
+    if not csv_paths:
+        return
+    rows: list[dict[str, str]] = []
+    fieldnames: list[str] = []
+    for path in csv_paths:
+        if not path.exists():
+            continue
+        with open(path, "r", encoding="utf-8", newline="") as f:
+            reader = csv.DictReader(f)
+            if reader.fieldnames:
+                for name in reader.fieldnames:
+                    if name not in fieldnames:
+                        fieldnames.append(name)
+            for row in reader:
+                rows.append({str(k): "" if v is None else str(v) for k, v in row.items()})
+    if not fieldnames:
+        return
+    out_path.parent.mkdir(parents=True, exist_ok=True)
+    with open(out_path, "w", encoding="utf-8", newline="") as f:
+        writer = csv.DictWriter(f, fieldnames=fieldnames)
+        writer.writeheader()
+        for row in rows:
+            writer.writerow({name: row.get(name, "") for name in fieldnames})
+
+
+def _relative_to_results_dir(path: str | Path, *, results_dir: Path) -> str:
+    raw = str(path)
+    if not raw:
+        return ""
+    p = Path(raw)
+    try:
+        return p.relative_to(results_dir).as_posix()
+    except ValueError:
+        return raw
+
+
+def _render_behavioral_status_markdown(results: List[BehavioralModelResult], *, results_dir: Path) -> str:
+    passed = sum(1 for r in results if r.status == "PASS")
+    failed = sum(1 for r in results if r.status == "FAIL")
+    timed_out = sum(1 for r in results if r.status == "TIMEOUT")
+    overall = "PASS" if failed == 0 and timed_out == 0 else "FAIL"
+    lines = [
+        "## MPS Behavioral Model Status",
+        "",
+        f"- overall_status: {overall}",
+        f"- passed_models: {passed}",
+        f"- failed_models: {failed}",
+        f"- timed_out_models: {timed_out}",
+        "",
+        "| model | status | csv_path | detail |",
+        "|---|---|---|---|",
+    ]
+    for r in results:
+        rel_csv = _relative_to_results_dir(r.csv_path, results_dir=results_dir)
+        detail = r.reason or ("" if r.exit_code is None else f"exit {int(r.exit_code)}")
+        lines.append(f"| {r.model} | {r.status} | {rel_csv} | {detail} |")
+    lines.append("")
+    return "\n".join(lines)
+
+
+def _write_behavioral_status_artifacts(results_dir: Path, results: List[BehavioralModelResult]) -> tuple[Path, Path]:
+    md_text = _render_behavioral_status_markdown(results, results_dir=results_dir)
+    payload = {
+        "generated_at_utc": _utc_now_iso(),
+        "overall_status": "PASS" if all(r.status == "PASS" for r in results) else "FAIL",
+        "models": [
+            {
+                "model": str(r.model),
+                "status": str(r.status),
+                "csv_path": _relative_to_results_dir(r.csv_path, results_dir=results_dir),
+                "reason": str(r.reason),
+                "exit_code": None if r.exit_code is None else int(r.exit_code),
+            }
+            for r in results
+        ],
+    }
+    md_path = results_dir / "behavioral_model_status.md"
+    json_path = results_dir / "behavioral_model_status.json"
+    md_path.write_text(md_text + "\n", encoding="utf-8")
+    _write_json(json_path, payload)
+    return md_path, json_path
+
+
+def _append_markdown_to_report(report_path: Path, markdown_text: str) -> None:
+    if not report_path.exists():
+        return
+    existing = report_path.read_text(encoding="utf-8")
+    suffix = markdown_text.strip()
+    if suffix and suffix not in existing:
+        report_path.write_text(existing.rstrip() + "\n\n" + suffix + "\n", encoding="utf-8")
 
 
 def _try_git_commit() -> str:
@@ -196,17 +360,17 @@ def ensure_paper_dataset(
 
         files = {
             "disamb_pairs.jsonl": {
-                "path": str(disamb_path),
+                "path": _portable_manifest_path(disamb_path, base_dir=data_dir.parent),
                 "n_lines": int(_count_nonempty_lines(disamb_path)),
                 "sha256": _sha256_file(disamb_path),
             },
             "counterfactual.jsonl": {
-                "path": str(cf_path),
+                "path": _portable_manifest_path(cf_path, base_dir=data_dir.parent),
                 "n_lines": int(_count_nonempty_lines(cf_path)),
                 "sha256": _sha256_file(cf_path),
             },
             "coherence.jsonl": {
-                "path": str(coh_path),
+                "path": _portable_manifest_path(coh_path, base_dir=data_dir.parent),
                 "n_lines": int(_count_nonempty_lines(coh_path)),
                 "sha256": _sha256_file(coh_path),
             },
@@ -1068,17 +1232,17 @@ def run_smoke(args: argparse.Namespace) -> PaperRun:
         smoke_paths = ensure_smoke_datasets(smoke_data_dir)
         files = {
             "disamb_pairs.jsonl": {
-                "path": str(smoke_paths["disamb"]),
+                "path": _portable_manifest_path(smoke_paths["disamb"], base_dir=smoke_data_dir.parent),
                 "n_lines": int(_count_nonempty_lines(smoke_paths["disamb"])),
                 "sha256": _sha256_file(smoke_paths["disamb"]),
             },
             "counterfactual.jsonl": {
-                "path": str(smoke_paths["cf"]),
+                "path": _portable_manifest_path(smoke_paths["cf"], base_dir=smoke_data_dir.parent),
                 "n_lines": int(_count_nonempty_lines(smoke_paths["cf"])),
                 "sha256": _sha256_file(smoke_paths["cf"]),
             },
             "coherence.jsonl": {
-                "path": str(smoke_paths["coh"]),
+                "path": _portable_manifest_path(smoke_paths["coh"], base_dir=smoke_data_dir.parent),
                 "n_lines": int(_count_nonempty_lines(smoke_paths["coh"])),
                 "sha256": _sha256_file(smoke_paths["coh"]),
             },
@@ -1396,7 +1560,117 @@ def run_smoke(args: argparse.Namespace) -> PaperRun:
     return run
 
 
-def run_m1max(args: argparse.Namespace) -> PaperRun:
+def _run_m1max_behavioral_split(
+    *,
+    results_dir: Path,
+    dataset_manifest_path: Optional[Path],
+    models: List[str],
+    disamb_path: Path,
+    cf_path: Path,
+    coh_path: Path,
+    commands: List[List[str]],
+    args: argparse.Namespace,
+    attn_implementation: str,
+    torch_dtype: str,
+    timeout_seconds: int,
+) -> List[BehavioralModelResult]:
+    behavioral_dir = results_dir / "behavioral"
+    behavioral_dir.mkdir(parents=True, exist_ok=True)
+    results: List[BehavioralModelResult] = []
+    successful_csvs: List[Path] = []
+    for model_name in models:
+        model_csv = behavioral_dir / f"{_model_slug(model_name)}.csv"
+        cmd = _aom_eval_cmd(
+            models=[str(model_name)],
+            device="mps",
+            torch_dtype=str(torch_dtype),
+            attn_implementation=str(attn_implementation),
+            local_files_only=bool(args.local_files_only),
+            trust_remote_code=bool(args.trust_remote_code),
+            revision=getattr(args, "revision", None),
+            tokenizer_revision=getattr(args, "tokenizer_revision", None),
+            disamb_path=str(disamb_path),
+            cf_path=str(cf_path),
+            coh_path=str(coh_path),
+            dataset_manifest_path=str(dataset_manifest_path) if dataset_manifest_path is not None else None,
+            bootstrap_n=int(args.bootstrap_n),
+            bootstrap_seed=int(args.bootstrap_seed),
+            ci=float(args.ci),
+            run_clt_patching=bool(getattr(args, "run_clt_patching", False)),
+            clt_repo=str(getattr(args, "clt_repo", "")),
+            clt_width=str(getattr(args, "clt_width", "16k")),
+            clt_run_name=getattr(args, "clt_run_name", None),
+            clt_l0_target=getattr(args, "clt_l0_target", None),
+            clt_layers=str(getattr(args, "clt_layers", "")),
+            clt_scale=float(getattr(args, "clt_scale", 1.0)),
+            clt_dtype=str(getattr(args, "clt_dtype", "float32")),
+            clt_decode_strategy=str(getattr(args, "clt_decode_strategy", "delta_1decode")),
+            clt_dtype_policy=str(getattr(args, "clt_dtype_policy", "clt")),
+            clt_eps_active=float(getattr(args, "clt_eps_active", 1e-6)),
+            csv_path=str(model_csv),
+            device_map=str(args.device_map) if args.device_map else None,
+        )
+        commands.append(cmd)
+        outcome = _run_with_timeout(
+            cmd,
+            cwd=ROOT,
+            dry_run=bool(args.dry_run),
+            timeout_seconds=int(timeout_seconds),
+        )
+        if bool(args.dry_run):
+            continue
+        if outcome.timed_out:
+            results.append(
+                BehavioralModelResult(
+                    model=str(model_name),
+                    status="TIMEOUT",
+                    csv_path=str(model_csv),
+                    reason=f"timed out after {int(timeout_seconds)}s",
+                    exit_code=int(outcome.returncode),
+                )
+            )
+            continue
+        if int(outcome.returncode) != 0:
+            results.append(
+                BehavioralModelResult(
+                    model=str(model_name),
+                    status="FAIL",
+                    csv_path=str(model_csv),
+                    reason=f"command exit {int(outcome.returncode)}",
+                    exit_code=int(outcome.returncode),
+                )
+            )
+            continue
+        if not model_csv.exists() or model_csv.stat().st_size == 0:
+            results.append(
+                BehavioralModelResult(
+                    model=str(model_name),
+                    status="FAIL",
+                    csv_path=str(model_csv),
+                    reason="missing behavioral csv output",
+                )
+            )
+            continue
+        successful_csvs.append(model_csv)
+        results.append(
+            BehavioralModelResult(
+                model=str(model_name),
+                status="PASS",
+                csv_path=str(model_csv),
+            )
+        )
+    if not bool(args.dry_run):
+        _merge_csv_files(successful_csvs, results_dir / "aom_eval.csv")
+    return results
+
+
+def _run_m1max_impl(
+    args: argparse.Namespace,
+    *,
+    mode_name: str,
+    behavioral_attn: str,
+    split_behavioral: bool,
+) -> PaperRun:
     results_dir = Path(args.results_dir)
     results_dir.mkdir(parents=True, exist_ok=True)
     dataset_dir = Path(args.data_dir)
@@ -1420,41 +1694,57 @@ def run_m1max(args: argparse.Namespace) -> PaperRun:
     disamb_path = dataset_dir / "disamb_pairs.jsonl"
     cf_path = dataset_dir / "counterfactual.jsonl"
     coh_path = dataset_dir / "coherence.jsonl"
+    mps_safe_eval_torch_dtype = "float32" if bool(split_behavioral) else "float16"
 
-    # 1) Full AoM behavioral suite on MPS (fast attention allowed).
-    behavioral_csv = results_dir / "aom_eval.csv"
-    cmd = _aom_eval_cmd(
-        models=models,
-        device="mps",
-        torch_dtype="float16",
-        attn_implementation="sdpa",
-        local_files_only=bool(args.local_files_only),
-        trust_remote_code=bool(args.trust_remote_code),
-        revision=getattr(args, "revision", None),
-        tokenizer_revision=getattr(args, "tokenizer_revision", None),
-        disamb_path=str(disamb_path),
-        cf_path=str(cf_path),
-        coh_path=str(coh_path),
-        dataset_manifest_path=str(dataset_manifest_path) if dataset_manifest_path is not None else None,
-        bootstrap_n=int(args.bootstrap_n),
-        bootstrap_seed=int(args.bootstrap_seed),
-        ci=float(args.ci),
-        run_clt_patching=bool(getattr(args, "run_clt_patching", False)),
-        clt_repo=str(getattr(args, "clt_repo", "")),
-        clt_width=str(getattr(args, "clt_width", "16k")),
-        clt_run_name=getattr(args, "clt_run_name", None),
-        clt_l0_target=getattr(args, "clt_l0_target", None),
-        clt_layers=str(getattr(args, "clt_layers", "")),
-        clt_scale=float(getattr(args, "clt_scale", 1.0)),
-        clt_dtype=str(getattr(args, "clt_dtype", "float32")),
-        clt_decode_strategy=str(getattr(args, "clt_decode_strategy", "delta_1decode")),
-        clt_dtype_policy=str(getattr(args, "clt_dtype_policy", "clt")),
-        clt_eps_active=float(getattr(args, "clt_eps_active", 1e-6)),
-        csv_path=str(behavioral_csv),
-        device_map=str(args.device_map) if args.device_map else None,
-    )
-    commands.append(cmd)
-    _run(cmd, cwd=ROOT, dry_run=bool(args.dry_run))
+    behavioral_results: List[BehavioralModelResult] = []
+    if split_behavioral:
+        behavioral_results = _run_m1max_behavioral_split(
+            results_dir=results_dir,
+            dataset_manifest_path=dataset_manifest_path,
+            models=models,
+            disamb_path=disamb_path,
+            cf_path=cf_path,
+            coh_path=coh_path,
+            commands=commands,
+            args=args,
+            attn_implementation=str(behavioral_attn),
+            torch_dtype=str(mps_safe_eval_torch_dtype),
+            timeout_seconds=int(getattr(args, "model_timeout_seconds", 1200)),
+        )
+    else:
+        behavioral_csv = results_dir / "aom_eval.csv"
+        cmd = _aom_eval_cmd(
+            models=models,
+            device="mps",
+            torch_dtype="float16",
+            attn_implementation=str(behavioral_attn),
+            local_files_only=bool(args.local_files_only),
+            trust_remote_code=bool(args.trust_remote_code),
+            revision=getattr(args, "revision", None),
+            tokenizer_revision=getattr(args, "tokenizer_revision", None),
+            disamb_path=str(disamb_path),
+            cf_path=str(cf_path),
+            coh_path=str(coh_path),
+            dataset_manifest_path=str(dataset_manifest_path) if dataset_manifest_path is not None else None,
+            bootstrap_n=int(args.bootstrap_n),
+            bootstrap_seed=int(args.bootstrap_seed),
+            ci=float(args.ci),
+            run_clt_patching=bool(getattr(args, "run_clt_patching", False)),
+            clt_repo=str(getattr(args, "clt_repo", "")),
+            clt_width=str(getattr(args, "clt_width", "16k")),
+            clt_run_name=getattr(args, "clt_run_name", None),
+            clt_l0_target=getattr(args, "clt_l0_target", None),
+            clt_layers=str(getattr(args, "clt_layers", "")),
+            clt_scale=float(getattr(args, "clt_scale", 1.0)),
+            clt_dtype=str(getattr(args, "clt_dtype", "float32")),
+            clt_decode_strategy=str(getattr(args, "clt_decode_strategy", "delta_1decode")),
+            clt_dtype_policy=str(getattr(args, "clt_dtype_policy", "clt")),
+            clt_eps_active=float(getattr(args, "clt_eps_active", 1e-6)),
+            csv_path=str(behavioral_csv),
+            device_map=str(args.device_map) if args.device_map else None,
+        )
+        commands.append(cmd)
+        _run(cmd, cwd=ROOT, dry_run=bool(args.dry_run))
 
     if bool(getattr(args, "run_clt_stage", False)):
         clt_csv = results_dir / "clt_cpt_disamb_only.csv"
@@ -1654,7 +1944,7 @@ def run_m1max(args: argparse.Namespace) -> PaperRun:
         cmd = _aom_eval_cmd(
             models=sweep_models,
             device="mps",
-            torch_dtype="float16",
+            torch_dtype=str(mps_safe_eval_torch_dtype),
             attn_implementation="eager",
             local_files_only=bool(args.local_files_only),
             trust_remote_code=bool(args.trust_remote_code),
@@ -1687,7 +1977,7 @@ def run_m1max(args: argparse.Namespace) -> PaperRun:
             cmd = _aom_eval_cmd(
                 models=models,
                 device="mps",
-                torch_dtype="float16",
+                torch_dtype=str(mps_safe_eval_torch_dtype),
                 attn_implementation="eager",
                 local_files_only=bool(args.local_files_only),
                 trust_remote_code=bool(args.trust_remote_code),
@@ -1829,10 +2119,36 @@ def run_m1max(args: argparse.Namespace) -> PaperRun:
     commands.append(report_cmd)
     _run(report_cmd, cwd=ROOT, dry_run=bool(args.dry_run))
 
-    run = PaperRun(mode="m1max", results_dir=results_dir, dataset_manifest_path=dataset_manifest_path, commands=commands)
+    behavioral_failures = [r for r in behavioral_results if r.status != "PASS"]
+    if split_behavioral and not bool(args.dry_run):
+        md_path, _json_path = _write_behavioral_status_artifacts(results_dir, behavioral_results)
+        _append_markdown_to_report(results_dir / "results_report.md", md_path.read_text(encoding="utf-8"))
+
+    run = PaperRun(mode=str(mode_name), results_dir=results_dir, dataset_manifest_path=dataset_manifest_path, commands=commands)
     if not bool(args.dry_run):
         _write_run_manifest(run)
+    if behavioral_failures:
+        failed_models = ", ".join(str(r.model) for r in behavioral_failures)
+        raise RuntimeError(f"MPS behavioral stage had model failures: {failed_models}")
     return run
+
+
+def run_m1max(args: argparse.Namespace) -> PaperRun:
+    return _run_m1max_impl(
+        args,
+        mode_name="m1max",
+        behavioral_attn="sdpa",
+        split_behavioral=False,
+    )
+
+
+def run_m1max_safe(args: argparse.Namespace) -> PaperRun:
+    return _run_m1max_impl(
+        args,
+        mode_name="m1max_safe",
+        behavioral_attn="eager",
+        split_behavioral=True,
+    )
 
 
 def run_a100(args: argparse.Namespace) -> PaperRun:
@@ -2274,7 +2590,7 @@ def run_a100(args: argparse.Namespace) -> PaperRun:
     commands.append(report_cmd)
     _run(report_cmd, cwd=ROOT, dry_run=bool(args.dry_run))
 
-    run = PaperRun(mode="a100", results_dir=results_dir, dataset_manifest_path=dataset_manifest_path, commands=commands)
+    run = PaperRun(mode="cuda_validated", results_dir=results_dir, dataset_manifest_path=dataset_manifest_path, commands=commands)
     if not bool(args.dry_run):
         _write_run_manifest(run)
     return run
@@ -2282,7 +2598,7 @@ def run_a100(args: argparse.Namespace) -> PaperRun:
 
 def parse_args() -> argparse.Namespace:
     p = argparse.ArgumentParser(description="Run paper-style evaluations in three reproducible modes.")
-    p.add_argument("mode", type=str, choices=["smoke", "m1max", "a100"])
+    p.add_argument("mode", type=str, choices=["smoke", "m1max", "m1max_safe", "cuda_validated"])
     p.add_argument("--data_dir", type=str, default=str(ROOT / "data_paper_hardened_v2"))
     p.add_argument("--results_dir", type=str, default="")
     p.add_argument("--dataset_seed", type=int, default=0)
@@ -2301,6 +2617,12 @@ def parse_args() -> argparse.Namespace:
     p.add_argument("--bootstrap_n", type=int, default=1000)
     p.add_argument("--bootstrap_seed", type=int, default=42)
     p.add_argument("--ci", type=float, default=0.95)
+    p.add_argument(
+        "--model_timeout_seconds",
+        type=int,
+        default=1200,
+        help="Per-model timeout for the MPS-safe behavioral stage (default: 1200).",
+    )
 
     p.add_argument("--attn_behavioral", type=str, default="sdpa", choices=["eager", "sdpa", "flash_attention_2"])
     p.add_argument("--specificity_depth_frac", type=float, default=0.25)
@@ -2489,7 +2811,9 @@ def main() -> None:
         run_smoke(args)
     elif args.mode == "m1max":
         run_m1max(args)
-    elif args.mode == "a100":
+    elif args.mode == "m1max_safe":
+        run_m1max_safe(args)
+    elif args.mode == "cuda_validated":
         run_a100(args)
     else:
         raise ValueError(f"Unknown mode: {args.mode!r}")

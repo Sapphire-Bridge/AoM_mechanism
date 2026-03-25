@@ -22,7 +22,7 @@ Usage:
   bash scripts/build_replication_bundle.sh [options]
 
 Options:
-  --mode MODE                  run_paper mode: smoke | m1max | a100 (default: m1max)
+  --mode MODE                  run_paper mode: smoke | m1max | cuda_validated (default: m1max)
   --results-dir PATH           run/results directory (default: results_submission)
   --tables-dir PATH            output directory for strict LaTeX tables (default: tables_submission)
   --archive PATH               output archive path (default: aom_replication_bundle.tar.gz)
@@ -124,8 +124,8 @@ while [[ $# -gt 0 ]]; do
 done
 
 case "$MODE" in
-  smoke|m1max|a100) ;;
-  *) die "Invalid --mode: $MODE (expected smoke|m1max|a100)" ;;
+  smoke|m1max|cuda_validated) ;;
+  *) die "Invalid --mode: $MODE (expected smoke|m1max|cuda_validated)" ;;
 esac
 
 RESULTS_DIR_ABS="$(cd "$(dirname "$RESULTS_DIR")" && pwd)/$(basename "$RESULTS_DIR")"

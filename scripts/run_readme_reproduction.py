@@ -17,17 +17,21 @@ ROOT = Path(__file__).resolve().parents[1]
 if str(ROOT) not in sys.path:
     sys.path.insert(0, str(ROOT))
 
-from scripts.verify_readme_reproduction import CheckResult, verify_run
+from scripts.paper_requirements import (
+    PAPER_CLT_BUNDLE_PATH as README_CORE_BUNDLE_PATH,
+    PAPER_MODEL_REPO_ID,
+    PAPER_MODEL_REVISION,
+    PAPER_SCOPE_REVISION as README_CORE_BUNDLE_REVISION,
+)
+from scripts.verify_readme_reproduction import CheckResult, _is_failure_status, _status_label, verify_run
 
-
-README_CORE_BUNDLE_REVISION = "fd571b47c1c64851e9b1989792367b9babb4af63"
-README_CORE_BUNDLE_PATH = Path("clt_bundles/gemma-scope-2b-pt-res_sweep_smoke")
 
 
 @dataclass(frozen=True)
 class CommandSpec:
     name: str
     argv: tuple[str, ...]
+    artifact_kind: str = "core"
 
 
 @dataclass(frozen=True)
@@ -39,6 +43,7 @@ class CommandRecord:
     ended_at_utc: str
     exit_code: int
     generated_files: tuple[str, ...]
+    artifact_kind: str = "core"
 
 
 def _utc_now_iso() -> str:
@@ -90,6 +95,7 @@ def _run_one(spec: CommandSpec, *, cwd: Path, run_root: Path) -> CommandRecord:
         ended_at_utc=ended,
         exit_code=int(result.returncode),
         generated_files=generated,
+        artifact_kind=spec.artifact_kind,
     )
 
 
@@ -119,7 +125,9 @@ def _readme_command_specs(run_root: Path, *, local_files_only: bool) -> list[Com
         sys.executable,
         "scripts/clt_raw_comparability.py",
         "--model_name_or_path",
-        "google/gemma-2-2b",
+        PAPER_MODEL_REPO_ID,
+        "--revision",
+        PAPER_MODEL_REVISION,
         "--disamb_path",
         "data/disamb_pairs.jsonl",
         "--clt_repo",
@@ -154,7 +162,9 @@ def _readme_command_specs(run_root: Path, *, local_files_only: bool) -> list[Com
         sys.executable,
         "scripts/clt_raw_comparability.py",
         "--model_name_or_path",
-        "google/gemma-2-2b",
+        PAPER_MODEL_REPO_ID,
+        "--revision",
+        PAPER_MODEL_REVISION,
         "--disamb_path",
         "data/disamb_pairs.jsonl",
         "--clt_repo",
@@ -186,7 +196,9 @@ def _readme_command_specs(run_root: Path, *, local_files_only: bool) -> list[Com
         sys.executable,
         "scripts/clt_raw_comparability.py",
         "--model_name_or_path",
-        "google/gemma-2-2b",
+        PAPER_MODEL_REPO_ID,
+        "--revision",
+        PAPER_MODEL_REVISION,
         "--disamb_path",
         "data/disamb_pairs.jsonl",
         "--clt_repo",
@@ -239,7 +251,7 @@ def _readme_command_specs(run_root: Path, *, local_files_only: bool) -> list[Com
                 "--disamb_path",
                 "data/disamb_pairs.jsonl",
                 "--tokenizer_name_or_path",
-                "google/gemma-2-2b",
+                PAPER_MODEL_REPO_ID,
                 "--bootstrap_n",
                 "5000",
                 "--ci",
@@ -262,7 +274,9 @@ def _readme_command_specs(run_root: Path, *, local_files_only: bool) -> list[Com
                 sys.executable,
                 "scripts/clt_raw_comparability_cf.py",
                 "--model_name_or_path",
-                "google/gemma-2-2b",
+                PAPER_MODEL_REPO_ID,
+                "--revision",
+                PAPER_MODEL_REVISION,
                 "--cf_path",
                 "data/counterfactual.jsonl",
                 "--coh_path",
@@ -293,11 +307,13 @@ def _readme_command_specs(run_root: Path, *, local_files_only: bool) -> list[Com
                 sys.executable,
                 "scripts/clt_raw_comparability_coh.py",
                 "--model_name_or_path",
-                "google/gemma-2-2b",
+                PAPER_MODEL_REPO_ID,
+                "--revision",
+                PAPER_MODEL_REVISION,
                 "--cf_path",
                 "data/counterfactual.jsonl",
                 "--coh_path",
-                "data/coherence.jsonl",
+                "data_paper_hardened_v2/coherence.jsonl",
                 "--clt_repo",
                 str(ROOT / README_CORE_BUNDLE_PATH),
                 "--layers",
@@ -325,7 +341,7 @@ def _render_check(result: CheckResult) -> str:
     detail = f"observed={result.observed!r}; expected={result.expected!r}"
     if result.note:
         detail += f"; {result.note}"
-    status = "PASS" if result.status == "pass" else "FAIL"
+    status = _status_label(result.status)
     return f"- {status}: `{result.name}` ({detail}; reference=`{result.reference_path}`)"
 
 
@@ -384,7 +400,7 @@ def _render_report(
         lines.append(_render_check(check))
 
     overall = "PASS"
-    if any(record.exit_code != 0 for record in records) or any(check.status != "pass" for check in checks):
+    if any(record.exit_code != 0 for record in records) or any(_is_failure_status(check.status) for check in checks):
         overall = "FAIL"
     lines.extend(["", "## Overall", "", f"- status: `{overall}`"])
     return "\n".join(lines) + "\n"
@@ -491,7 +507,7 @@ def main(argv: list[str] | None = None) -> int:
     if any(record.exit_code != 0 for record in records):
         print(report, file=sys.stderr)
         return 2
-    if missing or any(check.status != "pass" for check in checks):
+    if missing or any(_is_failure_status(check.status) for check in checks):
         print(report, file=sys.stderr)
         return 2
 

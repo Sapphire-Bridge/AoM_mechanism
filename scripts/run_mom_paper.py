@@ -2,6 +2,7 @@
 from __future__ import annotations
 
 import argparse
+import platform
 import subprocess
 import sys
 import tempfile
@@ -12,8 +13,17 @@ ROOT = Path(__file__).resolve().parents[1]
 if str(ROOT) not in sys.path:
     sys.path.insert(0, str(ROOT))
 
+from scripts.paper_requirements import (
+    PAPER_CLT_BUNDLE_PATH,
+    PAPER_FIXED_LAYER_SAE_LAYER,
+    PAPER_FIXED_LAYER_SAE_RUN_NAME,
+    PAPER_MODEL_REPO_ID,
+    PAPER_MODEL_REVISION,
+    PAPER_SCOPE_REPO_ID,
+    PAPER_SCOPE_REVISION,
+    PAPER_SIX_LAYER_PROFILE_LAYERS,
+)
 from scripts.run_readme_reproduction import (
-    README_CORE_BUNDLE_PATH,
     CommandRecord,
     CommandSpec,
     _bundle_materialization_command,
@@ -25,14 +35,22 @@ from scripts.run_readme_reproduction import (
     _walk_files,
     _write_json_log,
 )
-from scripts.verify_mom_paper import verify_run
+from scripts.verify_mom_paper import _display_reference_path, _load_result_row, verify_run
+from scripts.verify_readme_reproduction import _is_failure_status
 
 
-MODEL_REVISION = "c5ebcd40d208330abc697524c919956e692655cf"
-SAE_REVISION = "fd571b47c1c64851e9b1989792367b9babb4af63"
-SIX_LAYER_PROFILE_LAYERS = "4,8,12,16,20,24"
-FIXED_LAYER_SAE_RUN_NAME = "average_l0_457"
-FIXED_LAYER_SAE_LAYER = "24"
+MODEL_REVISION = PAPER_MODEL_REVISION
+SAE_REVISION = PAPER_SCOPE_REVISION
+README_CORE_BUNDLE_PATH = PAPER_CLT_BUNDLE_PATH
+SIX_LAYER_PROFILE_LAYERS = ",".join(str(layer) for layer in PAPER_SIX_LAYER_PROFILE_LAYERS)
+FIXED_LAYER_SAE_RUN_NAME = PAPER_FIXED_LAYER_SAE_RUN_NAME
+FIXED_LAYER_SAE_LAYER = str(PAPER_FIXED_LAYER_SAE_LAYER)
+PAPER_SUPPORT_DEVICE = "cpu"
+SUPPORT_MANIFEST_SPECS = (
+    ("six-layer raw", "paper_support/gemma2b_raw_6layer_full_seed42.manifest.json"),
+    ("six-layer clt", "paper_support/gemma2b_clt_6layer_full_seed42.manifest.json"),
+    ("fixed-layer sae", "paper_support/gemma2b_sae.manifest.json"),
+)
 
 
 def _run_one(spec: CommandSpec, *, cwd: Path, run_root: Path, dry_run: bool) -> CommandRecord:
@@ -55,6 +73,7 @@ def _run_one(spec: CommandSpec, *, cwd: Path, run_root: Path, dry_run: bool) -> 
         ended_at_utc=ended,
         exit_code=exit_code,
         generated_files=generated,
+        artifact_kind=spec.artifact_kind,
     )
 
 
@@ -65,11 +84,11 @@ def _paper_support_command_specs(run_root: Path, *, local_files_only: bool) -> l
         sys.executable,
         "aom_eval.py",
         "--model_name_or_path",
-        "google/gemma-2-2b",
+        PAPER_MODEL_REPO_ID,
         "--revision",
         MODEL_REVISION,
         "--device",
-        "auto",
+        PAPER_SUPPORT_DEVICE,
         "--attn_implementation",
         "eager",
         "--disamb_path",
@@ -99,11 +118,11 @@ def _paper_support_command_specs(run_root: Path, *, local_files_only: bool) -> l
         sys.executable,
         "aom_eval.py",
         "--model_name_or_path",
-        "google/gemma-2-2b",
+        PAPER_MODEL_REPO_ID,
         "--revision",
         MODEL_REVISION,
         "--device",
-        "auto",
+        PAPER_SUPPORT_DEVICE,
         "--attn_implementation",
         "eager",
         "--disamb_path",
@@ -139,11 +158,11 @@ def _paper_support_command_specs(run_root: Path, *, local_files_only: bool) -> l
         sys.executable,
         "aom_eval.py",
         "--model_name_or_path",
-        "google/gemma-2-2b",
+        PAPER_MODEL_REPO_ID,
         "--revision",
         MODEL_REVISION,
         "--device",
-        "auto",
+        PAPER_SUPPORT_DEVICE,
         "--torch_dtype",
         "float32",
         "--attn_implementation",
@@ -168,7 +187,9 @@ def _paper_support_command_specs(run_root: Path, *, local_files_only: bool) -> l
         "--run_patching_specificity",
         "--run_sae_patching",
         "--sae_repo",
-        f"hf://google/gemma-scope-2b-pt-res@{SAE_REVISION}",
+        PAPER_SCOPE_REPO_ID,
+        "--sae_revision",
+        SAE_REVISION,
         "--sae_width",
         "16k",
         "--sae_run_name",
@@ -189,10 +210,95 @@ def _paper_support_command_specs(run_root: Path, *, local_files_only: bool) -> l
         sae.append("--local_files_only")
 
     return [
-        CommandSpec(name="Six-layer raw layer profile", argv=tuple(raw)),
-        CommandSpec(name="Six-layer CLT layer profile", argv=tuple(clt)),
-        CommandSpec(name="Fixed-layer SAE specificity support", argv=tuple(sae)),
+        CommandSpec(name="Six-layer raw layer profile", argv=tuple(raw), artifact_kind="support"),
+        CommandSpec(name="Six-layer CLT layer profile", argv=tuple(clt), artifact_kind="support"),
+        CommandSpec(name="Fixed-layer SAE specificity support", argv=tuple(sae), artifact_kind="support"),
     ]
+
+
+def _artifact_failed(kind: str, *, core_failed: bool, support_failed: bool) -> tuple[bool, bool]:
+    if str(kind).lower() == "support":
+        return core_failed, True
+    if str(kind).lower() == "core":
+        return True, support_failed
+    return True, True
+
+
+def _runtime_provenance() -> dict[str, str]:
+    try:
+        import torch
+    except Exception as exc:  # pragma: no cover - defensive only
+        torch_version = f"unavailable ({exc.__class__.__name__})"
+    else:
+        torch_version = str(getattr(torch, "__version__", "unknown"))
+
+    try:
+        import transformers
+    except Exception as exc:  # pragma: no cover - defensive only
+        transformers_version = f"unavailable ({exc.__class__.__name__})"
+    else:
+        transformers_version = str(getattr(transformers, "__version__", "unknown"))
+
+    return {
+        "python_version": str(sys.version.split()[0]),
+        "platform": str(platform.platform()),
+        "torch_version": torch_version,
+        "transformers_version": transformers_version,
+    }
+
+
+def _display_provenance_path(path: Path, run_root: Path) -> str:
+    try:
+        return f"$RUN_ROOT/{path.relative_to(run_root).as_posix()}"
+    except ValueError:
+        return _display_reference_path(path)
+
+
+def _support_artifact_provenance_lines(run_root: Path) -> list[str]:
+    lines: list[str] = []
+    for label, rel in SUPPORT_MANIFEST_SPECS:
+        try:
+            loaded = _load_result_row(run_root / rel)
+        except FileNotFoundError:
+            continue
+        except Exception as exc:
+            lines.append(f"- {label}: unavailable=`{exc.__class__.__name__}: {exc}`")
+            continue
+        row = loaded.row
+        lines.append(
+            f"- {label}: row_source=`{loaded.source_kind}`; "
+            f"row_path=`{_display_provenance_path(loaded.source_path, run_root)}`; "
+            f"requested_device=`{row.get('requested_device')}`; "
+            f"observed_device=`{row.get('device')}`; "
+            f"model_param_dtype=`{row.get('model_param_dtype')}`; "
+            f"logprobs_dtype=`{row.get('logprobs_dtype')}`; "
+            f"seed=`{row.get('seed')}`; "
+            f"bootstrap_seed=`{row.get('bootstrap_seed')}`"
+        )
+    return lines
+
+
+def _status_summary(*, records: list[CommandRecord], missing, checks) -> tuple[str, str, str]:
+    core_failed = False
+    support_failed = False
+
+    for record in records:
+        if int(record.exit_code) == 0:
+            continue
+        core_failed, support_failed = _artifact_failed(record.artifact_kind, core_failed=core_failed, support_failed=support_failed)
+
+    for artifact in missing:
+        core_failed, support_failed = _artifact_failed(artifact.artifact_kind, core_failed=core_failed, support_failed=support_failed)
+
+    for check in checks:
+        if not _is_failure_status(check.status):
+            continue
+        core_failed, support_failed = _artifact_failed(check.artifact_kind, core_failed=core_failed, support_failed=support_failed)
+
+    core_status = "FAIL" if core_failed else "PASS"
+    support_status = "FAIL" if support_failed else "PASS"
+    overall_status = "FAIL" if (core_failed or support_failed) else "PASS"
+    return core_status, support_status, overall_status
 
 
 def _render_report(
@@ -204,6 +310,17 @@ def _render_report(
     checks,
     dry_run: bool,
 ) -> str:
+    if dry_run:
+        core_status = "NOT_EXECUTED"
+        support_status = "NOT_EXECUTED"
+        overall_status = "PLAN_ONLY"
+    else:
+        core_status, support_status, overall_status = _status_summary(
+            records=records,
+            missing=missing,
+            checks=checks,
+        )
+    provenance = _runtime_provenance()
     lines = [
         "# MoM Paper Reproduction Report",
         "",
@@ -215,7 +332,7 @@ def _render_report(
 
     lines.extend(["", "## Command Log", ""])
     for index, record in enumerate(records, start=1):
-        status = "PASS" if record.exit_code == 0 else "FAIL"
+        status = "NOT_EXECUTED" if dry_run else ("PASS" if record.exit_code == 0 else "FAIL")
         lines.append(f"### {index}. {record.name}")
         lines.append("")
         lines.append(f"- status: `{status}`")
@@ -236,12 +353,40 @@ def _render_report(
             lines.append("- generated files: `none`")
         lines.append("")
 
+    lines.extend(
+        [
+            "## Status Summary",
+            "",
+            f"- core_claims_status: `{core_status}`",
+            f"- support_artifacts_status: `{support_status}`",
+            f"- overall_status: `{overall_status}`",
+            "",
+        ]
+    )
+
+    lines.extend(
+        [
+            "## Provenance",
+            "",
+            f"- python_version: `{provenance['python_version']}`",
+            f"- platform: `{provenance['platform']}`",
+            f"- torch_version: `{provenance['torch_version']}`",
+            f"- transformers_version: `{provenance['transformers_version']}`",
+            "",
+        ]
+    )
+
+    if not dry_run:
+        support_lines = _support_artifact_provenance_lines(run_root)
+        if support_lines:
+            lines.extend(["## Support Artifact Provenance", "", *support_lines, ""])
+
     if dry_run:
         lines.extend(
             [
                 "## Dry Run",
                 "",
-                "- status: `PASS`",
+                "- status: `PLAN_ONLY`",
                 "- note: `No commands were executed; this report lists the exact paper-facing command sequence.`",
             ]
         )
@@ -249,7 +394,8 @@ def _render_report(
 
     if missing:
         lines.extend(["## Missing Outputs", ""])
-        for path in missing:
+        for artifact in missing:
+            path = artifact.path
             try:
                 rel = path.relative_to(run_root).as_posix()
                 lines.append(f"- `$RUN_ROOT/{rel}`")
@@ -266,10 +412,7 @@ def _render_report(
     for check in checks:
         lines.append(_render_check(check))
 
-    overall = "PASS"
-    if any(record.exit_code != 0 for record in records) or any(check.status != "pass" for check in checks):
-        overall = "FAIL"
-    lines.extend(["", "## Overall", "", f"- status: `{overall}`"])
+    lines.extend(["", "## Overall", "", f"- overall_status: `{overall_status}`"])
     return "\n".join(lines) + "\n"
 
 
@@ -385,7 +528,7 @@ def main(argv: list[str] | None = None) -> int:
     if any(record.exit_code != 0 for record in records):
         print(report, file=sys.stderr)
         return 2
-    if missing or any(check.status != "pass" for check in checks):
+    if missing or any(_is_failure_status(check.status) for check in checks):
         print(report, file=sys.stderr)
         return 2
 
