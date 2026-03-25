@@ -218,6 +218,14 @@ def test_run_one_result_check_writes_preverify_log_for_accelerator(monkeypatch, 
 
     monkeypatch.setattr(run_one_result_check, "_resolve_requested_device", lambda device: "mps")
     monkeypatch.setattr(run_one_result_check, "_device_available", lambda device: True)
+    original_exists = Path.exists
+    monkeypatch.setattr(
+        run_one_result_check.Path,
+        "exists",
+        lambda self: True
+        if self == run_one_result_check.ROOT / run_one_result_check.PAPER_CLT_BUNDLE_PATH
+        else original_exists(self),
+    )
 
     def fake_run_one(spec, *, cwd, run_root, dry_run):
         (run_root / "one_result_controls_l4.csv").write_text("placeholder\n", encoding="utf-8")
