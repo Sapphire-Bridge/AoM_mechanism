@@ -1,8 +1,43 @@
 # AoM Interpretability (Appearance of Meaning)
 
-Mechanistic interpretability pipeline comparing raw residual-stream and SAE-basis interventions on meaning-sensitive tasks in Gemma 2 2B. Implements hard-gated substrate comparison, FP64 endpoint-native accounting, matched PCA/random/RECON/RESID controls, and disturbance-efficiency analysis. Companion code for the Mechanics of Meaning (MoM) paper.
+Paper-reproducible mechanistic-interpretability repository for the Mechanics of Meaning (MoM) paper.
+
+This repository is:
+- offline-checkable with a one-command validation path
+- evidence-linked via a canonical Evidence Contract
+- backed by checked-in reference artifacts for reviewer inspection
+- equipped with a broad local test suite (77 test files on the current public release surface)
+- structured for reviewer-facing verification, not only exploratory experimentation
+
+AoM compares raw residual-stream and SAE-basis interventions on meaning-sensitive tasks in Gemma 2 2B under hard invariants, endpoint-native accounting, matched controls, and artifact-traceable reporting.
 
 Agent/research context: see `CONTEXT.md`. Repo-specific working rules for agents: see `AGENTS.md`.
+
+## Fast Reviewer Path
+
+If you want the shortest path through the repo, use:
+
+1. `make check`
+2. `make reviewer-check`
+3. `make one-result-check` or `make one-result-check-gpu`
+4. `make reproduction`
+
+Canonical paper/evidence pair:
+- `paper/MoM_paper.md`
+- `MoM_evidence_contract.md`
+
+For a reviewer-oriented walkthrough, see `docs/REVIEWER_PATH.md`.
+
+## Why Trust This Repo?
+
+| Signal | Where to look | Why it matters |
+|---|---|---|
+| Broad local test surface | `tests/` | The repo is checked as code, not only described in prose |
+| Evidence Contract | `MoM_evidence_contract.md` | Claims are bound to named evidence IDs and artifacts |
+| Contract validator | `scripts/check_evidence_contract.py` | Manuscript/evidence linkage is machine-checked |
+| Reviewer quickcheck | `make reviewer-check` | Fresh reviewers get a fast verification path |
+| Checked-in reference artifacts | `results/`, `public_artifacts/` | Review does not depend only on rerunning everything from scratch |
+| Canonical paper reproduction | `make reproduction` | Main claim path is explicitly staged and repeatable |
 
 ## Paper
 
@@ -82,6 +117,8 @@ make check
 - `python scripts/check_evidence_contract.py`
 - `python scripts/check_evidence_contract_fields.py`
 - `python scripts/run_paper.py smoke`
+
+Environment management for the public paper/reviewer path is currently driven via `requirements.txt` and `Makefile` targets rather than `pip install .`.
 
 If you prefer to manage the environment manually, the equivalent commands are:
 
