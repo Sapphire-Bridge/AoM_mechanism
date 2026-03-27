@@ -1,6 +1,9 @@
 # Paper verification guide (AoM_mechanism)
 
-This repo is the broader mechanics-focused artifact and verification surface for the Mechanics of Meaning (MoM) paper. This guide points reviewers to the current supported verification routes and the artifact locations that back the public paper surface.
+> This guide documents the current verification surface of this public repository only.
+> It is not intended to enumerate every historical or exploratory path that may have existed in earlier local runs.
+
+This repo is the mechanics-focused artifact and verification surface for the Mechanics of Meaning (MoM) paper. This guide gives reviewers the current supported verification routes, the key artifact surfaces, and the main caveats needed to interpret the checked-in release artifacts correctly.
 
 Primary sources in this repo:
 - Manuscript: `paper/MoM_paper.md`
@@ -49,6 +52,13 @@ make paper-reproduction-gpu PAPER_GPU_ARGS="--results_dir /tmp/paper_cuda_valida
 ```
 
 Use this to demonstrate accelerator-backed operability. It is not the canonical claim-verification path.
+
+## Interpretation caveats
+
+- `results/` is the curated sanitized public release surface for this repository, not the full internal historical results tree.
+- The main-text six-layer raw-vs-SAE profile and the locked comparability artifacts use `data/disamb_pairs.jsonl`.
+- The fixed-layer specificity robustness artifact uses `data_paper_hardened_v2/disamb_pairs.jsonl` and is interpreted separately rather than pooled with the six-layer profile.
+- Use `MoM_evidence_contract.md` and Appendix A.2 for claim-to-artifact mapping before inferring semantics from filenames alone.
 
 ## Artifact surface to inspect
 
