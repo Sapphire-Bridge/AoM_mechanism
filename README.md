@@ -1,8 +1,8 @@
-# AoM Interpretability (Appearance of Meaning)
+# AoM_mechanism
 
-Mechanistic interpretability pipeline comparing raw residual-stream and SAE-basis interventions on meaning-sensitive tasks in Gemma 2 2B. Implements hard-gated substrate comparison, FP64 endpoint-native accounting, matched PCA/random/RECON/RESID controls, and disturbance-efficiency analysis. Companion code for the Mechanics of Meaning (MoM) paper.
+Paper-grade artifact and verification repository for the mechanics-focused AoM / Mechanics of Meaning (MoM) analyses, comparability runs, and reproduction paths.
 
-Agent/research context: see `CONTEXT.md`. Repo-specific working rules for agents: see `AGENTS.md`.
+Reviewer guidance: see `PAPER_VERIFICATION_GUIDE.md`. AI-agent routing: see `CONTEXT.md`. Repo-specific working rules for agents: see `AGENTS.md`.
 
 ## Paper
 
