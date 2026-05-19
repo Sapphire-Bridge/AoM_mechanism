@@ -1,15 +1,16 @@
-# AoM Interpretability (Appearance of Meaning)
+# AoM Mechanism: Sparse Feature Interventions and Contextual Control
 
-Paper-reproducible mechanistic-interpretability repository for the Mechanics of Meaning (MoM) paper.
+This repository accompanies the Mechanics of Meaning (MoM) paper, which asks how the causal control identified in *The Appearance of Meaning* is organized in representation space. AoM showed that contextualized token-in-context states can causally shift meaning-like preference margins. MoM asks whether that control is more faithfully or efficiently recoverable in a sparse SAE feature basis than in the raw residual stream.
 
-This repository is:
-- offline-checkable with a one-command validation path
-- evidence-linked via a canonical Evidence Contract
-- backed by checked-in reference artifacts for reviewer inspection
-- equipped with a broad local test suite (77 test files on the current public release surface)
-- structured for reviewer-facing verification, not only exploratory experimentation
+The main result is deliberately bounded. In Gemma 2 2B with Gemma Scope 16k SAEs, layer-4 SAE-basis patching on lexical disambiguation produces a larger mean donor-directed effect than matched raw residual patching and improves RMS-based effect-efficiency. On DISAMB, layer 4 shows Raw = 0.261 and SAE = 0.336, corresponding to CRR = 1.29. At layer 8 the arms are near parity, and by layer 12 SAE under-recovers relative to raw. The endpoint-native paired layer-4 SAE-over-raw difference is positive in mean, but its 95% confidence interval includes zero, so the result is treated as directional evidence rather than definitive SAE superiority.
 
-AoM compares raw residual-stream and SAE-basis interventions on meaning-sensitive tasks in Gemma 2 2B under hard invariants, endpoint-native accounting, matched controls, and artifact-traceable reporting.
+The conclusion is therefore not that meaning is sparse, nor that SAEs reveal semantic atoms. The narrower claim is that AoM-relevant contextual control is basis-sensitive, layer-dependent, and task-heterogeneous rather than uniformly sparse. The early DISAMB pattern weakens or reverses at later layers and does not generalize uniformly to CF and COH.
+
+This repository provides the code, datasets, checked-in reference artifacts, and verification scripts needed to inspect and rerun the paper-facing evidence surface. It is offline-checkable with a one-command validation path, evidence-linked through a canonical Evidence Contract, and structured for reviewer-facing verification rather than only exploratory experimentation.
+
+![DISAMB six-layer profile showing early directional SAE-over-raw recovery at layer 4, near parity at layer 8, and later SAE under-recovery.](figures/fig1_disamb_layer_profile.png)
+
+*DISAMB layer profile. The figure visualizes the bounded main result: early directional SAE-over-raw recovery, followed by parity or under-recovery at later layers.*
 
 Agent/research context: see `CONTEXT.md`. Repo-specific working rules for agents: see `AGENTS.md`.
 
