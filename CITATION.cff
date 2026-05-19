@@ -8,7 +8,7 @@ authors:
 license: "Apache-2.0"
 repository-code: "https://github.com/Sapphire-Bridge/AoM_mechanism"
 url: "https://github.com/Sapphire-Bridge/AoM_mechanism"
-abstract: "Code, data, publication-safe artifact tooling, and verification scripts for the mechanics-focused AoM_mechanism repository."
+abstract: "Code, data, publication-safe artifact tooling, and verification scripts for the mechanics-focused Mechanics of Meaning / AoM interpretability repository."
 keywords:
   - mechanistic interpretability
   - activation patching

@@ -1,8 +1,44 @@
-# AoM_mechanism
+# AoM Mechanism: Sparse Feature Interventions and Contextual Control
 
-Paper-grade artifact and verification repository for the mechanics-focused AoM / Mechanics of Meaning (MoM) analyses, comparability runs, and reproduction paths.
+This repository accompanies the Mechanics of Meaning (MoM) paper, which asks how the causal control identified in *The Appearance of Meaning* is organized in representation space. AoM showed that contextualized token-in-context states can causally shift meaning-like preference margins. MoM asks whether that control is more faithfully or efficiently recoverable in a sparse SAE feature basis than in the raw residual stream.
+
+The main result is deliberately bounded. In Gemma 2 2B with Gemma Scope 16k SAEs, layer-4 SAE-basis patching on lexical disambiguation produces a larger mean donor-directed effect than matched raw residual patching and improves RMS-based effect-efficiency. On DISAMB, layer 4 shows Raw = 0.261 and SAE = 0.336, corresponding to CRR = 1.29. At layer 8 the arms are near parity, and by layer 12 SAE under-recovers relative to raw. The endpoint-native paired layer-4 SAE-over-raw difference is positive in mean, but its 95% confidence interval includes zero, so the result is treated as directional evidence rather than definitive SAE superiority.
+
+The conclusion is therefore not that meaning is sparse, nor that SAEs reveal semantic atoms. The narrower claim is that AoM-relevant contextual control is basis-sensitive, layer-dependent, and task-heterogeneous rather than uniformly sparse. The early DISAMB pattern weakens or reverses at later layers and does not generalize uniformly to CF and COH.
+
+This repository provides the code, datasets, checked-in reference artifacts, and verification scripts needed to inspect and rerun the paper-facing evidence surface. It is offline-checkable with a one-command validation path, evidence-linked through a canonical Evidence Contract, and structured for reviewer-facing verification rather than only exploratory experimentation.
+
+![DISAMB six-layer profile showing early directional SAE-over-raw recovery at layer 4, near parity at layer 8, and later SAE under-recovery.](figures/fig1_disamb_layer_profile.png)
+
+*DISAMB layer profile. The figure visualizes the bounded main result: early directional SAE-over-raw recovery, followed by parity or under-recovery at later layers.*
 
 Reviewer guidance: see `PAPER_VERIFICATION_GUIDE.md`. AI-agent routing: see `CONTEXT.md`. Repo-specific working rules for agents: see `AGENTS.md`.
+
+## Fast Reviewer Path
+
+If you want the shortest path through the repo, use:
+
+1. `make check`
+2. `make reviewer-check`
+3. `make one-result-check` or `make one-result-check-gpu`
+4. `make reproduction`
+
+Canonical paper/evidence pair:
+- `paper/MoM_paper.md`
+- `MoM_evidence_contract.md`
+
+For a reviewer-oriented walkthrough, see `docs/REVIEWER_PATH.md`.
+
+## Why Trust This Repo?
+
+| Signal | Where to look | Why it matters |
+|---|---|---|
+| Broad local test surface | `tests/` | The repo is checked as code, not only described in prose |
+| Evidence Contract | `MoM_evidence_contract.md` | Claims are bound to named evidence IDs and artifacts |
+| Contract validator | `scripts/check_evidence_contract.py` | Manuscript/evidence linkage is machine-checked |
+| Reviewer quickcheck | `make reviewer-check` | Fresh reviewers get a fast verification path |
+| Checked-in reference artifacts | `results/`, `public_artifacts/` | Review does not depend only on rerunning everything from scratch |
+| Canonical paper reproduction | `make reproduction` | Main claim path is explicitly staged and repeatable |
 
 ## Paper
 
@@ -82,6 +118,8 @@ make check
 - `python scripts/check_evidence_contract.py`
 - `python scripts/check_evidence_contract_fields.py`
 - `python scripts/run_paper.py smoke`
+
+Environment management for the public paper/reviewer path is currently driven via `requirements.txt` and `Makefile` targets rather than `pip install .`.
 
 If you prefer to manage the environment manually, the equivalent commands are:
 

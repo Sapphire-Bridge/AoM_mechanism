@@ -5,10 +5,39 @@ build-backend = "setuptools.build_meta"
 [project]
 name = "aom-mechanism"
 version = "1.0.4"
-description = "Artifact and verification surface for mechanics-focused AoM research"
+description = "Paper-reproducible artifact and verification surface for mechanics-focused Mechanics of Meaning / AoM research."
 readme = "README.md"
+license = { file = "LICENSE" }
 requires-python = ">=3.10"
+authors = [
+  { name = "Felix Borck" }
+]
+keywords = [
+  "mechanistic-interpretability",
+  "transformers",
+  "sparse-autoencoders",
+  "activation-patching",
+  "causal-interventions",
+  "reproducibility",
+  "research",
+]
+classifiers = [
+  "Development Status :: 4 - Beta",
+  "Intended Audience :: Science/Research",
+  "License :: OSI Approved :: Apache Software License",
+  "Programming Language :: Python :: 3",
+  "Programming Language :: Python :: 3.10",
+  "Programming Language :: Python :: 3.11",
+  "Topic :: Scientific/Engineering :: Artificial Intelligence",
+]
+# Public environment management for the paper/reviewer path is intentionally
+# driven via requirements.txt and Make targets rather than pip install .
 dependencies = []
+
+[project.urls]
+Repository = "https://github.com/sapphire-bridge/AoM_mechanism"
+Documentation = "https://github.com/sapphire-bridge/AoM_mechanism#readme"
+Issues = "https://github.com/sapphire-bridge/AoM_mechanism/issues"
 
 [tool.setuptools]
 packages = ["aom"]
