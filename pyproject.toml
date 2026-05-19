@@ -5,7 +5,7 @@ build-backend = "setuptools.build_meta"
 [project]
 name = "aom-mechanism"
 version = "1.0.4"
-description = "Paper-reproducible mechanistic interpretability pipeline for the Mechanics of Meaning (MoM) paper."
+description = "Paper-reproducible artifact and verification surface for mechanics-focused Mechanics of Meaning / AoM research."
 readme = "README.md"
 license = { file = "LICENSE" }
 requires-python = ">=3.10"

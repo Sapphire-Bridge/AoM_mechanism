@@ -6,9 +6,9 @@ authors:
   - family-names: "Borck"
     given-names: "Felix"
 license: "Apache-2.0"
-repository-code: "https://github.com/sapphire-bridge/AoM_mechanism"
-url: "https://github.com/sapphire-bridge/AoM_mechanism"
-abstract: "Code, data, publication-safe artifact tooling, and verification scripts for the Mechanics of Meaning / AoM interpretability repository."
+repository-code: "https://github.com/Sapphire-Bridge/AoM_mechanism"
+url: "https://github.com/Sapphire-Bridge/AoM_mechanism"
+abstract: "Code, data, publication-safe artifact tooling, and verification scripts for the mechanics-focused Mechanics of Meaning / AoM interpretability repository."
 keywords:
   - mechanistic interpretability
   - activation patching

@@ -5,7 +5,7 @@
       "name": "Borck, Felix"
     }
   ],
-  "description": "Code, datasets, publication-safe artifacts, and verification tooling for the Mechanics of Meaning / AoM interpretability repository.",
+  "description": "Code, datasets, publication-safe artifacts, and verification tooling for the mechanics-focused AoM_mechanism repository.",
   "keywords": [
     "mechanistic interpretability",
     "activation patching",
@@ -13,6 +13,6 @@
     "reproducibility"
   ],
   "license": "Apache-2.0",
-  "title": "AoM_interpretability",
+  "title": "AoM_mechanism",
   "upload_type": "software"
 }

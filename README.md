@@ -12,7 +12,7 @@ This repository provides the code, datasets, checked-in reference artifacts, and
 
 *DISAMB layer profile. The figure visualizes the bounded main result: early directional SAE-over-raw recovery, followed by parity or under-recovery at later layers.*
 
-Agent/research context: see `CONTEXT.md`. Repo-specific working rules for agents: see `AGENTS.md`.
+Reviewer guidance: see `PAPER_VERIFICATION_GUIDE.md`. AI-agent routing: see `CONTEXT.md`. Repo-specific working rules for agents: see `AGENTS.md`.
 
 ## Fast Reviewer Path
 
